@@ -14,7 +14,7 @@ Under normal circumstances, loading a documented class in any language should ig
 
 The ability to reflect documentation is not a mistake. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
 
-<pre><code>
+<pre>
 <?php
 class Zoo {
 	/**
@@ -25,7 +25,7 @@ class Zoo {
 	}
 }
 ?>
-</code></pre>
+</pre>
 
 ## How Bad Could it Be?
 
@@ -38,18 +38,132 @@ The numbers don't lie. I took some classes with existing documentation and loade
 			<th>Class</th>
 			<th>/** ... */</th>
 			<th>/*! ... */</th>
-			<th>php -w</th>
-		<tr>
+			<th><code>php -w</code></th>
+		</tr>
 	</thead>
 	<tfoot>
 		<tr>
-			<td>Performance</td>
-			<td>0%</td>
-			<td>50%</td>
-			<td>20%</td>
+			<th>Overall Performance</th>
+			<th>0.00%</th>
+			<th></th>
+			<th></th>
 		</tr>
 	</tfoot>
 	<tbody>
+		<tr>
+			<td>FCalendarDay</td>
+			<td>52200</td>
+			<td>50616</td>
+			<td>50616</td>
+		</tr>
+		<tr>
+			<td>FDataModel</td>
+			<td>101096</td>
+			<td>94968</td>
+			<td>94968</td>
+		</tr>
+		<tr>
+			<td>FDataModelField</td>
+			<td>67288</td>
+			<td>61976</td>
+			<td>61928</td>
+		</tr>
+		<tr>
+			<td>FDataModelTable</td>
+			<td>98560</td>
+			<td>94240</td>
+			<td>94192</td>
+		</tr>
+		<tr>
+			<td>FDB</td>
+			<td>99152</td>
+			<td>92504</td>
+			<td>92472</td>
+		</tr>
+		<tr>
+			<td>FMySQLStructureSync</td>
+			<td>29736</td>
+			<td>29496</td>
+			<td>29496</td>
+		</tr>
+		<tr>
+			<td>FFormFactory</td>
+			<td>12112</td>
+			<td>11408</td>
+			<td>11440</td>
+		</tr>
+		<tr>
+			<td>FFormUtils</td>
+			<td>16344</td>
+			<td>15352</td>
+			<td>15328</td>
+		</tr>
+		<tr>
+			<td>FField</td>
+			<td>30464</td>
+			<td>27200</td>
+			<td>27200</td>
+		</tr>
+		<tr>
+			<td>FModelManager</td>
+			<td>17032</td>
+			<td>14136</td>
+			<td>14136</td>
+		</tr>
+		<tr>
+			<td>FObject</td>
+			<td>132736</td>
+			<td>129912</td>
+			<td>129952</td>
+		</tr>
+		<tr>
+			<td>FTemplate</td>
+			<td>41216</td>
+			<td>37120</td>
+			<td>37128</td>
+		</tr>
+		<tr>
+			<td>FTemplateRenderFilter</td>
+			<td>5880</td>
+			<td>3960</td>
+			<td>3952</td>
+		</tr>
+		<tr>
+			<td>FTemplateUtils</td>
+			<td>43968</td>
+			<td>36792</td>
+			<td>36784</td>
+		</tr>
+		<tr>
+			<td>FFileSystem</td>
+			<td>11808</td>
+			<td>10920</td>
+			<td>10904</td>
+		</tr>
+		<tr>
+			<td>FString</td>
+			<td>41000</td>
+			<td>38840</td>
+			<td>38840</td>
+		</tr>
+		<tr>
+			<td>FStringCycle</td>
+			<td>13056</td>
+			<td>11848</td>
+			<td>11848</td>
+		</tr>
+		<tr>
+			<td>FDOMDocument</td>
+			<td>17872</td>
+			<td>16832</td>
+			<td>16808</td>
+		</tr>
+		<tr>
+			<td>FDOMNode</td>
+			<td>25344</td>
+			<td>23864</td>
+			<td>23864</td>
+		</tr>
 	</tbody>
 </table>
 
