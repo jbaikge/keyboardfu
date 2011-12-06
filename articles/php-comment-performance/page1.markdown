@@ -1,12 +1,16 @@
 # Documentation is Making Your Site Explode
 
-Seems a pretty bold claim that something which is designed to hide code is actually causing a performance hit. Since the introduction of PHP's [Reflection](http://php.net/reflection) library, Javadoc comments have started adding to memory usage.
+Seems a pretty bold claim that something which is designed to hide code is actually causing a performance hit. Since the introduction of PHP's [Reflection](http://php.net/manual/en/book.reflection.php) library, JavaDoc comments have started adding to memory usage.
 
 ## Why is There Java in My PHP?
 
-In case you haven't been formally introduced, Javadoc comments are a style of multi-line comments introduced by Java, where instead of starting with just a `/*`, `/**` is used instead. These comment blocks generally appear above function, class, or method definitions as documentation.
+In case you haven't been formally introduced, JavaDoc comments are a style of multi-line comments [introduced by Java](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html). Comment blocks start with `/**` instead of `/*` and generally appear above function, class, or method definitions as documentation.
 
-These comments can generate portable documentation when parsed by tools like [Doxygen](http://doxygen.org). Within these comment blocks, special attributes are available to document the adjacent code: `@param` will explain the first function parameter, `@return` will describe what is returned by the function, and so on.
+These comments can generate portable documentation when parsed by tools like [Doxygen](http://www.stack.nl/~dimitri/doxygen/index.html). Within these comment blocks, special attributes are available to document the adjacent code:
+
+* `@param` will explain the first function parameter
+* `@return` will describe what is returned by the function
+* `@see` will link to another class, function, or method
 
 ## Just the Class, Ma'am
 
@@ -14,25 +18,21 @@ Under normal circumstances, loading a documented class in any language should ig
 
 The ability to reflect documentation is not a mistake. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
 
-<pre>
-<?php
-class Zoo {
-	/**
-	 * @route /zoo/flamingos
-	 */
-	public function getFlamingos() {
-		return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
+	class Zoo {
+		/**
+		 * @route /zoo/flamingos
+		 */
+		public function getFlamingos() {
+			return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
+		}
 	}
-}
-?>
-</pre>
 
 ## How Bad Could it Be?
 
-The numbers don't lie. I took some classes with existing documentation and loaded them into a script, calling [get\_memory\_usage()](http://php.net/functions.get_memory_usage.php) before and after the load to gain the memory delta from loading the class.
+The numbers don't lie. I took some classes with existing documentation and loaded them into a script, calling [memory\_get\_usage()](http://php.net/manual/en/function.memory-get-usage.php) before and after the load to gain the memory delta from loading the class.
 
 <table>
-	<caption>Comparison of different modifications to documented PHP classes - /** ... */ Normal Javadoc Style; /*! ... */ Ruby Style; <code>php -w</code> PHP's native whitespace and comment stripping command.</caption>
+	<caption>Comparison of different modifications to documented PHP classes - /** ... */ Normal JavaDoc Style; /*! ... */ Qt Style; <code>php -w</code> PHP's native whitespace and comment stripping command.</caption>
 	<thead>
 		<tr>
 			<th>Class</th>
@@ -43,127 +43,28 @@ The numbers don't lie. I took some classes with existing documentation and loade
 	</thead>
 	<tfoot>
 		<tr>
-			<th>Overall Performance</th>
-			<th>0.00%</th>
-			<th></th>
-			<th></th>
+			<th>Memory Reduction</th>
+			<th>0.000%</th>
+			<th>7.572%</th>
+			<th>7.599%</th>
 		</tr>
 	</tfoot>
 	<tbody>
-		<tr>
-			<td>FCalendarDay</td>
-			<td>52200</td>
-			<td>50616</td>
-			<td>50616</td>
-		</tr>
-		<tr>
-			<td>FDataModel</td>
-			<td>101096</td>
-			<td>94968</td>
-			<td>94968</td>
-		</tr>
-		<tr>
-			<td>FDataModelField</td>
-			<td>67288</td>
-			<td>61976</td>
-			<td>61928</td>
-		</tr>
-		<tr>
-			<td>FDataModelTable</td>
-			<td>98560</td>
-			<td>94240</td>
-			<td>94192</td>
-		</tr>
-		<tr>
-			<td>FDB</td>
-			<td>99152</td>
-			<td>92504</td>
-			<td>92472</td>
-		</tr>
-		<tr>
-			<td>FMySQLStructureSync</td>
-			<td>29736</td>
-			<td>29496</td>
-			<td>29496</td>
-		</tr>
-		<tr>
-			<td>FFormFactory</td>
-			<td>12112</td>
-			<td>11408</td>
-			<td>11440</td>
-		</tr>
-		<tr>
-			<td>FFormUtils</td>
-			<td>16344</td>
-			<td>15352</td>
-			<td>15328</td>
-		</tr>
-		<tr>
-			<td>FField</td>
-			<td>30464</td>
-			<td>27200</td>
-			<td>27200</td>
-		</tr>
-		<tr>
-			<td>FModelManager</td>
-			<td>17032</td>
-			<td>14136</td>
-			<td>14136</td>
-		</tr>
-		<tr>
-			<td>FObject</td>
-			<td>132736</td>
-			<td>129912</td>
-			<td>129952</td>
-		</tr>
-		<tr>
-			<td>FTemplate</td>
-			<td>41216</td>
-			<td>37120</td>
-			<td>37128</td>
-		</tr>
-		<tr>
-			<td>FTemplateRenderFilter</td>
-			<td>5880</td>
-			<td>3960</td>
-			<td>3952</td>
-		</tr>
-		<tr>
-			<td>FTemplateUtils</td>
-			<td>43968</td>
-			<td>36792</td>
-			<td>36784</td>
-		</tr>
-		<tr>
-			<td>FFileSystem</td>
-			<td>11808</td>
-			<td>10920</td>
-			<td>10904</td>
-		</tr>
-		<tr>
-			<td>FString</td>
-			<td>41000</td>
-			<td>38840</td>
-			<td>38840</td>
-		</tr>
-		<tr>
-			<td>FStringCycle</td>
-			<td>13056</td>
-			<td>11848</td>
-			<td>11848</td>
-		</tr>
-		<tr>
-			<td>FDOMDocument</td>
-			<td>17872</td>
-			<td>16832</td>
-			<td>16808</td>
-		</tr>
-		<tr>
-			<td>FDOMNode</td>
-			<td>25344</td>
-			<td>23864</td>
-			<td>23864</td>
-		</tr>
+		<tr><th>FDataModel</th><td>101096</td><td>94968</td><td>94968</td></tr>
+		<tr><th>FDataModelField</th><td>67288</td><td>61976</td><td>61928</td></tr>
+		<tr><th>FDataModelTable</th><td>98560</td><td>94240</td><td>94192</td></tr>
+		<tr><th>FDB</th><td>99152</td><td>92504</td><td>92472</td></tr>
+		<tr><th>FFormFactory</th><td>12112</td><td>11408</td><td>11440</td></tr>
+		<tr><th>FFormUtils</th><td>16344</td><td>15352</td><td>15328</td></tr>
+		<tr><th>FField</th><td>30464</td><td>27200</td><td>27200</td></tr>
+		<tr><th>FTemplate</th><td>41216</td><td>37120</td><td>37128</td></tr>
+		<tr><th>FTemplateRenderFilter</th><td>5880</td><td>3960</td><td>3952</td></tr>
+		<tr><th>FTemplateUtils</th><td>43968</td><td>36792</td><td>36784</td></tr>
+		<tr><th>FFileSystem</th><td>11808</td><td>10920</td><td>10904</td></tr>
+		<tr><th>FString</th><td>41000</td><td>38840</td><td>38840</td></tr>
+		<tr><th>FStringCycle</th><td>13056</td><td>11848</td><td>11848</td></tr>
+		<tr><th>FDOMDocument</th><td>17872</td><td>16832</td><td>16808</td></tr>
+		<tr><th>FDOMNode</th><td>25344</td><td>23864</td><td>23864</td></tr>
 	</tbody>
 </table>
 
@@ -182,7 +83,7 @@ You're a considerate PHP developer and commenting your code is your way of provi
 
 ### Forget What You Thought You Knew
 
-Most of us who include inline documentation for our classes and methods use a Javadoc style multi-line comment above the code of interest. As an example:
+Most of us who include inline documentation for our classes and methods use a JavaDoc style multi-line comment above the code of interest. As an example:
 
 <pre>
 </pre>
