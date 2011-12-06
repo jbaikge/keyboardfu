@@ -14,9 +14,9 @@ These comments can generate portable documentation when parsed by tools like [Do
 
 ## Just the Class, Ma'am
 
-Under normal circumstances, loading a documented class in any language should ignore commented lines and utilize enough memory to operate the class. However, in PHP, there is a funky library that will reflect classes to gain information about their internals. Part of this reflection data includes the class or function documentation. Now that this information is retrievable, it must also load into memory.
+Under normal circumstances, loading a documented class in any language should ignore commented lines and utilize enough memory to operate the class. However, in PHP 5, there is a funky library that will reflect classes to gain information about their internals. Part of this reflection data includes the class, method, or function documentation. Now that this information is retrievable, it must also load into memory.
 
-The ability to reflect documentation is not a mistake. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
+The ability to reflect documentation is not a mistake or pitfall. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
 
 	class Zoo {
 		/**
@@ -27,7 +27,34 @@ The ability to reflect documentation is not a mistake. As an example, you can in
 		}
 	}
 
-## How Bad Could it Be?
+## Regaining a Sleek Profile
+
+Everything seems pretty dark and stormy at this point: Documenting PHP suddenly has negative consequences. Now we need to find a way to solve a few problems:
+
+1. Maintain documentation within the code
+2. Continue to use Doxygen to compile docs
+3. Easily retrofit the solution on all existing documented code
+4. Distribute the new way of documenting to other team members and make sure they continue to document their code
+
+If you're maintaining many large codebases, these considerations carry their own consequences. These are the three potential solutions I came up with when presented with this problem:
+
+### Leave it Alone
+
+_If it ain't broke, don't fix it._ What's the fun in that? 
+
+### Strip Comments Out in a Post-Commit Hook
+
+At work, I use subversion to handle our code. We have a bunch of pre- and post-commit hooks to take care of lint checking and notifying developers of commits, why not add one to run `php -w` on each PHP file and store it in a different area of the repository?
+
+That's great and all, until something goes awry and someone needs to hotfix code with no whitespace.
+
+### _BANG!_ - Surprise it
+
+Sneak up on the code and scare it to death. It'll freak the interpreter out so much that we can regain memory.
+
+After pouring through the Doxygen docs for a few days, I stumbled upon [this gem](http://www.stack.nl/~dimitri/doxygen/docblocks.html). Qt style comments. Turns out, if you convert the typical hack splat splat (`/**`) to hack splat bang (`/*!`), PHP thinks it's a normal C block comment, and Doxygen still thinks it's a documentation block.
+
+## How Much of a Difference Can a Single Character Make?
 
 The numbers don't lie. I took some classes with existing documentation and loaded them into a script, calling [memory\_get\_usage()](http://php.net/manual/en/function.memory-get-usage.php) before and after the load to gain the memory delta from loading the class.
 
@@ -68,30 +95,4 @@ The numbers don't lie. I took some classes with existing documentation and loade
 	</tbody>
 </table>
 
-## Don't Ditch Your Docs
-
-
-
-
-
-
-
-
-## Documentation. The final frontier.
-
-You're a considerate PHP developer and commenting your code is your way of providing help to the poor chap who comes behind you. While you're being considerate to your team or the rest of the world, are you actually causing more problems than not?
-
-### Forget What You Thought You Knew
-
-Most of us who include inline documentation for our classes and methods use a JavaDoc style multi-line comment above the code of interest. As an example:
-
-<pre>
-</pre>
-
-This is great for many reasons:
-
-+ Standard commenting procedure you probably learned in school
-+ Useful @-directives to denote authors, dates, parameters, etc.
-+ Support from tools like DOxygen which will extract the documentation and make it pretty
-
-Prior to the [SPL](http://php.net/spl) libraries coming into existance, this was actually a perfectly fine way to document code. However, things have changed. And not for the better.
+The above classes are used in a homebrew framework and the above table is a decent representation of how much memory is typically used on a dynamic website. 7.5% doesn't sound like very much for a single page, but once a site becomes popular, that extra freed memory could equate to thousands of extra hits per second without a hardware upgrade.
