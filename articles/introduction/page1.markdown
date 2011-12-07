@@ -1,8 +1,12 @@
 # Introducing: KeyboardFu
 
-I am not your grandma's techno nerd. No, I will not fix your computer. My experience 
+Look down at your keyboard, what do you see?
 
-Look down at your keyboard. Ever wondered if those little square boxes could make something beautiful? I believe each one of those boxen can contribute to something grand.
+Do you see a vast collection of keys in an incomprehensible order, and a means of communicating with anyone you please?
+
+Do you see an implement of corporate monotony, whereby smashing on those little keys spins your hamster wheel of emails and reports around one more turn?
+
+I see a tool. One which is comfortable at my fingertips and a necessary component of my craft. It is the hammer; code, the nail.
 
 Writing code is an art. This website will devote itself to exploring ways to write more concise, legible code, as well as push performance to the highest degree possible.
 
