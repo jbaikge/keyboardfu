@@ -1,10 +1,10 @@
 # Introducing: KeyboardFu
 
-Ahh, the smell of a new website in the morning. It's like a fresh pancake on a cold morning. With some coffee, always with coffee. Ever notice how websites smell like stale coffee? That's because the developer spilled at least one or two cups on the code to make it go faster. It's like a spoiler on, well, just about anything. It just plain goes faster.
+Ahh, the smell of a new website. It's like a fresh pancake on a cold morning. With some bacon, and always with coffee. Ever notice how websites smell like stale coffee? That's because the developer spilled at least one or two cups on the code to make it go faster. It's like a spoiler on, well, just about anything. It just plain goes faster.
 
 ## Cordial Welcome
 
-There's no possible way you're still reading, but if you are, welcome to KeyboardFu.com. My name is Jake and I have contributed to the web development field professionally since 2003. I hope you will accept this virtual handshake as a warm welcome to a place full of insight, ponderous topics, and all-out tom-foolery.
+There's no way you're still reading, but if you are, welcome to KeyboardFu.com. My name is Jake and I have contributed to the web development field professionally since 2003. I hope you will accept this virtual handshake as a warm welcome to a place full of insight, ponderous topics, and all-out tom-foolery.
 
 ## Content
 
