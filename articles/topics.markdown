@@ -7,4 +7,5 @@ Practice makes you faster
 Examples:
 List of PDFs need to go into a page of content, titles can be extracted from the filenames
 	for P in *.pdf; do
-		echo '<a href="'$P'" target="_blank">'
+		echo '<a href="'$P'" target="_blank">'$(echo $P | sed -e 's/_/ /g' -e 's/.pdf$//')'</a>';
+	done
