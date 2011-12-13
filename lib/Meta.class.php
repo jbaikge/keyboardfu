@@ -11,10 +11,19 @@ class Meta {
 		return self::$stylesheets;
 	}
 
-	public static function getTitle() {
+	public static function getPageTitle() {
 		$title = $_ENV['config']['title'];
 		if (self::$title) {
-			$title = self::$title;
+			$title = htmlize(self::$title) . ' &raquo; ' . $title;
 		}
+		return $title;
+	}
+
+	public static function getTitle() {
+		return htmlize(self::$title);
+	}
+
+	public static function setTitle($title) {
+		self::$title = $title;
 	}
 }
