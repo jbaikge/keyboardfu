@@ -2,6 +2,8 @@
 class Meta {
 	private static $javascripts = array();
 	private static $stylesheets = array();
+	private static $title = null;
+
 	public static function addJavascript($url) {
 		self::$javascripts[$url] = sprintf('<script src="%s"></script>', $url);
 	}
@@ -17,17 +19,20 @@ class Meta {
 	public static function getStylesheets() {
 		return self::$stylesheets;
 	}
+	public static function getTitle() {
+		$title = $_ENV['config']['title'];
+		if (self::$title) {
+			$title = self::$title;
+		}
+	}
+	public static function setTitle($title) {
+		self::$title = $title;
+	}
 	public static function toString($prefix = "\t") {
 		$string = '';
 		foreach (Meta::getAll() as $tag) {
 			$string .= sprintf("%s%s\n", $prefix, $tag);
 		}
 		return $string;
-	}
-	public static function getTitle() {
-		$title = $_ENV['config']['title'];
-		if (self::$title) {
-			$title = self::$title;
-		}
 	}
 }
