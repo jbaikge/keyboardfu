@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/html5.css">
 	<![endif]-->
 	<link rel="profile" href="http://microformats.org/profile/hcard">
+<?php echo Meta::toString(); ?>
 </head>
 <body>
 </body>
