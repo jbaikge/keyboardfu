@@ -24,6 +24,7 @@ class Meta {
 		if (self::$title) {
 			$title = self::$title;
 		}
+		return $title;
 	}
 	public static function setTitle($title) {
 		self::$title = $title;
