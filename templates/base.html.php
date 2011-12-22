@@ -8,9 +8,13 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/html5.css">
 	<![endif]-->
-	<link rel="profile" href="http://microformats.org/profile/hcard">
 <?php echo Meta::toString(); ?>
 </head>
 <body>
+<div class="container_12">
+	<div 
+</div>
+<footer class="container_12">
+</footer>
 </body>
 </html>
