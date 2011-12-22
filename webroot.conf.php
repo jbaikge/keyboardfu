@@ -5,4 +5,5 @@ $config['title'] = 'KeyboardFu';
 
 require(dirname(__FILE__) . '/lib/framework/load.php');
 
+Meta::addStylesheet('/css/960_12_col.css');
 Meta::addStylesheet('/css/base.css');
