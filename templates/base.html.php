@@ -11,7 +11,7 @@
 <?php echo Meta::toString(); ?>
 </head>
 <body>
-<div class="container_12">
+<div id="Header" class="container_12">
 	<div id="Logo" class="grid_5 suffix_7">
 		<a href="/">KeyboardFu</a>
 	</div>
@@ -24,15 +24,11 @@
 		</ul>
 	</nav>
 </div>
+<div class="container_12">
+<?php echo $content; ?>
+</div>
 <footer class="container_12">
-	<nav class="grid_12">
-		<ul>
-			<li><a href="/articles">Articles</a></li>
-			<li><a href="/portfolio">Portfolio</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
-	</nav>
+	<p>Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?></p>
 </footer>
 </body>
 </html>
