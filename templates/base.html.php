@@ -12,9 +12,27 @@
 </head>
 <body>
 <div class="container_12">
-	<div 
+	<div id="Logo" class="grid_5 suffix_7">
+		<a href="/">KeyboardFu</a>
+	</div>
+	<nav class="grid_12">
+		<ul>
+			<li><a href="/articles">Articles</a></li>
+			<li><a href="/portfolio">Portfolio</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</nav>
 </div>
 <footer class="container_12">
+	<nav class="grid_12">
+		<ul>
+			<li><a href="/articles">Articles</a></li>
+			<li><a href="/portfolio">Portfolio</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</nav>
 </footer>
 </body>
 </html>
