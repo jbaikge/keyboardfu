@@ -1,11 +1,12 @@
 <?php
 class Article extends FObject implements FObjectDatabaseStorage {
 	public static function getFromHash($hash) {
-		$result = FObjectQuery::select(__CLASS__)->hash($hash);
+		$class_name = __CLASS__;
+		$result = FObjectQuery::select($class_name)->hash($hash);
 		if (count($result)) {
 			return $result->fetch();
 		} else {
-			$object = new __CLASS__;
+			$object = new $class_name;
 			$object->hash = $hash;
 			return $object;
 		}
