@@ -1,0 +1,67 @@
+#!/usr/bin/php -f
+<?php
+require(dirname(__FILE__) . '/../webroot.conf.php');
+
+function build($directory) {
+	$meta_file = $directory . DS . 'meta.json';
+	$page_files = glob($directory . DS . '[0-9][0-9].textile');
+
+	// Sanity checks:
+	if (!is_dir($directory)) {
+		error('Directory `' . $directory . '\' does not exist');
+	}
+	if (!file_exists($meta_file)) {
+		error('Required file `' . $meta_file . '\' not found');
+	}
+	if ($page_files == false) {
+		error('No Textile files found');
+	}
+
+	$meta = meta_info($meta_file);
+	$article = new Article($meta->uuid);
+
+	$article->update();
+	//add_tags($meta->uuid, $meta->tags);
+	//render_pages($meta->uuid, $page_files);
+}
+
+function meta_info($file) {
+	$meta = json_decode(file_get_contents($file));
+	if (!property_exists($meta, 'uuid')) {
+		error('UUID required in meta.json');
+	}
+	return $meta;
+}
+
+function add_tags($uuid, array $tags) {
+	
+}
+
+function render_pages($uuid, array $files) {
+	$textile = new Textile();
+	$rendered_article_dir = dirname(__FILE__) . '/../templates/articles';
+	if (!is_dir($rendered_article_dir)) {
+		mkdir($rendered_article_dir);
+	}
+	foreach ($files as $i => $file) {
+		$filename = sprintf('%s/%s-%02d.html.php', $rendered_article_dir, $uuid, $i + 1);
+		$raw = file_get_contents($file);
+		$rendered = $textile->TextileThis($raw);
+		file_put_contents($filename, $rendered);
+	}
+}
+
+function error($msg) {
+	printf('ERROR: %s%s', $msg, PHP_EOL);
+	exit(1);
+}
+
+function main() {
+	global $argc, $argv;
+	if ($argc < 2) {
+		printf("USAGE: %s article_dir%s", $argv[0], PHP_EOL);
+	}
+	build($argv[1]);
+}
+
+main();
