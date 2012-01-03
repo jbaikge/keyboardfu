@@ -2,13 +2,13 @@
 require('webroot.conf.php');
 
 // Figure out what to load
-$url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_STRING);
-if ($url == '') {
+$path = filter_input(INPUT_GET, 'path', FILTER_SANITIZE_STRING);
+if ($path == '') {
 	header('HTTP 1.1 404 Not Found');
 	exit;
 }
 
-$article = Article::getFromURL($url);
+$article = Article::getFromURL($path);
 if ($article == null) {
 	header('HTTP 1.1 404 Not Found');
 	exit;
