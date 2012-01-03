@@ -1,0 +1,18 @@
+#!/usr/bin/python
+import sys
+import uuid
+
+def add_uuid(filename):
+	open(filename)
+
+def get_uuid(json):
+	return uuid.uuid5(uuid.NAMESPACE_URL, 'keyboardfu.com')
+
+def main():
+	if len(sys.argv) != 2:
+		print 'Usage:', sys.argv[0], '<filename>'
+		exit(1)
+	add_uuid(sys.argv[1])
+
+if __name__ == '__main__':
+	main()
