@@ -1,10 +1,18 @@
 <?php
 class Article extends FObject implements DatabaseTableStorage, TextileTemplateStorage {
+	public function getByUUID($uuid) {
+		$result = FDB::query("SELECT article_id FROM articles WHERE article_uuid = '%s' LIMIT 1", $uuid);
+		if (count($result)) {
+			return new Article($result->fetch()->article_id);
+		} else {
+			return null;
+		}
+	}
 	public function getDatabaseTableName() {
 		return 'articles';
 	}
 	public function getDatabaseIDWhere($id) {
-		return FDB::sql("article_id = %1\$d OR article_uuid = '%1\$s'", $id);
+		return FDB::sql("article_id = %d", $id);
 	}
 	public static function getModel() {
 		return new FModelManager(array(

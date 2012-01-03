@@ -5,7 +5,11 @@ interface DatabaseTableStorage {
 }
 
 class DatabaseTableStorageDriver extends FObjectDriver implements FObjectPopulateHooks, FObjectUpdateHooks {
-	public function prePopulate(&$data) {}
+	public function prePopulate(&$data) {
+		if ($data == null) {
+			$data = array();
+		}
+	}
 	public function doPopulate(&$data) {
 		$sql = sprintf("SELECT %s FROM %s WHERE %s LIMIT 1",
 			$this->getAliasedFieldList(),
@@ -13,10 +17,8 @@ class DatabaseTableStorageDriver extends FObjectDriver implements FObjectPopulat
 			$this->subject->getDatabaseIDWhere($this->subject->initialized_id)
 		);
 		$result = FDB::query($sql);
-		if ($result->count() == 1) {
-			return $result->asAssoc()->fetch();
-		} else {
-			return array();
+		if (count($result) > 0) {
+			$data = array_merge($data, $result->asAssoc()->fetch());
 		}
 	}
 	public function postPopulate(&$data) {}
@@ -26,22 +28,21 @@ class DatabaseTableStorageDriver extends FObjectDriver implements FObjectPopulat
 		FDB::query("START TRANSACTION");
 	}
 	public function doUpdate(&$data) {
-		$subject_data = $this->subject->getData();
 		$updates = array();
 		foreach ($this->subject->getModel()->database() as $alias => $options) {
 			$field = isset($options['fieldName']) ? $options['fieldName'] : $alias;
-			$updates[] = FDB::query("%s = '%s'", $field, $subject_data[$alias]);
+			$updates[] = FDB::sql("%s = '%s'", $field, $this->subject->$alias);
 		}
 		var_dump($this->subject->id);
 		if ($this->subject->id != '') {
 			$sql = sprintf("UPDATE %s SET %s WHERE %s LIMIT 1",
-				$this->getDatabaseTableName(),
+				$this->subject->getDatabaseTableName(),
 				implode(', ', $updates),
-				$this->getDatabaseIDWhere($this->subject->id)
+				$this->subject->getDatabaseIDWhere($this->subject->id)
 			);
 		} else {
 			$sql = sprintf("INSERT INTO %s SET %s",
-				$this->getDatabaseTableName(),
+				$this->subject->getDatabaseTableName(),
 				implode(', ', $updates)
 			);
 		}
