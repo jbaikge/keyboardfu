@@ -1,5 +1,7 @@
 <?php
-$config['database.auto_connect'] = false;
+$config['database.name'] = 'keyboardfu';
+$config['database.user'] = 'root';
+
 $config['secret'] = 'd57c6fc8086676a5ca088744888964b592adc50b881b085d7a187aa9c31f9027';
 $config['title'] = 'KeyboardFu';
 $config['report.frequency'] = 100;
