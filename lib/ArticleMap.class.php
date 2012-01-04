@@ -5,15 +5,17 @@ class ArticleMap {
 
 	public static function addArticle(Article $article) {
 		self::loadMap();
-		$tuple = array($article->uuid, $article->path);
-		self::$map[$article->uuid] = $tuple;
-		self::$map[$article->path] = $tuple;
+		self::$map[$article->uuid] = $article->path;
 		self::saveMap();
 	}
 	public static function getArticle($key) {
 		self::loadMap();
 		if (array_key_exists($key, self::$map)) {
-			return new Article(self::$map[$key][0]);
+			return new Article($key);
+		} else if ($uuid = array_search($key, self::$map)) {
+			return new Article($uuid);
+		} else {
+			return false;
 		}
 	}
 
