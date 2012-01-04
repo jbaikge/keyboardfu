@@ -27,7 +27,7 @@ function build($directory) {
 	$article->title = get_title($page_files[0]);
 	$article->update();
 
-	
+	ArticleMap::addArticle($article);
 }
 
 function error($msg) {
