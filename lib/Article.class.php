@@ -5,6 +5,11 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 		$pages[] = $this->addTextileFile($filename);
 		$this->pages = $pages;
 	}
+	public function generatePath($directory) {
+		$title = basename($directory);
+		$date = date('/Y/m/d/');
+		return $this->path = $date . $title;
+	}
 	/**
 	 * Required for JSONStorage
 	 */

@@ -17,70 +17,29 @@ function build($directory) {
 		error('No Textile files found');
 	}
 
+	// Build the article
 	$json = file_get_contents($meta_file);
 	$article = new Article($json);
-
 	foreach ($page_files as $file) {
 		$article->addPage($file);
 	}
-
-	var_dump($article);
+	$article->generatePath($directory);
+	$article->title = get_title($page_files[0]);
 	$article->update();
 
-/*
-	$meta = meta_info($meta_file);
-
-
-
-
-
-
-
-	$article = new Article($meta->uuid);
-	if ($article == null) {
-		$article = new Article();
-		$article->uuid = $meta->uuid;
-	}
-	$article->pubDate = strtotime($meta->pubDate);
-	$article->setTextileFiles($page_files);
-
-	var_dump($article);
-
-	$article->update();
-*/
-	//add_tags($meta->uuid, $meta->tags);
-	//render_pages($meta->uuid, $page_files);
-}
-
-function meta_info($file) {
-	$meta = json_decode();
-	if (!property_exists($meta, 'uuid')) {
-		error('UUID required in meta.json');
-	}
-	return $meta;
-}
-
-function add_tags($uuid, array $tags) {
 	
-}
-
-function render_pages($uuid, array $files) {
-	$textile = new Textile();
-	$rendered_article_dir = dirname(__FILE__) . '/../templates/articles';
-	if (!is_dir($rendered_article_dir)) {
-		mkdir($rendered_article_dir);
-	}
-	foreach ($files as $i => $file) {
-		$filename = sprintf('%s/%s-%02d.html.php', $rendered_article_dir, $uuid, $i + 1);
-		$raw = file_get_contents($file);
-		$rendered = $textile->TextileThis($raw);
-		file_put_contents($filename, $rendered);
-	}
 }
 
 function error($msg) {
 	printf('ERROR: %s%s', $msg, PHP_EOL);
 	exit(1);
+}
+
+function get_title($file) {
+	$fh = fopen($file, 'r');
+	while (!FString::startsWith($line = fgets($fh), 'h1.'));
+	$title = trim(str_replace('h1.', '', $line));
+	return $title;
 }
 
 function main() {
