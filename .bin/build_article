@@ -18,7 +18,14 @@ function build($directory) {
 	}
 
 	$meta = meta_info($meta_file);
-	$article = new Article($meta->uuid);
+	$article = Article::getByUUID($meta->uuid);
+	if ($article == null) {
+		$article = new Article();
+	}
+	$article->uuid = $meta->uuid;
+	$article->date = date('Y-m-d H:i:s', strtotime($meta->pubDate));
+
+	var_dump($article);
 
 	$article->update();
 	//add_tags($meta->uuid, $meta->tags);
