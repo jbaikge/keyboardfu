@@ -33,7 +33,6 @@ class DatabaseTableStorageDriver extends FObjectDriver implements FObjectPopulat
 			$field = isset($options['fieldName']) ? $options['fieldName'] : $alias;
 			$updates[] = FDB::sql("%s = '%s'", $field, $this->subject->$alias);
 		}
-		var_dump($this->subject->id);
 		if ($this->subject->id != '') {
 			$sql = sprintf("UPDATE %s SET %s WHERE %s LIMIT 1",
 				$this->subject->getDatabaseTableName(),
