@@ -1,12 +1,11 @@
 <?php
 class Article extends FObject implements JSONStorage, TextileTemplateStorage {
-	private static $dataDir;
-
-	public function getJSONFilename($uuid) {
-		if ($this->dataDir == null) {
-			$this->setDataDir();
+	public function getJSONFilename($uuid = null) {
+		if ($uuid == null) {
+			$uuid = $this->uuid;
 		}
-		return $this->dataDir . $uuid . '.json';
+		$filename = sprintf("%s/articles/%s.json", $_ENV['config']['cache.dir'], $uuid);
+		return $filename;
 	}
 	public static function getModel() {
 		return new FModelManager(array(
@@ -18,11 +17,14 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 			FField::make('updated')
 		));
 	}
-	private function setDataDir() {
-		$this->dataDir = $_ENV['config']['cache.dir'] . '/articles/';
-		if (!is_dir($this->dataDir)) {
-			mkdir($this->dataDir);
-			@chmod($this->dataDir, 0777);
+	public function getTextileCompiledFilename($uuid = null) {
+		if ($uuid == null) {
+			$uuid = $this->uuid;
 		}
+		$filename = sprintf("%s/article_templates/%s-%%02d.html.php", $_ENV['config']['cache.dir'], $uuid);
+		return $filename;
+	}
+	public function populate() {
+		var_dump("NOOP");
 	}
 }
