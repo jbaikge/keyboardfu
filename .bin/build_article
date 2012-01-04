@@ -21,9 +21,10 @@ function build($directory) {
 	$article = Article::getByUUID($meta->uuid);
 	if ($article == null) {
 		$article = new Article();
+		$article->uuid = $meta->uuid;
 	}
-	$article->uuid = $meta->uuid;
-	$article->date = date('Y-m-d H:i:s', strtotime($meta->pubDate));
+	$article->pubDate = strtotime($meta->pubDate);
+	$article->setTextileFiles($page_files);
 
 	var_dump($article);
 
