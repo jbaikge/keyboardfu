@@ -21,8 +21,12 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 			FField::make('pages'),
 			FField::make('title'),
 			FField::make('path'),
-			FField::make('pubDate'),
+			FField::make('pubDate')
+				->storage_json_options()
+					->callback(function($v) { return date('c', strtotime($v)); }),
 			FField::make('updated')
+				->storage_json_options()
+					->callback(function($v) { return date('c'); })
 		));
 	}
 	/**

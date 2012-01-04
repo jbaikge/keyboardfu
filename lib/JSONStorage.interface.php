@@ -21,7 +21,16 @@ class JSONStorageDriver extends FObjectDriver implements /*FObjectPopulateHooks,
 		$this->ensureDir(dirname($this->filename));
 	}
 	public function doUpdate(&$data) {
-		$this->jsonData = json_encode($this->subject->getData());
+		$data = $this->subject->getModel()->storage_json();
+		foreach ($data as $key => &$value) {
+			if (isset($value['callback'])) {
+				$callback = $value['callback'];
+				$value = $callback($this->subject->$key);
+			} else {
+				$value = $this->subject->$key;
+			}
+		}
+		$this->jsonData = json_encode($data);
 	}
 	public function postUpdate(&$data) {
 		file_put_contents($this->filename, $this->jsonData);
