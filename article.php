@@ -20,6 +20,8 @@ foreach ($article->getStylesheets() as $stylesheet) {
 	Meta::addStylesheet($stylesheet);
 }
 
+$body = FTemplate::fetch($article->getTextileTemplate());
+
 // Render
 $content = FTemplate::fetch('templates/article.html.php');
 FTemplate::render();
