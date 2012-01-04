@@ -1,5 +1,13 @@
 <?php
 class Article extends FObject implements JSONStorage, TextileTemplateStorage {
+	public function addPage($filename) {
+		$pages = $this->pages;
+		$pages[] = $this->addTextileFile($filename);
+		$this->pages = $pages;
+	}
+	/**
+	 * Required for JSONStorage
+	 */
 	public function getJSONFilename($uuid = null) {
 		if ($uuid == null) {
 			$uuid = $this->uuid;
@@ -17,6 +25,9 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 			FField::make('updated')
 		));
 	}
+	/**
+	 * Required for TextileTemplateStorage
+	 */
 	public function getTextileCompiledFilename($uuid = null) {
 		if ($uuid == null) {
 			$uuid = $this->uuid;

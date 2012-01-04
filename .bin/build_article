@@ -21,9 +21,9 @@ function build($directory) {
 	$article = new Article($json);
 
 	foreach ($page_files as $file) {
-		$article->addTextileFile($file);
+		$article->addPage($file);
 	}
-	
+
 	var_dump($article);
 	$article->update();
 

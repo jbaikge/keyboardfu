@@ -15,7 +15,7 @@ class TextileTemplateStorageDriver extends FObjectDriver implements FObjectUpdat
 		$page_num = count($this->textileFiles) + 1;
 		$compiled = $this->getCompiledFilename($page_num);
 		$this->textileFiles[$filename] = $compiled;
-		$this->pages[] = $compiled;
+		return $compiled;
 	}
 
 	public function preUpdate(&$data) {
