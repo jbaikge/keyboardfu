@@ -23,7 +23,7 @@ function build($directory) {
 		$article = new Article();
 	}
 	$article->uuid = $meta->uuid;
-	$article->date = strtotime($meta->pubDate);
+	$article->date = date('Y-m-d H:i:s', strtotime($meta->pubDate));
 
 	var_dump($article);
 
