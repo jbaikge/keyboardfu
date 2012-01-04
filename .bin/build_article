@@ -17,8 +17,26 @@ function build($directory) {
 		error('No Textile files found');
 	}
 
+	$json = file_get_contents($meta_file);
+	$article = new Article($json);
+
+	foreach ($page_files as $file) {
+		$article->addTextileFile($file);
+	}
+	
+	var_dump($article);
+	$article->update();
+
+/*
 	$meta = meta_info($meta_file);
-	$article = Article::getByUUID($meta->uuid);
+
+
+
+
+
+
+
+	$article = new Article($meta->uuid);
 	if ($article == null) {
 		$article = new Article();
 		$article->uuid = $meta->uuid;
@@ -29,12 +47,13 @@ function build($directory) {
 	var_dump($article);
 
 	$article->update();
+*/
 	//add_tags($meta->uuid, $meta->tags);
 	//render_pages($meta->uuid, $page_files);
 }
 
 function meta_info($file) {
-	$meta = json_decode(file_get_contents($file));
+	$meta = json_decode();
 	if (!property_exists($meta, 'uuid')) {
 		error('UUID required in meta.json');
 	}
