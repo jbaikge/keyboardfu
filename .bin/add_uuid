@@ -5,6 +5,20 @@ import sys
 import time
 import uuid
 
+class indent(object):
+	def __init__(self, indent="\t"):
+		self.base_indent = indent
+		self.indent = indent
+	
+	def __mul__(self, o):
+		try:
+			self.indent = self.base_indent * o
+		except TypeError:
+			return self.indent
+		return self
+	def __rmul__(self, o):
+		return self.__mul__(o)
+
 def add_uuid(filename):
 	if os.path.isdir(filename):
 		filename = os.path.join(filename, 'meta.json')
@@ -23,7 +37,7 @@ def add_uuid(filename):
 	meta['uuid'] = get_uuid(date, path)
 
 	file = open(filename, 'w')
-	file.write(json.dumps(meta, indent=8, separators=(',', ': ')).replace(' '*8, '\t'))
+	file.write(json.dumps(meta, indent=indent(), separators=(',', ': ')))
 	file.write('\n')
 	file.close()
 
