@@ -2,7 +2,6 @@
 import json
 import os.path
 import sys
-import time
 import uuid
 
 class indent(object):
@@ -29,20 +28,18 @@ def add_uuid(filename):
 	with open(filename, 'r') as file:
 		meta = json.load(file)
 
-	if not 'pubDate' in meta:
-		print '`pubDate\' not defined in meta information'
-		exit(3)
-	path = os.path.basename(os.path.dirname(filename))
-	date = time.strptime(meta['pubDate'], '%a %b %d %H:%M:%S %Z %Y')
-	meta['uuid'] = get_uuid(date, path)
+	# Don't need to add a UUID if one exists.
+	if 'uuid' in meta:
+		return
+
+	meta['uuid'] = get_uuid()
 
 	with open(filename, 'w') as file:
 		file.write(json.dumps(meta, indent=indent(), separators=(',', ': ')))
 		file.write('\n')
 
-def get_uuid(date, path):
-	url = 'http://keyboardfu.com/%s/%s'%(time.strftime('%Y/%m/%d', date), path)
-	return str(uuid.uuid5(uuid.NAMESPACE_URL, url))
+def get_uuid():
+	return str(uuid.uuid4())
 
 def main():
 	if len(sys.argv) != 2:
