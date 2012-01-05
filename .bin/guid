@@ -2,22 +2,27 @@
 import json
 import os.path
 import sys
+import time
 import uuid
 
 def add_uuid(filename):
-	if os.path.exists(filename) == False:
+	if not os.path.exists(filename):
 		print 'File does not exist:', filename
 		exit(2)
-	file = open(filename)
+	file = open(filename, 'r+')
 	meta = json.load(file)
 	if not 'pubDate' in meta:
 		print '`pubDate\' not defined in meta information'
 		exit(3)
-	
+	path = os.path.basename(os.path.dirname(filename))
+	date = time.strptime(meta.pubDate, '%x')
+	meta.uuid = get_uuid(date, path)
+	json.dump(file, indent = 4)
 	file.close()
 
-def get_uuid(json):
-	return uuid.uuid5(uuid.NAMESPACE_URL, 'keyboardfu.com')
+def get_uuid(date, path):
+	url = 'http://keyboardfu.com/%s/%s'%(time.strftime('%Y/%m/%d', date), json.path)
+	return uuid.uuid5(uuid.NAMESPACE_URL, url)
 
 def main():
 	if len(sys.argv) != 2:
