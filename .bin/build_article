@@ -1,4 +1,4 @@
-#!/usr/bin/php -f
+#!/usr/bin/env php
 <?php
 require(dirname(__FILE__) . '/../webroot.conf.php');
 
