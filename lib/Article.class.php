@@ -22,7 +22,7 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 		if (!isset($uuid)) {
 			return false;
 		}
-		return sprintf("%s/articles/%s.json", $_ENV['config']['cache.dir'], $uuid);
+		return sprintf("%s/articles/%s/data.json", $_ENV['config']['cache.dir'], basename($this->path));
 	}
 	public static function getModel() {
 		return new FModelManager(array(
@@ -41,11 +41,7 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 	/**
 	 * Required for TextileTemplateStorage
 	 */
-	public function getTextileCompiledFilename($uuid = null) {
-		if ($uuid == null) {
-			$uuid = $this->uuid;
-		}
-		$filename = sprintf("%s/article_templates/%s-%%02d.html.php", $_ENV['config']['cache.dir'], $uuid);
-		return $filename;
+	public function getTextileCompiledFilename() {
+		return sprintf("%s/articles/%s/%%02d.html.php", $_ENV['config']['cache.dir'], basename($this->path));
 	}
 }
