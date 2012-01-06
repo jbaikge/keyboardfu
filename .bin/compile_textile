@@ -18,7 +18,6 @@ $textile = new Textile();
 $compiled = $textile->TextileThis($input);
 
 if (isset($argv[2])) {
-	@mkdir(dirname($argv[2]), 0755, true);
 	file_put_contents($argv[2], $compiled);
 } else {
 	echo $compiled;
