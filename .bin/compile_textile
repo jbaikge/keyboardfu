@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+require(dirname(__FILE__) . '/../lib/textile/classTextile.php');
+
+if ($argc < 2 || $argc > 3) {
+	echo "USAGE: {$argv[0]} TEXTILE_FILE [OUTPUT_FILE]\n";
+	exit(1);
+}
+
+if (!file_exists($argv[1])) {
+	echo "FILE DOES NOT EXIST: {$argv[1]}\n";
+	exit(2);
+}
+
+$input = file_get_contents($argv[1]);
+
+$textile = new Textile();
+$compiled = $textile->TextileThis($input);
+
+if (isset($argv[2])) {
+	@mkdir(dirname($argv[2]), 0755, true);
+	file_put_contents($argv[2], $compiled);
+} else {
+	echo $compiled;
+}
