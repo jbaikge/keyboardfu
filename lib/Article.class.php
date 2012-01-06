@@ -7,7 +7,7 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 	}
 	public function generatePath($directory) {
 		$title = basename($directory);
-		$date = date('/Y/m/d/', strtotime($this->pubDate));
+		$date = date('Y/m/d/', strtotime($this->pubDate));
 		return $this->path = $date . $title;
 	}
 	/**
@@ -47,8 +47,5 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 		}
 		$filename = sprintf("%s/article_templates/%s-%%02d.html.php", $_ENV['config']['cache.dir'], $uuid);
 		return $filename;
-	}
-	public function populate() {
-		var_dump("NOOP");
 	}
 }
