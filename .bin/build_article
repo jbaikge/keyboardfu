@@ -20,10 +20,10 @@ function build($directory) {
 	// Build the article
 	$json = file_get_contents($meta_file);
 	$article = new Article($json);
+	$article->generatePath($directory);
 	foreach ($page_files as $file) {
 		$article->addPage($file);
 	}
-	$article->generatePath($directory);
 	$article->title = get_title($page_files[0]);
 	$article->update();
 
