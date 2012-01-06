@@ -1,0 +1,84 @@
+h1. Documentation is Making Your Site Explode
+
+Seems a pretty bold claim that something which is designed to hide code is actually causing a performance hit. Since the introduction of PHP's "Reflection":http://php.net/manual/en/book.reflection.php library, JavaDoc comments have started adding to memory usage.
+
+h2. Why is There Java in My PHP?
+
+In case you haven't been formally introduced, JavaDoc comments are a style of multi-line comments "introduced by Java":http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html. Comment blocks start with `/**` instead of `/*` and generally appear above function, class, or method definitions as documentation.
+
+These comments can generate portable documentation when parsed by tools like "Doxygen":http://www.stack.nl/~dimitri/doxygen/index.html. Within these comment blocks, special attributes are available to document the adjacent code:
+
+* `@param` will explain the first function parameter
+* `@return` will describe what is returned by the function
+* `@see` will link to another class, function, or method
+
+h2. Just the Class, Ma'am
+
+Under normal circumstances, loading a documented class in any language should ignore commented lines and utilize enough memory to operate the class. However, in PHP 5, there is a funky library that will reflect classes to gain information about their internals. Part of this reflection data includes the class, method, or function documentation. Now that this information is retrievable, it must also load into memory.
+
+The ability to reflect documentation is not a mistake or pitfall. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
+
+	class Zoo {
+		/**
+		 * @route /zoo/flamingos
+		 */
+		public function getFlamingos() {
+			return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
+		}
+	}
+
+h2. Regaining a Sleek Profile
+
+Everything seems pretty dark and stormy at this point: Documenting PHP suddenly has negative consequences. Now we need to find a way to solve a few problems:
+
+1. Maintain documentation within the code
+2. Continue to use Doxygen to compile docs
+3. Easily retrofit the solution on all existing documented code
+4. Distribute the new way of documenting to other team members and make sure they continue to document their code
+
+If you're maintaining many large codebases, these considerations carry their own consequences. These are the three potential solutions I came up with when presented with this problem:
+
+h3. Leave it Alone
+
+_If it ain't broke, don't fix it._ What's the fun in that? 
+
+h3. Strip Comments Out in a Post-Commit Hook
+
+At work, I use subversion to handle our code. We have a bunch of pre- and post-commit hooks to take care of lint checking and notifying developers of commits, why not add one to run `php -w` on each PHP file and store it in a different area of the repository?
+
+That's great and all, until something goes awry and someone needs to hotfix code with no whitespace.
+
+h3. _BANG!_ - Surprise it
+
+Sneak up on the code and scare it to death. It'll freak the interpreter out so much that we can regain memory.
+
+After pouring through the Doxygen docs for a few days, I stumbled upon [this gem](http://www.stack.nl/~dimitri/doxygen/docblocks.html). Qt style comments. Turns out, if you convert the typical hack splat splat (`/**`) to hack splat bang (`/*!`), PHP thinks it's a normal C block comment, and Doxygen still thinks it's a documentation block.
+
+h2. How Much of a Difference Can a Single Character Make?
+
+The numbers don't lie. I took some classes with existing documentation and loaded them into a script, calling [memory\_get\_usage()](http://php.net/manual/en/function.memory-get-usage.php) before and after the load to gain the memory delta from loading the class.
+
+
+|=. Comparison of different modifications to documented PHP classes - /** ... */ Normal JavaDoc Style; /*! ... */ Qt Style; <code>php -w</code> PHP's native whitespace and comment stripping command.
+|^.
+|_. Class|_. /** ... */|_. /*! ... */|_. <code>php -w</code>|
+|~.
+|_. Memory Reduction|_. 0.000%|_. 7.572%|_. 7.599%|
+|-.
+|_. FDataModel            |101096|94968|94968|
+|_. FDataModelField       |67288|61976|61928|
+|_. FDataModelTable       |98560|94240|94192|
+|_. FDB                   |99152|92504|92472|
+|_. FFormFactory          |12112|11408|11440|
+|_. FFormUtils            |16344|15352|15328|
+|_. FField                |30464|27200|27200|
+|_. FTemplate             |41216|37120|37128|
+|_. FTemplateRenderFilter |5880 |3960 |3952 |
+|_. FTemplateUtils        |43968|36792|36784|
+|_. FFileSystem           |11808|10920|10904|
+|_. FString               |41000|38840|38840|
+|_. FStringCycle          |13056|11848|11848|
+|_. FDOMDocument          |17872|16832|16808|
+|_. FDOMNode              |25344|23864|23864|
+
+The above classes are used in a homebrew framework and the above table is a decent representation of how much memory is typically used on a dynamic website. 7.5% doesn't sound like very much for a single page, but once a site becomes popular, that extra freed memory could equate to thousands of extra hits per second without a hardware upgrade.
