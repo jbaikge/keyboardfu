@@ -14,19 +14,20 @@ class JSONStorageDriver extends FObjectDriver implements FObjectPopulateHooks, F
 	}
 	public function doPopulate(&$data) {
 		$encoded = file_get_contents($this->filename);
-		$decoded = json_decode($encoded);
+		$decoded = json_decode($encoded, true);
 		if (json_last_error() == JSON_ERROR_NONE) {
 			$data = array_merge($data, $decoded);
 		} else {
 			throw new JSONStorageDecodeException(json_last_error());
 		}
 	}
-	public function postUpdate(&$data) {
+	public function postPopulate(&$data) {
 	}
-	public function failUpdate($exception) {
+	public function failPopulate($exception) {
 	}
 	public function preUpdate(&$data) {
-		$this->ensureDir(dirname($this->getFilename()));
+		$this->filename = $this->getFilename();
+		$this->ensureDir(dirname($this->filename));
 	}
 	public function doUpdate(&$data) {
 		$data = $this->subject->getModel()->storage_json();
