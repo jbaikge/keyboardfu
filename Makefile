@@ -12,7 +12,10 @@ clean:
 	rm -rf cache/articles
 
 cache/%.html.php: %.textile
+	mkdir -p $(dir $@)
 	./.bin/compile_textile $< $@
 
 cache/%/data.json: %/meta.json
+	mkdir -p $(dir $@)
 	cp $< $@
+
