@@ -1,12 +1,11 @@
 <?php
 interface JSONStorage {
-	public function getJSONFilename($uuid = null);
+	public function getJSONFilename();
 }
 
-class JSONStorageDriver extends FObjectDriver implements /*FObjectPopulateHooks,*/ FObjectUpdateHooks {
+class JSONStorageDriver extends FObjectDriver implements FObjectPopulateHooks, FObjectUpdateHooks {
 	private $filename;
 	private $jsonData;
-	/*
 	public function prePopulate(&$data) {
 		if (!is_array($data)) {
 			$data = array();
@@ -15,10 +14,8 @@ class JSONStorageDriver extends FObjectDriver implements /*FObjectPopulateHooks,
 	public function doPopulate(&$data) {
 
 	}
-	*/
 	public function preUpdate(&$data) {
-		$this->filename = $this->subject->getJSONFilename();
-		$this->ensureDir(dirname($this->filename));
+		$this->ensureDir(dirname($this->getFilename()));
 	}
 	public function doUpdate(&$data) {
 		$data = $this->subject->getModel()->storage_json();
@@ -45,4 +42,13 @@ class JSONStorageDriver extends FObjectDriver implements /*FObjectPopulateHooks,
 			@chmod($dir, 0777);
 		}
 	}
+	private function getFilename() {
+		$filename = $this->subject->getJSONFilename();
+		if ($filename == false) {
+			throw new JSONStorageNoFile('Could not determine filename');
+		}
+		return $filename;
+	}
 }
+
+class JSONStorageNoFile extends Exception {}

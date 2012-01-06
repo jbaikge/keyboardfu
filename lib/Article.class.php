@@ -7,18 +7,22 @@ class Article extends FObject implements JSONStorage, TextileTemplateStorage {
 	}
 	public function generatePath($directory) {
 		$title = basename($directory);
-		$date = date('/Y/m/d/');
+		$date = date('/Y/m/d/', strtotime($this->pubDate));
 		return $this->path = $date . $title;
 	}
 	/**
 	 * Required for JSONStorage
 	 */
-	public function getJSONFilename($uuid = null) {
-		if ($uuid == null) {
+	public function getJSONFilename() {
+		if (isset($this->uuid)) {
 			$uuid = $this->uuid;
+		} else if (isset($this->initialized_id)) {
+			$uuid = $this->initialized_id;
 		}
-		$filename = sprintf("%s/articles/%s.json", $_ENV['config']['cache.dir'], $uuid);
-		return $filename;
+		if (!isset($uuid)) {
+			return false;
+		}
+		return sprintf("%s/articles/%s.json", $_ENV['config']['cache.dir'], $uuid);
 	}
 	public static function getModel() {
 		return new FModelManager(array(
