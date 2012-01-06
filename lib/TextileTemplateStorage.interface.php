@@ -1,6 +1,6 @@
 <?php
 interface TextileTemplateStorage {
-	public function getTextileCompiledFilename($uuid = null);
+	public function getTextileCompiledFilename();
 }
 
 class TextileTemplateStorageDriver extends FObjectDriver implements FObjectUpdateHooks {
