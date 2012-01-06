@@ -22,7 +22,7 @@ class TextileTemplateStorageDriver extends FObjectDriver implements FObjectUpdat
 		$this->textile = new Textile();
 		$dir = dirname($this->subject->getTextileCompiledFilename());
 		if (!is_dir($dir)) {
-			mkdir($dir);
+			mkdir($dir, 0777, true);
 			@chmod($dir, 0777);
 		}
 	}

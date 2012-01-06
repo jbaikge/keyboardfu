@@ -50,7 +50,7 @@ class JSONStorageDriver extends FObjectDriver implements FObjectPopulateHooks, F
 	}
 	private function ensureDir($dir) {
 		if (!is_dir($dir)) {
-			mkdir($dir);
+			mkdir($dir, 0777, true);
 			@chmod($dir, 0777);
 		}
 	}
