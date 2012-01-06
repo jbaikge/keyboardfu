@@ -10,9 +10,20 @@ class JSONStorageDriver extends FObjectDriver implements FObjectPopulateHooks, F
 		if (!is_array($data)) {
 			$data = array();
 		}
+		$this->filename = $this->getFilename();
 	}
 	public function doPopulate(&$data) {
-
+		$encoded = file_get_contents($this->filename);
+		$decoded = json_decode($encoded);
+		if (json_last_error() == JSON_ERROR_NONE) {
+			$data = array_merge($data, $decoded);
+		} else {
+			throw new JSONStorageDecodeException(json_last_error());
+		}
+	}
+	public function postUpdate(&$data) {
+	}
+	public function failUpdate($exception) {
 	}
 	public function preUpdate(&$data) {
 		$this->ensureDir(dirname($this->getFilename()));
@@ -45,10 +56,12 @@ class JSONStorageDriver extends FObjectDriver implements FObjectPopulateHooks, F
 	private function getFilename() {
 		$filename = $this->subject->getJSONFilename();
 		if ($filename == false) {
-			throw new JSONStorageNoFile('Could not determine filename');
+			throw new JSONStorageNoFileException('Could not determine filename');
 		}
 		return $filename;
 	}
 }
 
-class JSONStorageNoFile extends Exception {}
+class JSONStorageNoFileException extends Exception {}
+
+class JSONStorageDecodeException extends Exception {}
