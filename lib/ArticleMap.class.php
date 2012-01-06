@@ -12,7 +12,7 @@ class ArticleMap {
 		self::loadMap();
 		if (array_key_exists($key, self::$map)) {
 			return new Article($key);
-		} else if ($uuid = array_search($key, self::$map)) {
+		} else if ($uuid = array_search(trim($key, '/'), self::$map)) {
 			return new Article($uuid);
 		} else {
 			return false;
