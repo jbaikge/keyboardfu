@@ -8,9 +8,9 @@ In case you haven't been formally introduced, JavaDoc comments are a style of mu
 
 These comments can generate portable documentation when parsed by tools like "Doxygen":http://www.stack.nl/~dimitri/doxygen/index.html. Within these comment blocks, special attributes are available to document the adjacent code:
 
-* `@param` will explain the first function parameter
-* `@return` will describe what is returned by the function
-* `@see` will link to another class, function, or method
+* @param will explain the first function parameter
+* @return will describe what is returned by the function
+* @see will link to another class, function, or method
 
 h2. Just the Class, Ma'am
 
@@ -18,14 +18,14 @@ Under normal circumstances, loading a documented class in any language should ig
 
 The ability to reflect documentation is not a mistake or pitfall. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
 
-	class Zoo {
-		/**
-		 * @route /zoo/flamingos
-		 */
-		public function getFlamingos() {
-			return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
-		}
+class Zoo {
+	/**
+	 * @route /zoo/flamingos
+	 */
+	public function getFlamingos() {
+		return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
 	}
+}
 
 h2. Regaining a Sleek Profile
 
