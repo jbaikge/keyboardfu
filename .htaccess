@@ -11,7 +11,8 @@ php_value magic_quotes_gpc 0
 #php_value memory_limit 256M
 
 RewriteEngine On
-RewriteRule ^[0-9]{4}/[0-9]{2}/[0-9]{2}/.+$ /article.php?path=$0 [L]
+RewriteRule ^([0-9]{4}/[0-9]{2}/[0-9]{2}/[^/]+)/([0-9]+)/?$ /article.php?path=$1&page=$2 [L]
+RewriteRule ^[0-9]{4}/[0-9]{2}/[0-9]{2}/[^/]+/?$ /article.php?path=$0 [L]
 RewriteRule ^[0-9]{4}/[0-9]{2}/[0-9]{2}/?$ /archive.php?date=$0 [L]
 RewriteRule ^[0-9]{4}/[0-9]{2}/?$ /archive.php?date=$0 [L]
 RewriteRule ^[0-9]{4}/?$ /archive.php?date=$0 [L]
