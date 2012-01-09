@@ -25,7 +25,7 @@ cache/%.html.php: %.textile | $$(@D)
 
 # .SECONDEXPANSION not needed here, but left for doc purposes
 .SECONDEXPANSION:
-cache/%/data.php: %/meta.json | $$(@D)
+cache/%/data.php: %/meta.json %/[0-9][0-9].textile | $$(@D)
 	./.bin/compile_data $< $@
 
 # cache/articles/<title>
