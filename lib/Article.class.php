@@ -1,47 +1,13 @@
 <?php
-class Article extends FObject implements JSONStorage, TextileTemplateStorage {
-	public function addPage($filename) {
-		$pages = $this->pages;
-		$pages[] = $this->addTextileFile($filename);
-		$this->pages = $pages;
-	}
-	public function generatePath($directory) {
-		$title = basename($directory);
-		$date = date('Y/m/d/', strtotime($this->pubDate));
-		return $this->path = $date . $title;
-	}
-	/**
-	 * Required for JSONStorage
-	 */
-	public function getJSONFilename() {
-		if (isset($this->uuid)) {
-			$uuid = $this->uuid;
-		} else if (isset($this->initialized_id)) {
-			$uuid = $this->initialized_id;
-		}
-		if (!isset($uuid)) {
-			return false;
-		}
-		return sprintf("%s/articles/%s/data.json", $_ENV['config']['cache.dir'], basename($this->path));
-	}
+class Article extends FObject {
 	public static function getModel() {
 		return new FModelManager(array(
-			FField::make('uuid'),
+			FField::make('modified'),
 			FField::make('pages'),
+			FField::make('published'),
+			FField::make('tags'),
 			FField::make('title'),
-			FField::make('path'),
-			FField::make('pubDate')
-				->storage_json_options()
-					->callback(function($v) { return date('c', strtotime($v)); }),
-			FField::make('updated')
-				->storage_json_options()
-					->callback(function($v) { return date('c'); })
+			FField::make('url'),
 		));
-	}
-	/**
-	 * Required for TextileTemplateStorage
-	 */
-	public function getTextileCompiledFilename() {
-		return sprintf("%s/articles/%s/%%02d.html.php", $_ENV['config']['cache.dir'], basename($this->path));
 	}
 }
