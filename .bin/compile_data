@@ -50,9 +50,9 @@ $data['url'] = FString::date($data['published'], 'Y/m/d/') . basename(dirname($a
 // Generate data output/file
 ob_start();
 echo '<?php' . PHP_EOL;
-echo '$data = ';
-var_export($data);
-echo ';';
+foreach ($data as $key => $value) {
+	printf("\$this->%s = %s;\n", $key, var_export($value, true));
+}
 
 if ($argc == 3) {
 	file_put_contents($argv[2], ob_get_clean());
