@@ -3,7 +3,7 @@
 require(dirname(__FILE__) . '/../lib/textile/classTextile.php');
 
 if ($argc < 2 || $argc > 3) {
-	echo "USAGE: {$argv[0]} TEXTILE_FILE [OUTPUT_FILE]\n";
+	echo "USAGE: {$argv[0]} file.textile [file.html]\n";
 	exit(1);
 }
 
