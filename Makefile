@@ -1,5 +1,5 @@
 DATA_SRC := $(wildcard articles/*/meta.json)
-DATA_OBJ := $(DATA_SRC:%/meta.json=cache/%/data.json)
+DATA_OBJ := $(DATA_SRC:%/meta.json=cache/%/data.php)
 
 TEXTILE_SRC := $(wildcard articles/*/[0-9][0-9].textile)
 TEXTILE_OBJ := $(TEXTILE_SRC:%.textile=cache/%.html.php)
@@ -15,7 +15,7 @@ cache/%.html.php: %.textile
 	mkdir -p $(dir $@)
 	./.bin/compile_textile $< $@
 
-cache/%/data.json: %/meta.json
+cache/%/data.php: %/meta.json
 	mkdir -p $(dir $@)
-	cp $< $@
+	./.bin/compile_data $< $@
 

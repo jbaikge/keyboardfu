@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+if ($argc < 2 || $argc > 3) {
+	echo "USAGE: {$argv[0]} meta.json [output.php]\n";
+	exit(1);
+}
+
+if (!file_exists($argv[1])) {
+	echo "FILE DOES NOT EXIST: {$argv[1]}\n";
+	exit(2);
+}
+
+// Read in JSON
+$input = file_get_contents($argv[1]);
+$data = json_decode($input, true);
+
+// Determine the last time a portion of an article was modified
+$textiles = glob(dirname($argv[1]) . '/[0-9][0-9].textile');
+$oldest = array_reduce(
+	$textiles,
+	function ($timestamp, $file) {
+		$modified = filemtime($file);
+		return ($modified > $timestamp) ? $modified : $timestamp;
+	},
+	0
+);
+
+// Normalize data
+$data['published'] = date('c', strtotime($data['published']));
+$data['last_modified'] = date('c', $oldest);
+$data['url'] = date('Y/m/d/', strtotime($data['published'])) . basename(dirname($argv[1]));
+
+ob_start();
+echo '<?php $data = ';
+var_export($data);
+echo ';';
+
+if ($argc == 3) {
+	file_put_contents($argv[2], ob_get_clean());
+}
