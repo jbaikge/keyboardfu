@@ -9,7 +9,7 @@ if ($path == '') {
 	exit;
 }
 
-$article = ArticleMap::getArticle($path);
+$article = Article::getFromURL($path);
 if ($article == null) {
 	header('HTTP 1.1 404 Not Found');
 	echo 'article not found';
