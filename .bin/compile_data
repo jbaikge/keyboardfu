@@ -1,5 +1,7 @@
 #!/usr/bin/env php
 <?php
+require(dirname(__FILE__) . '/../webroot.conf.php');
+
 if ($argc < 2 || $argc > 3) {
 	echo "USAGE: {$argv[0]} meta.json [output.php]\n";
 	exit(1);
@@ -14,8 +16,14 @@ if (!file_exists($argv[1])) {
 $input = file_get_contents($argv[1]);
 $data = json_decode($input, true);
 
-// Determine the last time a portion of an article was modified
+// Extract textiles
 $textiles = glob(dirname($argv[1]) . '/[0-9][0-9].textile');
+if ($textiles == false || count($textiles) == 0) {
+	echo "ERROR: Could not find any textile files for this article.\n";
+	exit(3);
+}
+
+// Determine the last time a portion of an article was modified
 $oldest = array_reduce(
 	$textiles,
 	function ($timestamp, $file) {
@@ -25,13 +33,24 @@ $oldest = array_reduce(
 	0
 );
 
-// Normalize data
-$data['published'] = date('c', strtotime($data['published']));
-$data['last_modified'] = date('c', $oldest);
-$data['url'] = date('Y/m/d/', strtotime($data['published'])) . basename(dirname($argv[1]));
+// Page count
+$data['pages'] = count($textiles);
 
+// Extract article title
+$fh = fopen($textiles[0], 'r');
+while (!FString::startsWith($line = fgets($fh), 'h1.'));
+$data['title'] = trim(str_replace('h1.', '', $line));
+
+
+// Normalize data
+$data['published'] = FString::date($data['published'], 'c');
+$data['modified'] = FString::date($oldest, 'c');
+$data['url'] = FString::date($data['published'], 'Y/m/d/') . basename(dirname($argv[1]));
+
+// Generate data output/file
 ob_start();
-echo '<?php $data = ';
+echo '<?php' . PHP_EOL;
+echo '$data = ';
 var_export($data);
 echo ';';
 
