@@ -1,0 +1,23 @@
+h1. Safe Input With PHP's Filter Functions, Part 1
+
+In any web application that does more than just barf content to the user's browser, users are allowed to provide input. The input could be as simple as the page number in a paged list of items, or as complex as a site-wide unique username containing only a subset of characters. The question becomes one of trust: Do you really trust the person on the other end of the screen isn't going to fiddle with values to make your site fall over and drool?
+
+.h2. Not Just Another @filter_input@ Article
+
+There are plenty of articles on the web regarding the use of @filter_input@ and it's friends. To learn about the basics, go read those and come back. I'll let them soapbox the _Thou Shalt Always Filter Thine Inputs_ speech.
+
+This article is part of a multi-part[#multi-part] series where we'll look at efficiently managing and applying filters in a more centralized and collaborative environment.
+
+note#multi-part. Feel free to substitute an arbitrary non-negative integer here, I'm feeling non-committal.
+
+.h2. First Things First: @FILTER_CALLBACK@
+
+Callbacks are the red-headed step child of PHP's goodie list. They aren't as cleanly implemented as some other languages, but they do shine when they're used correctly.
+
+Let's filter a value with a callback:
+
+@$value = filter_var('monkey', FILTER_CALLBACK, array('options' => strlen));@
+
+Congratulations, you just took the user's input and threw it away because all you wanted was it's length. Useless? Maybe not.
+
+notelist.
