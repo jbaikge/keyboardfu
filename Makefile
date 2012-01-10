@@ -4,7 +4,13 @@ DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
 TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
 
 .PHONY: all
-all: $(TEXTILE_OBJ) $(DATA_OBJ)
+all: textile data
+
+.PHONY: textile
+textile: $(TEXTILE_OBJ)
+
+.PHONY: data
+data: $(DATA_OBJ)
 
 .PHONY: clean
 clean:
@@ -30,15 +36,15 @@ info:
 .SECONDEXPANSION:
 cache/%.html.php: %.textile | $$(@D)
 	@./.bin/compile_textile $< $@
-	@echo T: $@
+	@printf "%8s: %s\n" TEXTILE $@
 
 # .SECONDEXPANSION not needed here, but left for doc purposes
 .SECONDEXPANSION:
 cache/%/data.php: %/meta.json %/[0-9][0-9].textile | $$(@D)
 	@./.bin/compile_data $< $@
-	@echo D: $@
+	@printf "%8s: %s\n" DATA $@
 
 # cache/articles/<title>
 $(OBJDIRS):
 	@mkdir -p dir $@
-	@echo M: $@
+	@printf "%8s: %s\n" MKDIR $@
