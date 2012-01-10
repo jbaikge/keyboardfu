@@ -1,10 +1,7 @@
-DATA_SRC := $(wildcard articles/*/meta.json)
-DATA_OBJ := $(DATA_SRC:%/meta.json=cache/%/data.php)
-
-TEXTILE_SRC := $(wildcard articles/*/[0-9][0-9].textile)
-TEXTILE_OBJ := $(TEXTILE_SRC:%.textile=cache/%.html.php)
-
-OBJ_DIRS := $(dir $(DATA_OBJ))
+SRCDIRS := $(dir $(wildcard articles/*/meta.json))
+OBJDIRS := $(addprefix cache/,$(SRCDIRS))
+DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
+TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
 
 .PHONY: all
 all: $(TEXTILE_OBJ) $(DATA_OBJ)
@@ -12,6 +9,17 @@ all: $(TEXTILE_OBJ) $(DATA_OBJ)
 .PHONY: clean
 clean:
 	rm -rf cache/articles
+
+.PHONY: info
+info:
+	@echo Source Directories:
+	@for D in $(SRCDIRS); do echo '    '$$D; done
+	@echo Object Directories:
+	@for D in $(OBJDIRS); do echo '    '$$D; done
+	@echo Compiled Data:
+	@for F in $(DATA_OBJ); do echo '    '$$F; done
+	@echo Compiled HTML:
+	@for F in $(TEXTILE_OBJ); do echo '    '$$F; done
 
 # .SECONDEXPANSION used to turn "cache/articles/<title>/01.html.php" into
 # "cache/articles/<title>" and call the rule below. The expansion is used to hit
@@ -21,13 +29,16 @@ clean:
 # prerequisite if it does not exist.
 .SECONDEXPANSION:
 cache/%.html.php: %.textile | $$(@D)
-	./.bin/compile_textile $< $@
+	@./.bin/compile_textile $< $@
+	@echo T: $@
 
 # .SECONDEXPANSION not needed here, but left for doc purposes
 .SECONDEXPANSION:
 cache/%/data.php: %/meta.json %/[0-9][0-9].textile | $$(@D)
-	./.bin/compile_data $< $@
+	@./.bin/compile_data $< $@
+	@echo D: $@
 
 # cache/articles/<title>
-$(OBJ_DIRS):
-	mkdir -p dir $@
+$(OBJDIRS):
+	@mkdir -p dir $@
+	@echo M: $@
