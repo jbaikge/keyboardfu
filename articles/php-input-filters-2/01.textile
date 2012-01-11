@@ -1,0 +1,57 @@
+h1. Safe Input With PHP's Filter Functions, II
+
+Continuing from "Safe Input With PHP's Filter Functions, I":/2012/01/18/php-input-filter-1, it's time to nail down efficient filter definitions.
+
+h2. A Peek of What's To Come
+
+I read books backwards: Read the first few pages, read the last chapter, then go back to the front. Knowing the end helps me know what direction I should look in when reading the middle.
+
+Let's look at the end of the book, I want the final filtering definition to look like this:
+
+@$values = filter_input_array(INPUT_POST, array(
+	'transfer_date' => CustomFilters::timstamp(),
+	'desired_funds' => CustomFilters::validFundRange()
+));@
+
+h2. Science!
+
+Based on the learning done in the previous article, there are a few things to note:
+
+# @filter_input_array@ and @filter_var_array@ take an array where the key is the name of the incoming data, and the value is some definition of how that data should filter/validate
+# The value for a data item contains everything necessary to define it including the filter type and any options
+# When using the @FILTER_CALLBACK@ type, any data coming in from the user is sent to the first argument of the callback function
+
+From this information, it's pretty straightforward to hypothesize that a single function could wear two hats: Providing the data definition, and filtering or validating the data.
+
+h2. Validation with Veracity
+
+Without getting obnoxious, let's start with some very simple examples and work up to something a bit more sassy. The trick to this is remembering about @func_num_args()@ and @func_get_args()@. The former will tell us if we are supposed to provide the data definition or do work with incoming data. The latter will fetch the data to do the dirty work with.
+
+h3. Same Face, New Name
+
+@class CustomFilters {
+	public static function validInt() {
+		return FILTER_VALIDATE_INT;
+	}
+}
+
+$values = filter_input_array(INPUT_POST, array(
+	'ints_rule' => CustomFilters::validInt()
+));@
+
+Using an existing filter, there's no need to worry about incoming data. Also works with the more complex array definitions:
+
+@class CustomFilters {
+	public static function validInt() {
+		return array(
+		'filter' => FILTER_VALIDATE_INT,
+		'options' => array(
+			'min_range' => 1,
+			'max_range' => 100
+		);
+	}
+}
+
+$values = filter_input_array(INPUT_POST, array(
+	'ints_rule' => CustomFilters::validInt()
+));@
