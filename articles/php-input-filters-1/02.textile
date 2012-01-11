@@ -44,15 +44,4 @@ A million dollars sounds great, how about we transfer that _now_[#strtotime-now]
 
 note#strtotime-now. Yes, _now_ is a valid value for @strtotime@.
 
-h2. Centralized Custom Filtering to the Rescue
-
-I read books backwards: Read the first few pages, read the last chapter, then go back to the front. Knowing the end helps me know what direction I should look in when reading the middle.
-
-Let's look at the end of the book, I want the final filtering definition to look like this:
-
-@$values = filter_input_array(INPUT_POST, array(
-	'transfer_date' => CustomFilters::timstamp(),
-	'desired_funds' => CustomFilters::validFundRange()
-));@
-
 notelist.

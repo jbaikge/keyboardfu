@@ -1,4 +1,4 @@
-h1. Safe Input With PHP's Filter Functions, Part 1
+h1. Safe Input With PHP's Filter Functions, I
 
 In any web application that does more than just barf content to the user's browser, users are allowed to provide input. The input could be as simple as the page number in a paged list of items, or as complex as a site-wide unique username containing only a subset of characters. The question becomes one of trust: Do you really trust the person on the other end of the screen isn't going to fiddle with values to make your site fall over and drool?
 
