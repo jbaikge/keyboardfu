@@ -1,0 +1,58 @@
+h2. Saving Time With Centralized Custom Filters
+
+The goal is to save development time and gain consistency. Trying to remember the syntax for that array is annoying. Also, what happens if one developer creates a time-cast function for one site, and you need one so you go through the motions of recreating it? That wheel's going to be square after enough reinventions.
+
+The obvious jump is a small, static, class. We'll call it @CustomFilters@. This class will hold a few static methods which validate or filter when passed in as the callback for a filter function. To place something from the @CustomFilters@ class, say a timestamp-casting filter:
+
+@$value = filter_var('monkey', FILTER_CALLBACK, array('options' => array('CustomFilters', 'castTimestamp')));@
+
+But, this has that goofy syntax again, and I just said I hate it.
+
+h2. Enter @filter_input_array@
+
+To help out with the next section, you need a firm grasp of @filter_input_array@ or @filter_var_array@. This is the psychotic cousin to the tame @filter_input@ and @filter_var@, which only work on one value at a time. The former filtering functions take an array mapping of some key and map it to one of the following:
+
+# A single filter (@FILTER_SANITIZE_STRING@)
+# A single filter with a bunch of options
+
+h3. Simple Filtering
+
+@$values = filter_input_array(INPUT_POST, array(
+	'transfer_date' => FILTER_SANITIZE_STRING,
+	'desired_funds'  => FILTER_VALIDATE_INT
+));@
+
+Child's play.
+
+h3. Bunch of Options
+
+@$values = filter_input_array(INPUT_POST, array(
+	'transfer_date' => array(
+		'filter' => FILTER_CALLBACK,
+		'options' => 'strtotime'
+	),
+	'desired_funds' => array(
+		'filter' => FILTER_VALIDATE_INT,
+		'options' => array(
+			'min_range' => 1,
+			'max_range' => 1e6
+		)
+	)
+));@
+
+A million dollars sounds great, how about we transfer that _now_[#strtotime-now]!
+
+note#strtotime-now. Yes, _now_ is a valid value for @strtotime@.
+
+h2. Centralized Custom Filtering to the Rescue
+
+I read books backwards: Read the first few pages, read the last chapter, then go back to the front. Knowing the end helps me know what direction I should look in when reading the middle.
+
+Let's look at the end of the book, I want the final filtering definition to look like this:
+
+@$values = filter_input_array(INPUT_POST, array(
+	'transfer_date' => CustomFilters::timstamp(),
+	'desired_funds' => CustomFilters::validFundRange()
+));@
+
+notelist.
