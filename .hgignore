@@ -3,3 +3,4 @@ syntax: glob
 cache
 .sass-cache
 *.pyc
+*.sublime-workspace
