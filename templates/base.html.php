@@ -17,10 +17,10 @@
 	</div>
 	<nav class="grid_12">
 		<ul>
-			<li><a href="/articles">Articles</a></li>
-			<li><a href="/portfolio">Portfolio</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
+			<li><a href="/archive">Articles</a></li>
+			<li><a href="/coming-soon">Portfolio</a></li>
+			<li><a href="/coming-soon">About</a></li>
+			<li><a href="/coming-soon">Contact</a></li>
 		</ul>
 	</nav>
 </div>
