@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
-
+// TODO: allow for an arg describing where to output the array to. Could be the
+// first arg or the last one (like cp)
 function get_date($filename) {
 	$fh = fopen($filename, 'r');
 	$date = null;
@@ -32,3 +33,4 @@ ob_start();
 echo "<?php\n";
 echo '$map = ';
 var_export($map);
+echo ";\n";

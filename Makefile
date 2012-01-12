@@ -12,6 +12,9 @@ textile: $(TEXTILE_OBJ)
 .PHONY: data
 data: $(DATA_OBJ)
 
+.PHONY: dates
+dates: cache/articles/date_map.php
+
 .PHONY: clean
 clean:
 	rm -rf cache/articles
@@ -26,6 +29,9 @@ info:
 	@for F in $(DATA_OBJ); do echo '    '$$F; done
 	@echo Compiled HTML:
 	@for F in $(TEXTILE_OBJ); do echo '    '$$F; done
+
+cache/articles/date_map.php: $(DATA_OBJ)
+	@./.bin/compile_dates $(DATA_OBJ) > $@
 
 # .SECONDEXPANSION used to turn "cache/articles/<title>/01.html.php" into
 # "cache/articles/<title>" and call the rule below. The expansion is used to hit
