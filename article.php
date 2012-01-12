@@ -2,7 +2,10 @@
 require('webroot.conf.php');
 
 // Figure out what to load
-$path = filter_input(INPUT_GET, 'path', FILTER_SANITIZE_STRING);
+list($path, $page) = array_values(filter_input_array(INPUT_GET, array(
+	'path' => FILTER_SANITIZE_STRING,
+	'page' => FILTER_VALIDATE_INT
+)));
 if ($path == '') {
 	header('HTTP 1.1 404 Not Found');
 	echo 'no path supplied';
@@ -18,10 +21,9 @@ if ($article == null) {
 
 // Push in meta information
 Meta::setTitle($article->title);
-//foreach ($article->getStylesheets() as $stylesheet) {
-//	Meta::addStylesheet($stylesheet);
-//}
-$body = FTemplate::fetch($article->pages[0]);
+array_map(array('Meta', 'addStylesheet'), $article->getStylesheets());
+
+$body = FTemplate::fetch($article->getPage($page));
 
 // Render
 $content = FTemplate::fetch('templates/article.html.php');
