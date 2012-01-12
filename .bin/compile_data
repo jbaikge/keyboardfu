@@ -45,7 +45,8 @@ $data['title'] = trim(str_replace('h1.', '', $line));
 // Normalize data
 $data['published'] = FString::date($data['published'], 'c');
 $data['modified'] = FString::date($oldest, 'c');
-$data['url'] = FString::date($data['published'], 'Y/m/d/') . basename(dirname($argv[1]));
+$data['name'] = basename(dirname($argv[1]));
+$data['url'] = FString::date($data['published'], 'Y/m/d/') . $data['name'];
 
 // Generate data output/file
 ob_start();
