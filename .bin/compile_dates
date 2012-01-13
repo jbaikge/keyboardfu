@@ -37,6 +37,6 @@ ksort($map);
 
 ob_start();
 echo "<?php\n";
-echo '$map = ';
+echo '$date_map = ';
 var_export($map);
 echo ";\n";
