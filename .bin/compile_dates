@@ -32,6 +32,8 @@ foreach (array_slice($argv, 1) as $file) {
 	}
 	$map[strtotime($date)] = basename(dirname($file));
 }
+// Save a ton of time later by just ordering the keys now.
+ksort($map);
 
 ob_start();
 echo "<?php\n";
