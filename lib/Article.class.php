@@ -18,6 +18,19 @@ class Article extends FObject {
 	public static function getFromURL($url) {
 		return new Article(basename($url));
 	}
+	public static function getLatest() {
+		// Import $date_map
+		require($_ENV['config']['cache.dir'] . '/articles/date_map.php');
+		$latest = array_reduce(array_keys($date_map), function ($state, $value) {
+			static $t;
+			if ($t == null) { $t = time(); }
+			if ($value > $state && $value <= $t) {
+				$state = $value;
+			}
+			return $state;
+		}, 0);
+		return new Article($date_map[$latest]);
+	}
 	public static function getModel() {
 		return new FModelManager(
 			FField::make('modified'),
