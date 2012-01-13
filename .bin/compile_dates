@@ -3,6 +3,10 @@
 // TODO: allow for an arg describing where to output the array to. Could be the
 // first arg or the last one (like cp)
 function get_date($filename) {
+	require($filename);
+	if (isset($data['published'])) {
+		return $data['published'];
+	}
 	$fh = fopen($filename, 'r');
 	$date = null;
 	while ($line = fgets($fh)) {

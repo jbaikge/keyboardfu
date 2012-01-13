@@ -9,6 +9,7 @@ class Article extends FObject {
 			throw new ArticleDoesNotExistException($name);
 		} else {
 			require($this->getFilename($name));
+			$this->autoData($data);
 		}
 	}
 	public function getFilename($name) {
