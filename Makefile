@@ -15,6 +15,9 @@ data: $(DATA_OBJ)
 .PHONY: dates
 dates: cache/articles/date_map.php
 
+.PHONY: tags
+tags: cache/articles/tag_map.php
+
 .PHONY: clean
 clean:
 	rm -rf cache/articles
@@ -33,6 +36,10 @@ info:
 cache/articles/date_map.php: $(DATA_OBJ)
 	@printf "%8s: %s\n" DATES $@
 	@./.bin/compile_dates $(DATA_OBJ) > $@
+
+cache/articles/tag_map.php: $(DATA_OBJ)
+	@printf "%8s: %s\n" TAGS $@
+	@./.bin/compile_tags $(DATA_OBJ) > $@
 
 # .SECONDEXPANSION used to turn "cache/articles/<title>/01.html.php" into
 # "cache/articles/<title>" and call the rule below. The expansion is used to hit
