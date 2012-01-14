@@ -7,7 +7,7 @@ class Archive {
 	const YEARLY  = 1;
 	const MONTHLY = 2;
 	const DAILY   = 3;
-	private $maps = array();
+	private $map;
 	public function __construct() {
 		$this->load();
 	}
@@ -18,26 +18,36 @@ class Archive {
 		}
 		return $instance;
 	}
+	public function getMonthly($year, $month) {
+		$lower = strtotime($year . '-' . $month . '-01');
+		$upper = strtotime('+1 month -1 day', $lower);
+		return $this->makeArticles($this->filterDateRange($lower, $upper));
+	}
 	public function getYearly($year) {
-		$values = array_filter($this->maps['date'], function($v) use($year) {
-			return date('Y', $v[0]) == $year;
+		$lower = strtotime($year . '-01-01');
+		$upper = strtotime('+1 year -1 day', $lower);
+		return $this->makeArticles($this->filterDateRange($lower, $upper));
+	}
+	private function filterDateRange($lower, $upper) {
+		return array_filter($this->map, function($v) use($lower, $upper) {
+			return $lower <= $v[1] && $v[1] <= $upper;
 		});
-		return $this->makeArticles($values);
 	}
 	private function load() {
-		$dir = $_ENV['config']['cache.dir'] . '/articles/';
-		$this->loadDateMap($dir . 'date_map.php');
-		#$this->loadTagMap($dir . 'tag_map.php');
+		$this->loadMap($_ENV['config']['cache.dir'] . '/articles/map.php');
+		$this->trimFuture();
 	}
-	private function loadDateMap($filename) {
+	private function loadMap($filename) {
 		include($filename);
-		$this->maps['date'] = array_map(null, array_keys($date_map), array_values($date_map));
-	}
-	private function loadTagMap($filename) {
-		include($filename);
-		$this->maps['tag'] = array_map(null, array_keys($tag_map), array_values($tag_map));
+		$this->map = $map;
 	}
 	private function makeArticles(array $values) {
 		return $values;
+	}
+	private function trimFuture() {
+		$now = time();
+		$this->map = array_filter($this->map, function($v) use($now) {
+			return $v[1] <= $now;
+		});
 	}
 }
