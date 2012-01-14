@@ -13,6 +13,7 @@ switch (count($date_bits)) {
 	break;
 	// Yearly archive
 	case 1:
+		var_dump(Archive::getInstance()->getYearly($date_bits[0]));
 	break;
 }
 
