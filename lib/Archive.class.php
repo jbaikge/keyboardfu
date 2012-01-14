@@ -19,8 +19,7 @@ class Archive {
 		return $instance;
 	}
 	public function getYearly($year) {
-		$values = array_filter($this->maps['date'], function ($v) {
-			var_dump($year, $v);
+		$values = array_filter($this->maps['date'], function($v) use($year) {
 			return date('Y', $v[0]) == $year;
 		});
 		return $this->makeArticles($values);
