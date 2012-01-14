@@ -5,7 +5,7 @@
 function get_map($filename) {
 	require($filename);
 	return array(
-		basename(dirname($file)),
+		basename(dirname($filename)),
 		strtotime($data['published']),
 		$data['tags']
 	);

@@ -4,7 +4,7 @@ DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
 TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
 
 .PHONY: all
-all: textile data dates
+all: textile data map
 
 .PHONY: textile
 textile: $(TEXTILE_OBJ)
@@ -12,11 +12,8 @@ textile: $(TEXTILE_OBJ)
 .PHONY: data
 data: $(DATA_OBJ)
 
-.PHONY: dates
-dates: cache/articles/date_map.php
-
-.PHONY: tags
-tags: cache/articles/tag_map.php
+.PHONY: map
+map: cache/articles/map.php
 
 .PHONY: clean
 clean:
@@ -33,13 +30,9 @@ info:
 	@echo Compiled HTML:
 	@for F in $(TEXTILE_OBJ); do echo '    '$$F; done
 
-cache/articles/date_map.php: $(DATA_OBJ)
-	@printf "%8s: %s\n" DATES $@
-	@./.bin/compile_dates $(DATA_OBJ) > $@
-
-cache/articles/tag_map.php: $(DATA_OBJ)
-	@printf "%8s: %s\n" TAGS $@
-	@./.bin/compile_tags $(DATA_OBJ) > $@
+cache/articles/map.php: $(DATA_OBJ)
+	@printf "%8s: %s\n" MAP $@
+	@./.bin/compile_map $(DATA_OBJ) > $@
 
 # .SECONDEXPANSION used to turn "cache/articles/<title>/01.html.php" into
 # "cache/articles/<title>" and call the rule below. The expansion is used to hit
