@@ -4,9 +4,6 @@
  * @date Fri Jan 13 18:36:46 EST 2012
  */
 class Archive {
-	const YEARLY  = 1;
-	const MONTHLY = 2;
-	const DAILY   = 3;
 	private $map;
 	public function __construct() {
 		$this->load();
@@ -17,6 +14,11 @@ class Archive {
 			$instance = new self;
 		}
 		return $instance;
+	}
+	public function getDaily($year, $month, $day) {
+		$lower = strtotime($year . '-' . $month . '-' . $day);
+		$upper = strtotime('+23 hour +59 minute', $lower);
+		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
 	public function getMonthly($year, $month) {
 		$lower = strtotime($year . '-' . $month . '-01');
@@ -42,6 +44,11 @@ class Archive {
 		$this->map = $map;
 	}
 	private function makeArticles(array $values) {
+		return array_map(function($v) {
+				return new Article($v[0]);
+			},
+			$values
+		);
 		return $values;
 	}
 	private function trimFuture() {
