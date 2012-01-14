@@ -2,41 +2,30 @@
 <?php
 // TODO: allow for an arg describing where to output the array to. Could be the
 // first arg or the last one (like cp)
-function get_date($filename) {
+function get_map($filename) {
 	require($filename);
-	if (isset($data['published'])) {
-		return $data['published'];
-	}
-	$fh = fopen($filename, 'r');
-	$date = null;
-	while ($line = fgets($fh)) {
-		if (strpos($line, 'published') !== false) {
-			list( , $date, ) = explode("'", $line);
-		}
-	}
-	fclose($fh);
-	return $date;
+	return array(
+		basename(dirname($file)),
+		strtotime($data['published']),
+		$data['tags']
+	);
 }
 
 if ($argc == 1) {
-	echo "Nothing to process dates for!\n";
+	echo "Nothing to process data for!\n";
 	exit(1);
 }
 
 $map = array();
 foreach (array_slice($argv, 1) as $file) {
-	$date = get_date($file);
-	if ($date == null) {
-		echo "No date found in {$file}\n";
-		exit(2);
-	}
-	$map[strtotime($date)] = basename(dirname($file));
+	$m = get_map($file);
+	$map[$m[1]] = $m;
 }
 // Save a ton of time later by just ordering the keys now.
 ksort($map);
 
 ob_start();
 echo "<?php\n";
-echo '$date_map = ';
+echo '$map = ';
 var_export($map);
 echo ";\n";
