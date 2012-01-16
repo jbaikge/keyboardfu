@@ -20,6 +20,11 @@ class Archive {
 		$upper = strtotime('+23 hour +59 minute', $lower);
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
+	public function getLatest() {
+		reset($this->map);
+		$data = current($this->map);
+		return new Article($data['basename']);
+	}
 	public function getMonthly($year, $month) {
 		$lower = strtotime($year . '-' . $month . '-01');
 		$upper = strtotime('+1 month -1 day', $lower);
@@ -32,7 +37,7 @@ class Archive {
 	}
 	private function filterDateRange($lower, $upper) {
 		return array_filter($this->map, function($v) use($lower, $upper) {
-			return $lower <= $v[1] && $v[1] <= $upper;
+			return $lower <= $v['published'] && $v['published'] <= $upper;
 		});
 	}
 	private function load() {
@@ -45,7 +50,7 @@ class Archive {
 	}
 	private function makeArticles(array $values) {
 		return array_map(function($v) {
-				return new Article($v[0]);
+				return new Article($v['basename']);
 			},
 			$values
 		);
@@ -54,7 +59,7 @@ class Archive {
 	private function trimFuture() {
 		$now = time();
 		$this->map = array_filter($this->map, function($v) use($now) {
-			return $v[1] <= $now;
+			return $v['published'] <= $now;
 		});
 	}
 }
