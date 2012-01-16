@@ -2,9 +2,10 @@ SRCDIRS := $(dir $(wildcard articles/*/meta.json))
 OBJDIRS := $(addprefix cache/,$(SRCDIRS))
 DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
 TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
+STATIC_TEXTILE_OBJ := $(patsubst %.textile,cache/%.html.php,$(wildcard static/*.textile))
 
 .PHONY: all
-all: textile data map
+all: textile data map static
 
 .PHONY: textile
 textile: $(TEXTILE_OBJ)
@@ -15,9 +16,13 @@ data: $(DATA_OBJ)
 .PHONY: map
 map: cache/articles/map.php
 
+.PHONY: static
+static: $(STATIC_TEXTILE_OBJ)
+
 .PHONY: clean
 clean:
 	rm -rf cache/articles
+	rm -rf cache/static
 
 .PHONY: info
 info:
@@ -52,6 +57,6 @@ cache/%/data.php: %/meta.json %/[0-9][0-9].textile .bin/compile_data | $$(@D)
 	@./.bin/compile_data $< $@
 
 # cache/articles/<title>
-$(OBJDIRS):
+$(OBJDIRS) cache/static:
 	@printf "%8s: %s\n" MKDIR $@
 	@mkdir -p dir $@
