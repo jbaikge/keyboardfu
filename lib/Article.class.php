@@ -33,6 +33,7 @@ class Article extends FObject {
 	}
 	public static function getModel() {
 		return new FModelManager(
+			FField::make('abstract'),
 			FField::make('modified'),
 			FField::make('name'),
 			FField::make('pages'),
