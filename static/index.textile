@@ -1,0 +1,9 @@
+h1. Welcome
+
+bq. *Keyboard Fu* _n._ The art of keyboarding, specifically in the programming arena.
+
+KeyboardFu.com hosts the presence of Jake Tews, web developer and inquisitive explorer of ones and zeros.
+
+This isn't a blog about my pet cat, how to build a Hello World program in 30 different languages, and my portfolio of how I know 3 HTML(HyperText Markup Language) tags. Instead, it's a collection of articles pertaining to my -pet giraffe- findings while developing in any language I happen to need for a specific problem and my portfolio of notable accomplishments on various websites I've worked on.
+
+Enjoy the content, enjoy the art.
