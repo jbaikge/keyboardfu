@@ -22,7 +22,7 @@ foreach (array_slice($argv, 1) as $file) {
 	$map[$m[1]] = $m;
 }
 // Save a ton of time later by just ordering the keys now.
-ksort($map);
+krsort($map, SORT_NUMERIC);
 
 ob_start();
 echo "<?php\n";
