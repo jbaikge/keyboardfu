@@ -1,2 +1,2 @@
-lib/framework = [svn]svn://okcodev/framework/branches/database-objects/code
+lib/framework = [svn]svn://traffic.okco.com/framework/branches/database-objects/code
 lib/textile = [git]git://github.com/netcarver/textile.git
