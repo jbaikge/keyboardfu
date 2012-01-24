@@ -22,7 +22,7 @@ class Meta {
 	public static function getTitle() {
 		$title = $_ENV['config']['title'];
 		if (self::$title) {
-			$title = self::$title;
+			$title .= ': ' . self::$title;
 		}
 		return $title;
 	}

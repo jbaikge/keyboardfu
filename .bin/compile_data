@@ -41,6 +41,10 @@ $fh = fopen($textiles[0], 'r');
 while (!FString::startsWith($line = fgets($fh), 'h1.'));
 $data['title'] = trim(str_replace('h1.', '', $line));
 
+// Extract article abstract
+while (($line = trim(fgets($fh))) == '');
+$textile = new Textile();
+$data['abstract'] = $textile->TextileThis($line);
 
 // Normalize data
 $data['published'] = FString::date($data['published'], 'c');

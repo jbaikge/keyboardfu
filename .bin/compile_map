@@ -5,9 +5,9 @@
 function get_map($filename) {
 	require($filename);
 	return array(
-		basename(dirname($filename)),
-		strtotime($data['published']),
-		$data['tags']
+		'basename' => basename(dirname($filename)),
+		'published' => strtotime($data['published']),
+		'tags' => $data['tags']
 	);
 }
 
@@ -19,10 +19,10 @@ if ($argc == 1) {
 $map = array();
 foreach (array_slice($argv, 1) as $file) {
 	$m = get_map($file);
-	$map[$m[1]] = $m;
+	$map[$m['published']] = $m;
 }
 // Save a ton of time later by just ordering the keys now.
-ksort($map);
+krsort($map, SORT_NUMERIC);
 
 ob_start();
 echo "<?php\n";
