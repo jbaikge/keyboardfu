@@ -18,7 +18,7 @@ h3. Filter With a Built-In
 
 For a rudamentary demonstration, I shall now -pull a rabbit out of my hat- filter a value using a PHP built-in function, "strlen":http://php.net/function.strlen.php.
 
-@$value = filter_var('monkey', FILTER_CALLBACK, array('options' => 'strlen'));@
+bc. $value = filter_var('monkey', FILTER_CALLBACK, array('options' => 'strlen'));
 
 Congratulations, you just took the user's input and threw it away because all you wanted was it's length. Useless? Maybe not.
 
@@ -26,10 +26,10 @@ h3. Filter With a User Function
 
 A much more likely case for filter callbacks involves writing your own function and using that to filter user input. Same song and dance as the previous example:
 
-@function myFilter($value) {
+bc. function myFilter($value) {
 	return date('c', strtotime($value));
 }
-$value = filter_var('monkey', FILTER_CALLBACK, array('options' => 'myFilter'));@
+$value = filter_var('monkey', FILTER_CALLBACK, array('options' => 'myFilter'));
 
 Marginally more robust as we take the user's input, cast it to a timestamp, and then format it to a date string. This is actually starting to get useful, but I already hate typing out @FILTER_CALLBACK, array('options' => 'myFunc')@.
 

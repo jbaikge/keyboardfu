@@ -4,7 +4,11 @@ The goal is to save development time and gain consistency. Trying to remember th
 
 The obvious jump is a small, static, class. We'll call it @CustomFilters@. This class will hold a few static methods which validate or filter when passed in as the callback for a filter function. To place something from the @CustomFilters@ class, say a timestamp-casting filter:
 
-@$value = filter_var('monkey', FILTER_CALLBACK, array('options' => array('CustomFilters', 'castTimestamp')));@
+bc. $value = filter_var('monkey', FILTER_CALLBACK, array(
+	'options' => array(
+		'CustomFilters', 'castTimestamp'
+	)
+));
 
 But, this has that goofy syntax again, and I just said I hate it.
 
@@ -17,16 +21,16 @@ To help out with the next section, you need a firm grasp of @filter_input_array@
 
 h3. Simple Filtering
 
-@$values = filter_input_array(INPUT_POST, array(
+bc. $values = filter_input_array(INPUT_POST, array(
 	'transfer_date' => FILTER_SANITIZE_STRING,
 	'desired_funds'  => FILTER_VALIDATE_INT
-));@
+));
 
 Child's play.
 
 h3. Bunch of Options
 
-@$values = filter_input_array(INPUT_POST, array(
+bc. $values = filter_input_array(INPUT_POST, array(
 	'transfer_date' => array(
 		'filter' => FILTER_CALLBACK,
 		'options' => 'strtotime'
@@ -38,7 +42,7 @@ h3. Bunch of Options
 			'max_range' => 1e6
 		)
 	)
-));@
+));
 
 A million dollars sounds great, how about we transfer that _now_[#strtotime-now]!
 
