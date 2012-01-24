@@ -1,0 +1,1 @@
+cat full_report.sql | sqlite3 -header -html alcohol.sqlite | tidy -q | w3m -T text/html
