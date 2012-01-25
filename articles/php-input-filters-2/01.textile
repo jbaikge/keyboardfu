@@ -8,10 +8,10 @@ I read books backwards: Read the first few pages, read the last chapter, then go
 
 Let's look at the end of the book, I want the final filtering definition to look like this:
 
-@$values = filter_input_array(INPUT_POST, array(
+bc. $values = filter_input_array(INPUT_POST, array(
 	'transfer_date' => CustomFilters::timstamp(),
 	'desired_funds' => CustomFilters::validFundRange()
-));@
+));
 
 h2. Science!
 
@@ -29,7 +29,7 @@ Without getting obnoxious, let's start with some very simple examples and work u
 
 h3. Same Face, New Name
 
-@class CustomFilters {
+bc.. class CustomFilters {
 	public static function validInt() {
 		return FILTER_VALIDATE_INT;
 	}
@@ -37,11 +37,11 @@ h3. Same Face, New Name
 
 $values = filter_input_array(INPUT_POST, array(
 	'ints_rule' => CustomFilters::validInt()
-));@
+));
 
-Using an existing filter, there's no need to worry about incoming data. Also works with the more complex array definitions:
+p. Using an existing filter, there's no need to worry about incoming data. Also works with the more complex array definitions:
 
-@class CustomFilters {
+bc.. class CustomFilters {
 	public static function validInt() {
 		return array(
 		'filter' => FILTER_VALIDATE_INT,
@@ -54,4 +54,4 @@ Using an existing filter, there's no need to worry about incoming data. Also wor
 
 $values = filter_input_array(INPUT_POST, array(
 	'ints_rule' => CustomFilters::validInt()
-));@
+));
