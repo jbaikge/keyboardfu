@@ -18,7 +18,7 @@ Under normal circumstances, loading a documented class in any language should ig
 
 The ability to reflect documentation is not a mistake or pitfall. As an example, you can include meta information regarding a method or class, which is useful for establishing routing information:
 
-<pre><code>class Zoo {
+bc. class Zoo {
 	/**
 	 * @route /zoo/flamingos
 	 */
@@ -26,7 +26,6 @@ The ability to reflect documentation is not a mistake or pitfall. As an example,
 		return array('1 Flamingo', '2 Flamingo', '3 Flamingo', 'More');
 	}
 }
-</code></pre>
 
 h2. Regaining a Sleek Profile
 
