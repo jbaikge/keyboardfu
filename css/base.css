@@ -1,10 +1,9 @@
-@import url('grids/mobile.css') screen and (max-width:719px);
-@import url('grids/720.css') screen and (min-width:720px);
-@import url('grids/960.css') screen and (min-width:960px);
-@import url('grids/1200.css') screen and (min-width:1200px);
-@import url('grids/1560.css') screen and (min-width:1560px);
-@import url('grids/1920.css') screen and (min-width:1920px);
-@import url('grids/2520.css') screen and (min-width:2520px);
+@import url('grids/mobile.css') screen and (max-width:1039px);
+@import url('grids/960.css') screen and (min-width:1040px);
+@import url('grids/1200.css') screen and (min-width:1280px);
+@import url('grids/1560.css') screen and (min-width:1640px);
+@import url('grids/1920.css') screen and (min-width:2000px);
+@import url('grids/2520.css') screen and (min-width:2600px);
 body {
   color: #222;
   font-size: 0.85em;
@@ -58,6 +57,13 @@ body {
     #Header nav a:hover {
       background-position: center 0px;
       text-decoration: underline; }
+  @media screen and (max-width:1039px) {
+    #Header nav {
+      height: 64px; }
+      #Header nav a {
+        width: 24.5%;
+        float: left;
+        clear: none; } }
 
 #Body {
   background: #f2f2f2;

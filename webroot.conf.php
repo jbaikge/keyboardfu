@@ -7,7 +7,6 @@ $config['mode.production'] = strpos(__FILE__, '/home/jbaikge') === 0;
 
 require(dirname(__FILE__) . '/lib/framework/load.php');
 
-Meta::addStylesheet('/css/960_12_col.css');
 Meta::addStylesheet('/css/base.css');
 Meta::addStylesheet('//fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Serif|Droid+Sans');
 
