@@ -5,20 +5,32 @@
 @import url('grids/1920.css') screen and (min-width:2000px);
 @import url('grids/2520.css') screen and (min-width:2600px);
 body {
+  font-family: 'Droid Serif', serif;
   color: #222;
   font-size: 0.85em;
-  font-family: 'Droid Serif', serif;
-  font: 0.9em/1.5em sans-serif; }
+  line-height: 1.75em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Sans', sans-serif; }
+
+h1 {
+  font-size: 2.00em; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.50em; }
 
 #Header nav a, footer {
   font-family: 'Droid Sans', sans-serif; }
 
 pre, code {
   font-family: 'Droid Sans Mono', monospace;
-  font-size: 0.80em; }
+  line-height: 1.25em; }
 
 body {
-  background: #CECECE;
+  background: #C0C6CF;
   margin: 1em 0 2em; }
 
 #Header {
