@@ -19,19 +19,29 @@ if ($article == null) {
 	exit;
 }
 
-// Reset page position if out of range
-if ($page < 1 || $page > $article->pages) {
-	$page = 1;
+if ($article->pages > 1) {
+	// Reset page position if out of range
+	if ($page < 1 || $page > $article->pages) {
+		$page = 1;
+	}
+	// Establish all possible pages
+	$paging = array(
+		array('&laquo; Prev', $page - 1),
+		array('Next &raquo;', $page + 1)
+	);
+	array_splice($paging, 1, 0, array_map(null, $a = range(1, $article->pages), $a));
+	// Generate HTML for links
+	$paging_links = array_reduce($paging, function($links, $set) use($page, $article) {
+		list($text, $page_num) = $set;
+		if ($page_num != $page && $page_num >= 1 && $page_num <= $article->pages) {
+			$htmlf = '<li><a href="/%1$s/%2$d">%3$s</a></li>';
+		} else {
+			$htmlf = '<li>%3$s</li>';
+		}
+		$links .= sprintf($htmlf, $article->url, $page_num, $text);
+		return $links;
+	}, '');
 }
-
-// Determine paging links in the format text => url
-$paging = array();
-$urlf = '/' . $article->url . '/%d';
-$paging['&laquo; Prev'] = ($page == 1) ? null : sprintf($urlf, $page - 1);
-foreach (range(1, $article->pages) as $num) {
-	$paging[$num] = ($num == $page) ? null : sprintf($urlf, $num);
-}
-$paging['Next &raquo;'] = ($page == $article->pages) ? null : sprintf($urlf, $page + 1);
 
 // Push in meta information
 Meta::setTitle($article->title);

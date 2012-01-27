@@ -32,6 +32,10 @@ pre, code {
 body {
   background: #C0C6CF;
   margin: 1em 0 2em; }
+  body > footer {
+    font-size: 0.80em; }
+    body > footer .credits {
+      text-align: right; }
 
 #Header {
   padding-bottom: 1em; }

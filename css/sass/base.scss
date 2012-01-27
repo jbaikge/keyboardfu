@@ -12,6 +12,12 @@ $logoHeight: 64px;
 body {
 	background:#C0C6CF;
 	margin:1em 0 2em;
+	> footer {
+		font-size:0.80em;
+		.credits {
+			text-align:right;
+		}
+	}
 }
 #Header {
 	padding-bottom:1em;
@@ -81,6 +87,3 @@ body {
 	padding:1em 0;
 	//box-shadow:0 0 3px 3px $bodyColor;
 }
-footer {
-}
-

@@ -29,7 +29,12 @@
 <?php echo $content; ?>
 </div>
 <footer class="container_12">
-	<p>Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?></p>
+	<div class="grid_6 copyright">
+		<p>Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?></p>
+	</div>
+	<div class="grid_6 credits">
+		<p><strong>Icon theme:</strong> <em>ecqlipse</em> by <a href="http://chrfb.deviantart.com/gallery/#/dtr7yy" target="_blank">~chrfb</a></p>
+	</div>
 </footer>
 </body>
 </html>

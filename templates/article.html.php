@@ -1,10 +1,18 @@
-<article class="grid_8">
+<article class="grid_9">
 <?php
 echo $body;
-echo FTemplate::fetch("templates/article_footer.html.php");
-?>
 
+if ($article->pages > 1) {
+?>
+	<footer>
+		<nav>
+			<ol><?php echo $paging_links; ?></ol>
+		</nav>
+	</footer>
+<?php
+} // $article->pages > 1
+?>
 </article>
-<aside class="grid_4">
+<aside class="grid_3">
 	Aside content
 </aside>
