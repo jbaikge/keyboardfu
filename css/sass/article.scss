@@ -1,0 +1,24 @@
+@import "colors";
+
+article {
+	> footer nav {
+		text-align:center;
+		ol {
+			list-style:none;
+			margin:0;
+			padding:0;
+			li {
+				display:inline-block;
+				a, span {
+					display:inline-block;
+					padding:0.5em;
+				}
+			}
+		}
+	}
+	pre {
+		background:darken($bodyColor, 3%);
+		border:1px solid darken($bodyColor, 30%);
+		padding:0.2em;
+	}
+}

@@ -36,7 +36,7 @@ if ($article->pages > 1) {
 		if ($page_num != $page && $page_num >= 1 && $page_num <= $article->pages) {
 			$htmlf = '<li><a href="/%1$s/%2$d">%3$s</a></li>';
 		} else {
-			$htmlf = '<li>%3$s</li>';
+			$htmlf = '<li><span>%3$s</span></li>';
 		}
 		$links .= sprintf($htmlf, $article->url, $page_num, $text);
 		return $links;
@@ -45,6 +45,7 @@ if ($article->pages > 1) {
 
 // Push in meta information
 Meta::setTitle($article->title);
+Meta::addStylesheet('/css/article.css');
 array_map(array('Meta', 'addStylesheet'), $article->getStylesheets());
 
 $body = FTemplate::fetch($article->getPage($page));

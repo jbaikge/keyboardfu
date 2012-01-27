@@ -1,0 +1,15 @@
+article > footer nav {
+  text-align: center; }
+  article > footer nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    article > footer nav ol li {
+      display: inline-block; }
+      article > footer nav ol li a, article > footer nav ol li span {
+        display: inline-block;
+        padding: 0.5em; }
+article pre {
+  background: #ebebeb;
+  border: 1px solid #a6a6a6;
+  padding: 0.2em; }

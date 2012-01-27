@@ -5,6 +5,7 @@
 @import url('grids/1920.css') screen and (min-width:2000px);
 @import url('grids/2520.css') screen and (min-width:2600px);
 
+@import "colors";
 @import "text";
 
 $logoHeight: 64px;
@@ -78,7 +79,6 @@ body {
 	}
 }
 #Body {
-	$bodyColor:darken(white, 5%);
 	background:$bodyColor;
 	border:{
 		bottom:5px solid #222;
