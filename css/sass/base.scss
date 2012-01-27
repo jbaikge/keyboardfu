@@ -1,46 +1,79 @@
+@import url('grids/mobile.css') screen and (max-width:719px);
+@import url('grids/720.css') screen and (min-width:720px);
+@import url('grids/960.css') screen and (min-width:960px);
+@import url('grids/1200.css') screen and (min-width:1200px);
+@import url('grids/1560.css') screen and (min-width:1560px);
+@import url('grids/1920.css') screen and (min-width:1920px);
+@import url('grids/2520.css') screen and (min-width:2520px);
+
 @import "text";
 
+$logoHeight: 64px;
+
 body {
-	background: #F7F7F7 url('../images/layout/background.png');
-	margin: 1em 0 2em;
+	background:#CECECE;
+	margin:1em 0 2em;
 }
 #Header {
+	padding-bottom:1em;
+	#Logo a {
+		background:transparent url('../images/layout/logo.png') no-repeat top left;
+		display:block;
+		height:0;
+		overflow:hidden;
+		padding-top:$logoHeight;
+	}
 	nav {
-		border-bottom: 1px solid #C10;
-		height: 32px;
-		line-height: 32px;
-		margin: 8px 0 0;
 		ul {
-			display: block;
-			width: 52ex;
-			list-style: none;
-			margin: 0 auto;
-			padding: 0;
+			list-style:none;
+			margin:0 auto;
+			padding:0;
 		}
 		li {
-			display: block;
-			float: left;
-			text-align: center;
-			width: 13ex;
+			text-align:center;
+		}
+		li.articles a {
+			background-image:url('../images/icons/48/notepad.png');
+		}
+		li.portfolio a {
+			background-image:url('../images/icons/48/book.png');
+		}
+		li.about a {
+			background-image:url('../images/icons/48/info.png');
+		}
+		li.contact a {
+			background-image:url('../images/icons/48/mail.png');
 		}
 		a {
-			color: #222;
-			text-decoration: none;
+			background:{
+				position:center 3px;
+				repeat:no-repeat;
+			}
+			color:#C10;
+			display:block;
+			font-size:0.8em;
+			height:$logoHeight - 48px;
+			line-height:$logoHeight - 48px;
+			padding-top:48px;
+			text-decoration:none;
+			text-transform:uppercase;
 			&:hover {
-				text-decoration: underline;
+				background-position:center 0px;
+				text-decoration:underline;
 			}
 		}
 	}
 }
-#Logo a {
-	background: transparent url('../images/layout/logo.png') no-repeat top left;
-	display: block;
-	height: 0;
-	overflow: hidden;
-	padding-top: 64px;
-	width: 350px;
+#Body {
+	$bodyColor:darken(white, 5%);
+	background:$bodyColor;
+	border:{
+		bottom:5px solid #222;
+		top:5px solid #222;
+	}
+	padding:1em 0;
+	//box-shadow:0 0 3px 3px $bodyColor;
 }
 footer {
-	border-top: 1px solid #C10;
 }
 

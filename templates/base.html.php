@@ -13,19 +13,19 @@
 </head>
 <body>
 <div id="Header" class="container_12">
-	<div id="Logo" class="grid_5 suffix_7">
+	<div id="Logo" class="grid_5 suffix_3">
 		<a href="/">KeyboardFu</a>
 	</div>
-	<nav class="grid_12">
+	<nav>
 		<ul>
-			<li><a href="/<?php echo date('Y'); ?>">Articles</a></li>
-			<li><a href="/coming-soon">Portfolio</a></li>
-			<li><a href="/coming-soon">About</a></li>
-			<li><a href="/coming-soon">Contact</a></li>
+			<li class="grid_1 articles"><a href="/<?php echo date('Y'); ?>">Articles</a></li>
+			<li class="grid_1 portfolio"><a href="/coming-soon">Portfolio</a></li>
+			<li class="grid_1 about"><a href="/coming-soon">About</a></li>
+			<li class="grid_1 contact"><a href="/coming-soon">Contact</a></li>
 		</ul>
 	</nav>
 </div>
-<div class="container_12">
+<div id="Body" class="container_12">
 <?php echo $content; ?>
 </div>
 <footer class="container_12">
