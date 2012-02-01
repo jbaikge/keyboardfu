@@ -24,7 +24,55 @@ $greatest_col = 'GREATEST(' . implode(',', $columns) . ')';
 
 h2. @array_map@
 
+A bit of a pocket knife, @array_map@ has a few important features. The spec calls for the first argument to be a callback, and then an arbitrary number of array arguments follow. The callback should provide the same number of parameters as arrays passed in.
 
+h3. The @null@ Callback
+
+Providing @null@ as the callback causes array juxtaposition. It's particularly handy when you need to blend two sets of data together into tuples. The example below is surprisingly common:
+
+bc. $my_array = array(
+	'flamingo'  => 'bird',
+	'orangutan' => 'monkey',
+	'parrot'    => 'bird'
+);
+$tuples = array_map(null, $my_array, array_keys($my_array));
+
+The above code block will build the following structure for @$tuples@:
+
+bc. $tuples = array(
+	array('flamingo', 'bird'),
+	array('orangutan', 'monkey'),
+	array('parrot', 'bird')
+);
+
+h3. Siphoning
+
+Sometimes you must take a few sets of data and iterate over them to determine what goes where and squish them into a single set of data. The example below takes a predefined collection of arrays whose contents contain some numbers and are of varying lengths. We want to return a single array with bounds in each element
+
+bc. $a = array(1,2,3,4,5,6,7,8,9,0);
+$b = array(4,5,6,7,8,9,0,1,2,3);
+$c = array(8,9,0,1,2,3);
+$d = array_map(function($a, $b, $c) {
+	$args = func_get_args();
+	return array(min($args),max($args));
+}, $a, $b, $c);
+// $d now contains:
+array(
+	array(1, 8),
+	array(2, 9),
+	array(0, 6),
+	array(1, 7),
+	array(2, 8),
+	array(3, 9),
+	array(0, 7),
+	array(NULL, 8),
+	array(NULL, 9),
+	array(0, 3)
+);
+
+A few things to note about the above code block:
+# The number of iterations is based on the longest array passed in
+# @min()@ evaluates everything as an integer and then spits out the original value. When comparing @NULL@ and 0, 0 comes back, but when comparing @NULL@ and 1, @NULL@ comes back
 
 h2. @array_filter@
 
