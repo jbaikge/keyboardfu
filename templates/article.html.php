@@ -1,5 +1,8 @@
 <article class="grid_9">
 <?php
+if ($page > 1) {
+	echo "<h1>{$article->title}</h1>\n";
+}
 echo $body;
 
 if ($article->pages > 1) {
