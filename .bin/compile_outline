@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+if ($argc < 2) {
+	echo "USAGE: {$argv[0]} file [file [file]]\n";
+	exit(1);
+}
+
+$textiles = array_slice($argv, 1);
+
