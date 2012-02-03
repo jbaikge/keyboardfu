@@ -33,4 +33,6 @@ $value = filter_var('monkey', FILTER_CALLBACK, array('options' => 'myFilter'));
 
 Marginally more robust as we take the user's input, cast it to a timestamp, and then format it to a date string. This is actually starting to get useful, but I already hate typing out @FILTER_CALLBACK, array('options' => 'myFunc')@.
 
+h2. Footnotes
+
 notelist.

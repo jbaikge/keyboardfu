@@ -48,4 +48,6 @@ A million dollars sounds great, how about we transfer that _now_[#strtotime-now]
 
 note#strtotime-now. Yes, _now_ is a valid value for @strtotime@.
 
+h2. Footnotes
+
 notelist.
