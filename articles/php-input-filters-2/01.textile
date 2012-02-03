@@ -1,6 +1,6 @@
 h1. Safe Input With PHP's Filter Functions, II
 
-Continuing from "Safe Input With PHP's Filter Functions, I":/2012/01/18/php-input-filter-1, it's time to nail down efficient filter definitions.
+Continuing from "Safe Input With PHP's Filter Functions, I":/2012/01/18/php-input-filters-1, it's time to nail down efficient filter definitions.
 
 h2. A Peek of What's To Come
 
