@@ -1,17 +1,21 @@
 SRCDIRS := $(dir $(wildcard articles/*/meta.json))
 OBJDIRS := $(addprefix cache/,$(SRCDIRS))
 DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
+OUTLINE_OBJ := $(addsuffix outline.html.php,$(OBJDIRS))
 TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
 STATIC_TEXTILE_OBJ := $(patsubst %.textile,cache/%.html.php,$(wildcard static/*.textile))
 
 .PHONY: all
-all: textile data map static
+all: textile data outline map static
 
 .PHONY: textile
 textile: $(TEXTILE_OBJ)
 
 .PHONY: data
 data: $(DATA_OBJ)
+
+.PHONY: outline
+outline: $(OUTLINE_OBJ)
 
 .PHONY: map
 map: cache/articles/map.php
@@ -55,6 +59,12 @@ cache/%.html.php: %.textile .bin/compile_textile | $$(@D)
 cache/%/data.php: %/meta.json %/[0-9][0-9].textile .bin/compile_data | $$(@D)
 	@printf "%8s: %s\n" DATA $@
 	@./.bin/compile_data $< $@
+
+# .SECONDEXPANSION not needed here, but left for doc purposes
+.SECONDEXPANSION:
+cache/%/outline.html.php: %/[0-9][0-9].textile .bin/compile_outline | $$(@D)
+	@printf "%8s: %s\n" OUTLINE $@
+	@./.bin/compile_outline $< $@
 
 # cache/articles/<title>
 $(OBJDIRS) cache/static:

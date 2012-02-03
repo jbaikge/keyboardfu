@@ -1,9 +1,32 @@
 #!/usr/bin/env php
 <?php
-if ($argc < 2) {
-	echo "USAGE: {$argv[0]} file [file [file]]\n";
+require('webroot.conf.php');
+
+if ($argc < 3) {
+	echo "USAGE: {$argv[0]} file [file [file]] output.html.php\n";
 	exit(1);
 }
 
-$textiles = array_slice($argv, 1);
+$textiles = array_slice($argv, 1, -1);
+sort($textiles);
 
+$buffer = array_reduce($textiles, function($buffer, $filename) {
+	return $buffer . file_get_contents($filename);
+});
+
+preg_match_all('/h(\d)\. (.*)/', $buffer, $matches, PREG_SET_ORDER);
+
+$textile_list = array_reduce($matches, function($list, $match) {
+	list($line, $depth, $text) = $match;
+	return $list . str_repeat('#', $depth) . " {$text}\n";
+});
+
+$t = new Textile;
+$rendered = $t->TextileThis($textile_list);
+
+$save_as = end($argv);
+if ($save_as == '-') {
+	echo $rendered;
+} else {
+	file_put_contents($save_as, $rendered);
+}
