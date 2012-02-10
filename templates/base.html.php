@@ -20,7 +20,7 @@
 		<ul>
 			<li class="grid_1 articles"><a href="/<?php echo date('Y'); ?>">Articles</a></li>
 			<li class="grid_1 portfolio"><a href="/coming-soon">Portfolio</a></li>
-			<li class="grid_1 about"><a href="/coming-soon">About</a></li>
+			<li class="grid_1 about"><a href="/about">About</a></li>
 			<li class="grid_1 contact"><a href="/coming-soon">Contact</a></li>
 		</ul>
 	</nav>

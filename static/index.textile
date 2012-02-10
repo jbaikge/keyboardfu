@@ -1,9 +1,13 @@
 h1. Welcome
 
-bq. *Keyboard Fu* _n._ The art of keyboarding, specifically in the programming arena.
+Look down at your keyboard, what do you see?
 
-KeyboardFu.com hosts the presence of Jake Tews, web developer and inquisitive explorer of ones and zeros.
+Do you see the product of an alphabet monster sneezing letters, whereby you must tap each letter bubble to tame the lesser beast your keyboard is connected to?
 
-This isn't a blog about my pet cat, how to build a Hello World program in 30 different languages, or my portfolio of how I know 3 HTML(HyperText Markup Language) tags. Instead, it's a collection of articles pertaining to my -pet giraffe- findings while developing in any language I happen to need for a specific problem and my portfolio of notable accomplishments on various websites I've worked on.
+Do you see a vast array of little letters, scattered about incomprehensibly, waiting to be tapped and bopped to communicate with anyone you please?
 
-Enjoy the content. Enjoy the art.
+Do you see an implement of corporate monotony, spining your hamster wheel of emails and reports around one more turn with every smash of a key?
+
+I see a tool. One which is comfortable at my fingertips and the basis of my craft. It is the hammer; and code, the burning ore.
+
+Writing code is an art. KeyboardFu devotes itself to exploring ways to write more concise, legible code, while pushing performance to the highest degree possible.
