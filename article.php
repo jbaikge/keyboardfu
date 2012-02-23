@@ -24,6 +24,13 @@ if ($article->pages > 1) {
 	if ($page < 1 || $page > $article->pages) {
 		$page = 1;
 	}
+	// Add meta hints for next/previous rels
+	if ($page < $article->pages) {
+		Meta::setNext('/' . $article->url . '/' . ($page + 1));
+	}
+	if ($page > 1) {
+		Meta::setPrevious('/' . $article->url . (($page - 1 == 1) ? '' : '/' . ($page - 1)));
+	}
 	// Establish all possible pages
 	$paging = array(
 		array('&laquo; Prev', $page - 1),
@@ -44,6 +51,7 @@ if ($article->pages > 1) {
 }
 
 // Push in meta information
+Meta::setDescription($article->abstract);
 Meta::setTitle($article->title);
 Meta::addStylesheet('/css/article.css');
 array_map(array('Meta', 'addStylesheet'), $article->getStylesheets());
