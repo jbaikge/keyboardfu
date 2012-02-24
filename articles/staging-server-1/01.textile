@@ -1,0 +1,9 @@
+h1. Building a Staging Server of Doom, Part 1
+
+Website development is a pretty finicky task, especially when adding new features to relatively popular sites. A staging server set up to give clients access to preview changes before they hit production becomes really handy after the first few flummoxes to the production site.
+
+h2. Defining the End Goal
+
+I recently set up the staging server for my current company and built it with a few nifty tricks. We currently use Subversion for version control and already had some pre- and post-commit hooks in place for things like lint checking and notifications, but more on that in a later article. We wanted to be able to add a new feature to a site, then direct the manager or client to a URL like http://trunk.example.com to show off the latest trunk, or http://123-my-branch.example.com to show off everything in the 123-my-branch ... uhh, branch.
+
+The machine needed to accept a fresh database dump from the production server every morning so any sites on 
