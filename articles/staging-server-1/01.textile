@@ -1,9 +1,63 @@
 h1. Building a Staging Server of Doom, Part 1
 
-Website development is a pretty finicky task, especially when adding new features to relatively popular sites. A staging server set up to give clients access to preview changes before they hit production becomes really handy after the first few flummoxes to the production site.
+Web development is a finicky task when it comes to deploying new features to existing sites. A staging server can really help the approval process for new features - and let the client -break- test the site before a regular user does.
 
-h2. Defining the End Goal
+h2. Defining the Happy Ending
 
-I recently set up the staging server for my current company and built it with a few nifty tricks. We currently use Subversion for version control and already had some pre- and post-commit hooks in place for things like lint checking and notifications, but more on that in a later article. We wanted to be able to add a new feature to a site, then direct the manager or client to a URL like http://trunk.example.com to show off the latest trunk, or http://123-my-branch.example.com to show off everything in the 123-my-branch ... uhh, branch.
+I recently set up the staging server for my current company. I learned a few things from the last time I set one up for a previous employer; namely, planning ahead. Since it's difficult to build a path without knowing where you're going, I set up a few requirements for our staging server:
 
-The machine needed to accept a fresh database dump from the production server every morning so any sites on 
+# Simple machine to serve from, with gobs of drive space
+# Databases would mirror those on the production server by getting rebuilt every morning
+# Add an additional post-commit hook to Subversion to update all checkouts
+# Trunk should be accessible via http://trunk.clientsite.com
+# Branches should be accessible via http://my-branch.clientsite.com
+# Zero Apache restarts for new branches
+# Zero DNS reconfiguration for new branches
+
+These are all perfectly reasonable and achievable goals, save for maybe the last two?
+
+h2. Examining the Starting Line
+
+Wading through the inventory of pieces, parts, and knowledge should help get the project moving forward:
+
+h3. Server
+
+There was long novel of a story behind it, but we were able to acquire the dedicated server we were using from our hosting provider when we terminated our account. It came with some acceptable stats:
+
+* 1x Quad-Core 2.8GHz Intel Xeon
+* 4GB RAM
+* 2x 1TB 7.2k HDD
+* 2x Gigabit Ethernet
+
+Duuude, sweeeet. Check.
+
+h3. Database Mirroring
+
+I already developed a database backup script that was cronned to run at 2am every morning. I could easily modify it to jump into the staging server, directly import the dump stream from the production server into the staging database, then take backups off the staging database.
+
+h3. Additional post-commit Hook
+
+The best approach to the hook comes with developing a script where I can drop a repository name after it and it will do the following:
+
+# Set up the repository base location if it doesn't exist
+# Check out the trunk if it doesn't exist
+# Update the trunk if it does exist
+# Remove any branches that aren't defined in the repository
+# Check out any branches if they don't exist
+# Update any branches if they do exist
+
+h3. Apache Configuration
+
+There's a sweet-dandy module for Apache called mod_vhost. Credit given where credit due: my coworker knew about it long before I did, but he always uses it on his development box.
+
+The basic premise is quite elegantly simple:
+
+# Set up your domains in a single directory, like /var/www
+# Configure Apache with some simple magic
+# Suddenly /var/www/clientsite.com/static/images/cats.jpg becomes http://static.clientsite.com/images/cats.jpg
+
+There are a million different ways to set this up, but that's the closest to my goals.
+
+h3. DNS Configuration
+
+This was the shakiest of all, since DNS is more like dark magic. A little digging around found the solution, though.
