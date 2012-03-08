@@ -16,7 +16,7 @@ I recently set up the staging server for my current company. I learned a few thi
 
 These are all perfectly reasonable and achievable goals, save for maybe the last two?
 
-h2. Examining the Starting Line
+h2. Examining What is Available
 
 Wading through the inventory of pieces, parts, and knowledge should help get the project moving forward:
 
@@ -24,7 +24,7 @@ h3. Server
 
 There was long novel of a story behind it, but we were able to acquire the dedicated server we were using from our hosting provider when we terminated our account. It came with some acceptable stats:
 
-* 1x Quad-Core 2.8GHz Intel Xeon
+* 1x Intel(R) Xeon(R) CPU E5606 2.13GHz
 * 4GB RAM
 * 2x 1TB 7.2k HDD
 * 2x Gigabit Ethernet
@@ -60,4 +60,5 @@ There are a million different ways to set this up, but that's the closest to my 
 
 h3. DNS Configuration
 
-This was the shakiest of all, since DNS is more like dark magic. A little digging around found the solution, though.
+This was the shakiest of all, since DNS is more like dark magic. Known as a "wildcard DNS record":http://en.wikipedia.org/wiki/Wildcard_DNS_record, one simply supplies an A record to define _*.mydomain.com_. This allows any subdomain request that isn't previously defined to hit the IP defined by the wildcard record.
+
