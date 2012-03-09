@@ -1,0 +1,72 @@
+h2. First Steps Down the Staging Brick Road
+
+Now that Point A and Point B are defined, it's time to plot the path to completion. If you're doing this, give yourself about a week to plan out every detail you can think of. Draw pictures, converse with peers, ask someone over at a Q&A site; just don't go into the configuration stage alone. As you'll see here, everything was done perfectly the first time and I never had to backtrack[#lies].
+
+note#lies. Lies, damned lies, and statistics. _-Benjamin Disraeli, Earl of Beaconsfield, 1895_
+
+h3. Additional Hardware
+
+Since the server has four drive bays, I feel compelled to fill all of them to make sure this thing has no issues. In case a drive goes sideways and fails, there should be little downtime. The server came with two 1TB drives, so I dropped some dosh for three more. The third one is actually sitting on the box itself, ready to go.
+
+h3. OS Installation
+
+I'm not going to start any riots by discussing <acronym title="D">what</acronym> <acronym title="E">distribution</acronym> <acronym title="B">of</acronym> <acronym title="I">Linux</acronym> <acronym title="A">to</acronym> <acronym title="N">use</acronym>, just that one should be installed. The hard drive layout I chose is an attempt to push the performance a bit since the post-commit hook will run a lot of updates on the web files.
+
+|=. Device partitions
+|^.
+|_. Partition|_. Bootable|_. Type|_. Format|_. Size|
+|-.
+| /dev/sd[abcd]1 | Yes | Primary | linux_raid |>.  20GB |
+| /dev/sd[abcd]2 | No  | Primary | linux_raid |>.   5GB |
+| /dev/sd[abcd]3 | No  | Primary | linux_raid |>.   5GB |
+| /dev/sd[abcd]5 | No  | Logical | linux_raid |>. 969GB |
+| /dev/sd[abcd]6 | No  | Logical | swap       |>.   1GB |
+
+|=. RAID configurations
+|^.
+|_. Devices |_. RAID Level |_. Mount Point |_. Final Size |
+|-.
+| /dev/sd[abcd]1 |=. 1 | / |>. 20GB |
+| /dev/sd[abcd]2 |=. 0 | /tmp |>. 20GB |
+| /dev/sd[abcd]3 |=. 0 | /var/lib/mysql |>. 20GB |
+| /dev/sd[abcd]5 |=. 5 | /var/www |>. 2.7TB |
+
+The configurations above are still undergoing scrutiny. The RAID0 for /var/lib/mysql was initially a RAID1, but it was laughably slow. Additionally, the RAID5 for /var/www has appalling performance at this juncture.
+
+h3. Server Setups
+
+MySQL, PHP, and Apache all get installed from apt, making things pretty straight forward. Our sites are built specifically to be as flexible as possible so we can develop in nearly any environment.
+
+Apache gained some special configuration with the following added to /etc/apache2/sites-available/staging-sites:
+
+bc.. ServerName q
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	VirtualDocumentRoot /var/www/%2+/%1
+
+	<Directory /var/www/%2+/%1>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride all
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+p. After this configuration change, we wanted to emulate our production server as much as possible, which uses suExec. The easiest way to imitate this behavior is to change the @APACHE_RUN_USER@ and @APACHE_RUN_GROUP@ in /etc/apache2/envvars
+
+Since our maintenance user is @q@, I updated those values in envvars and set to enabling modules and sites:
+
+bc.. root@q:~# a2ensite staging-sites
+root@q:~# a2enmod rewrite
+root@q:~# a2enmod vhost_alias
+root@q:~# /etc/init.d/apache2 restart
+
+p. Note, using @apache2ctl restart@ instead of @/etc/init.d/apache2 restart@ won't work. The former is more of a 'reload' instead of a 'restart'.
+
+h2. Footnotes
+
+notelist.

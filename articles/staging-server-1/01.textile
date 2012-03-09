@@ -48,7 +48,7 @@ The best approach to the hook comes with developing a script where I can drop a 
 
 h3. Apache Configuration
 
-There's a sweet-dandy module for Apache called mod_vhost. Credit given where credit due: my coworker knew about it long before I did, but he always uses it on his development box.
+There's a sweet-dandy module for Apache called "mod_vhost":http://httpd.apache.org/docs/2.0/mod/mod_vhost_alias.html. Credit given where credit due: my coworker knew about it long before I did, but he always uses it on his development box.
 
 The basic premise is quite elegantly simple:
 
@@ -61,4 +61,3 @@ There are a million different ways to set this up, but that's the closest to my 
 h3. DNS Configuration
 
 This was the shakiest of all, since DNS is more like dark magic. Known as a "wildcard DNS record":http://en.wikipedia.org/wiki/Wildcard_DNS_record, one simply supplies an A record to define _*.mydomain.com_. This allows any subdomain request that isn't previously defined to hit the IP defined by the wildcard record.
-
