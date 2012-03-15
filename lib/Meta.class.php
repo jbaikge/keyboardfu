@@ -9,6 +9,7 @@ class Meta {
 	);
 	private static $javascripts = array();
 	private static $stylesheets = array();
+	private static $title;
 
 	public static function addJavascript($url) {
 		self::$javascripts[$url] = sprintf('<script src="%s"></script>', $url);
@@ -29,6 +30,9 @@ class Meta {
 	public static function getStylesheets() {
 		return self::$stylesheets;
 	}
+	public static function getTitle() {
+		return self::$title;
+	}
 	public static function setDescription($description) {
 		self::$main[self::POS_DESC] = sprintf(
 			'<meta name="description" content="%s">',
@@ -42,6 +46,10 @@ class Meta {
 		self::$main[self::POS_PREV] = sprintf('<link rel="prev" href="%s">', htmlize($url));
 	}
 	public static function setTitle($title) {
+		self::$title = $title;
+		if ($title != $_ENV['config']['title']) {
+			$title .= ' - ' . $_ENV['config']['title'];
+		}
 		self::$main[self::POS_TITLE] = sprintf('<title>%s</title>', htmlize($title));
 	}
 	public static function toString($prefix = "\t") {
