@@ -1,0 +1,37 @@
+h1. Building a Staging Server of Doom, Part 2
+
+The "saga continues":/2012/02/28/staging-server-1 as I encounter a drive failure and increase the overall performance of updates a million-fold.
+
+h2. Sensing a Problem
+
+During some routine maintenance, I noticed svn updates were taking an awfully long time to finish. A quick run of @dmesg@ showed a long trail of ioctl errors on @/dev/sdb@. Running @smartctl /dev/sdb@ revealed 78 real errors with the drive - enough to conclude that my assumption was correct: The server didn't survive being dropped by the original owner.
+
+h2. Refreshed Bytes
+
+Luckily, when I purchased the additional drives for the machine, I purchased one more than I actually needed. This time, though, I would capitalize on the failed drive by migrating from RAID0 for /var/lib/mysql and RAID5 for /var/www to RAID10 for both. To further increase the performance overall, I'd also switch from JFS to XFS and stride-align the filesystem to the RAID.
+
+"Benoit Sigoure":http://blog.tsunanet.net/ posted a "very informative blog entry":http://blog.tsunanet.net/2011/08/mkfsxfs-raid10-optimal-performance.html for exactly what I was trying to do. Since my configuration wasn't lucky enough to contain 12 drives, the math and commands are below.
+
+Since everything was fresh and new, I played around with different chunk sizes; formatting each one with the proper alignment options for XFS, and finally ran @dd if=/dev/zero of=DATA@ on the new partition. The best performance would take the gold. Of note, the default chunk size of 512K did not work at all for the mathy bits.
+
+| Chunk | sunit | swidth | agcount | Result |
+| 512K  | 1024  | 2048   | 4       | Could not format with XFS |
+| 256K  | 512   | 1024   | 4       | Best performance overall |
+| 128K  | 256   | 512    | 4       | Good performance, probably best with medium files |
+| 64K   | 128   | 256    | 4       | Poor performance with the @dd@, likely better when used for smaller files |
+
+The final commands used to create the partitions were:
+
+h3. MySQL - /var/lib/mysql
+
+bc. # mdadm --create /dev/md1 --chunk=256K --level=raid10 --raid-devices=4 /dev/sd?2
+# mkfs.xfs -L MYSQL -f -d sunit=512,swidth=1024,agcount=4 /dev/md1
+# mkfs.xfs -L MYSQL -f -d sunit=512,swidth=1024,agsize=$((610112*4096)) /dev/md1
+# mdadm --run /dev/md1
+
+h3. WWW - /var/www
+
+bc. # mdadm --create /dev/md3 --chunk=256K --level=raid10 --raid-devices=4 /dev/sd?5
+# mdadm --run /dev/md3
+# mkfs.xfs -L WWW -f -d sunit=512,swidth=1024,agcount=4 /dev/md3
+# mkfs.xfs -L WWW -f -d sunit=512,swidth=1024,agsize=$((118310208*4096)) /dev/md3
