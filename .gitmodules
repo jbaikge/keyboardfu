@@ -1,0 +1,6 @@
+[submodule "lib/textile"]
+	path = lib/textile
+	url = git://github.com/netcarver/textile.git
+[submodule "lib/framework"]
+	path = lib/framework
+	url = git://github.com/jbaikge/framework.git
