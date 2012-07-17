@@ -1,0 +1,57 @@
+h1. Making the Most of MySQL: COUNT
+
+Happens all the time, you need multiple counts within the same table of data and it really needs to happen in one query. You try the @UNION@ with multiple queries, subqueries, or when desperate, selecting all the data and then incrementing variables in some code.
+
+From the MySQL documentation:
+
+bq. Returns a count of the number of non-NULL values of expr in the rows retrieved by a @SELECT@ statement. The result is a @BIGINT@ value.
+
+That non-@NULL@ is a big gotcha that's easy to skip over. Let's say our table of data looks something like this:
+
+|_. id |_. name |_. status |_. puppies |
+|    1 | Bob    | married  | 2         |
+|    2 | Bill   | single   | 0         |
+|    3 | James  | married  | 1         |
+|    4 | Joan   | single   | 4         |
+|    5 | Lisa   | single   | 0         |
+
+h2. Status Counts
+
+How many people are in each status? With puppies?
+
+There are two ways to accomplish this: The first will give a vertical resultset and is the most common; The second will give a horizontal resultset and is really handy when you know how many different statuses are available. For comparison, the first method:
+
+bc. SELECT COUNT(*) FROM t WHERE puppies > 0 GROUP BY status
+
+Now, when you've satisfied your iterating self, come back for the second:
+
+bc. SELECT
+	COUNT(NULLIF(status, 'married')) AS single,
+	COUNT(NULLIF(status, 'single'))  AS married
+FROM t
+
+Mind the flipping about of status names. What about with puppies?
+
+bc. SELECT
+	COUNT(NULLIF(status, 'married')) AS single,
+	COUNT(NULLIF(status, 'single'))  AS married
+FROM t
+WHERE puppies > 0
+
+The lack of a @GROUP BY@ really helps MySQL squash the table down to a single row and take advantage of optimized internal routines.
+
+h2. Lonely Single People
+
+What percentage of single people have no puppies? Here's what I see pretty often:
+
+bc. SELECT COUNT(*) AS total FROM t WHERE status = 'single';
+SELECT COUNT(*) AS single_no_puppies FROM t WHERE status = 'single' AND puppies = 0;
+
+Then some scripting to pull out those two values and do some division. How about:
+
+bc. SELECT
+	1 - COUNT(NULLIF(puppies, 0)) / COUNT(*)
+FROM t
+WHERE status = 'single';
+
+66.67%, so sad.
