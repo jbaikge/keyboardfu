@@ -7,7 +7,7 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/html5.css">
 	<![endif]-->
-	<script>
+	<?php if ($_ENV['config']['mode.production']) { ?><script>
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-28514996-1']);
 		_gaq.push(['_setDomainName', 'keyboardfu.com']);
@@ -18,7 +18,7 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
-	</script>
+	</script><?php } // mode.production ?>
 </head>
 <body>
 <div id="Header" class="container_12">
