@@ -4,3 +4,6 @@
 [submodule "lib/framework"]
 	path = lib/framework
 	url = git://github.com/jbaikge/framework.git
+[submodule "lib/lessphp"]
+	path = lib/lessphp
+	url = git://github.com/leafo/lessphp.git
