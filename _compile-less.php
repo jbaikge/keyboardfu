@@ -51,7 +51,7 @@ switch (true) {
 	case !file_exists($compiled_path):
 	case $source_modified != $cache[$source]['modified']:
 		# Preload class since we know we'll need it. No need to use the autoloader
-		require(SITEROOT . '/lib/third-party/lessc.class.php');
+		require(SITEROOT . '/lib/lessphp/lessc.inc.php');
 		$less = new lessc($source);
 		#$less->setFormatter("compressed");
 		try {
