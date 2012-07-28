@@ -1,0 +1,20 @@
+@import "_colors";
+@import "_layout";
+
+body {
+	background-color:@colorBackground;
+	margin:0;
+}
+body > header {
+	@gradientLength:32px;
+	height:@gradientLength;
+	background-image:-webkit-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Webkit (Chrome 11+)
+	background-image:   -moz-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Mozilla Firefox
+	background-image:    -ms-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // IE10 Consumer Preview
+	background-image:     -o-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Opera
+	background-image:       -webkit-gradient(linear, left top, left bottom, color-stop(0, @colorHeaderFrom), color-stop(@gradientLength, @colorHeaderTo)); // Webkit (Safari/Chrome 10)
+	background-image:        linear-gradient(to bottom, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // W3C Markup, IE10 Release Preview
+	.container {
+		.layout-container;
+	}
+}

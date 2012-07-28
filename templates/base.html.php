@@ -21,19 +21,18 @@
 	</script><?php } // mode.production ?>
 </head>
 <body>
-<div id="Header" class="container_12">
-	<div id="Logo" class="grid_5 suffix_3">
-		<a href="/">KeyboardFu</a>
+<header>
+	<div class="container">
+		<div id="Logo" class="grid_5 suffix_3">
+			<a href="/">KeyboardFu</a>
+		</div>
+		<nav>
+			<ul>
+				<li class="grid_1 articles"><a href="/">Home</a></li>
+			</ul>
+		</nav>
 	</div>
-	<nav>
-		<ul>
-			<li class="grid_1 articles"><a href="/<?php echo date('Y'); ?>">Articles</a></li>
-			<li class="grid_1 portfolio"><a href="/coming-soon">Portfolio</a></li>
-			<li class="grid_1 about"><a href="/about">About</a></li>
-			<li class="grid_1 contact"><a href="/coming-soon">Contact</a></li>
-		</ul>
-	</nav>
-</div>
+</header>
 <div id="Body" class="container_12">
 <?php echo $content; ?>
 </div>
@@ -42,7 +41,10 @@
 		<p>Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?></p>
 	</div>
 	<div class="grid_6 credits">
-		<p><strong>Icon theme:</strong> <em>ecqlipse</em> by <a href="http://chrfb.deviantart.com/gallery/#/dtr7yy" target="_blank">~chrfb</a></p>
+		<p>
+			<a href="https://github.com/netcarver/textile" target="_blank">Textile</a> by <a href="https://github.com/netcarver/textile" target="_blank">netcarver</a>
+			<a href="https://github.com/leafo/lessphp" target="_blank">LessPHP</a> by <a href="http://leafo.net" target="_blank">Leafo</a>
+		</p>
 	</div>
 </footer>
 </body>
