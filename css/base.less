@@ -16,5 +16,25 @@ body > header {
 	background-image:        linear-gradient(to bottom, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // W3C Markup, IE10 Release Preview
 	.container {
 		.layout-container;
+		#Logo {
+			background:url(../images/layout/logo.png) no-repeat 165px -3px;
+			float:left;
+			height:64px;
+			// Takes up a double gutter on the right side to accomodate for the
+			// sword
+			padding:0 20px 0 10px;
+			width:220px;
+			a.text {
+				text-decoration:none;
+			}
+			.keyboard {
+				color:@colorBackground;
+				font:28px/@gradientLength "IM Fell DW Pica SC" ;
+			}
+			.fu {
+				color:@colorRed;
+				font:28px/@gradientLength Julee;
+			}
+		}
 	}
 }

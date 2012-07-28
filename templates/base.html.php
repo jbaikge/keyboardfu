@@ -23,14 +23,16 @@
 <body>
 <header>
 	<div class="container">
-		<div id="Logo" class="grid_5 suffix_3">
-			<a href="/">KeyboardFu</a>
+		<div id="Logo">
+			<a class="text" href="/"><span class="keyboard">Keyboard</span><span class="fu">FU</span></a>
 		</div>
+		<!--
 		<nav>
 			<ul>
 				<li class="grid_1 articles"><a href="/">Home</a></li>
 			</ul>
 		</nav>
+	-->
 	</div>
 </header>
 <div id="Body" class="container_12">
