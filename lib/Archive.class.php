@@ -20,6 +20,11 @@ class Archive {
 		$upper = strtotime('+23 hour +59 minute', $lower);
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
+	public function getLastN($n) {
+		return array_map(function($data) {
+			return new Article($data['basename']);
+		}, array_slice($this->map, 0, $n));
+	}
 	public function getLatest() {
 		reset($this->map);
 		$data = current($this->map);
