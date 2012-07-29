@@ -13,5 +13,10 @@
 		</section>
 		<section class="tags">
 			<h1>Tags</h1>
+			<ol>
+<?php foreach (Tags::getInstance() as $tag) { ?>
+				<li><a href="/tag/<?php echo rawurlencode($tag); ?>"><?php e($tag); ?></a></li>
+<?php } ?>
+			</ol>
 		</section>
 	</aside>
