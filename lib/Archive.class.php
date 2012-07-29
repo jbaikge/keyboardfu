@@ -3,11 +3,7 @@
  * @author Jake Tews <jake@keyboardfu.com>
  * @date Fri Jan 13 18:36:46 EST 2012
  */
-class Archive {
-	private $map;
-	public function __construct() {
-		$this->load();
-	}
+class Archive extends Map {
 	public static function &getInstance() {
 		static $instance;
 		if ($instance == null) {
@@ -21,11 +17,11 @@ class Archive {
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
 	public function getLastN($n) {
-		return $this->makeArticles(array_slice($this->map, 0, $n));
+		return $this->makeArticles(array_slice(self::$map, 0, $n));
 	}
 	public function getLatest() {
-		reset($this->map);
-		$data = current($this->map);
+		reset(self::$map);
+		$data = current(self::$map);
 		return new Article($data['basename']);
 	}
 	public function getMonthly($year, $month) {
@@ -39,30 +35,8 @@ class Archive {
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
 	private function filterDateRange($lower, $upper) {
-		return array_filter($this->map, function($v) use($lower, $upper) {
+		return array_filter(self::$map, function($v) use($lower, $upper) {
 			return $lower <= $v['published'] && $v['published'] <= $upper;
-		});
-	}
-	private function load() {
-		$this->loadMap($_ENV['config']['cache.dir'] . '/articles/map.php');
-		$this->trimFuture();
-	}
-	private function loadMap($filename) {
-		include($filename);
-		$this->map = $map;
-	}
-	private function makeArticles(array $values) {
-		return array_map(function($v) {
-				return new Article($v['basename']);
-			},
-			$values
-		);
-		return $values;
-	}
-	private function trimFuture() {
-		$now = time();
-		$this->map = array_filter($this->map, function($v) use($now) {
-			return $v['published'] <= $now;
 		});
 	}
 }
