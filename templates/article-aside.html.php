@@ -10,6 +10,11 @@
 		</section>
 		<section class="archives">
 			<h1>Archives</h1>
+			<ol>
+<?php foreach (Archive::getInstance()->getCalendarTree() as $month => $count) { ?>
+				<li><a href="<?php echo FString::date($month, "Y/m"); ?>"><?php echo FString::date($month, 'M Y'); ?></a><sup><?php echo $count; ?></sup></li>
+<?php } ?>
+			</ol>
 		</section>
 		<section class="tags">
 			<h1>Tags</h1>

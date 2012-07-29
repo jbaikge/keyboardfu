@@ -11,6 +11,13 @@ class Archive extends Map {
 		}
 		return $instance;
 	}
+	public function getCalendarTree() {
+		$tree = array();
+		foreach (array_reverse(self::$map) as $a) {
+			++$tree[date('Y-m-01', $a['published'])];
+		}
+		return $tree;
+	}
 	public function getDaily($year, $month, $day) {
 		$lower = strtotime($year . '-' . $month . '-' . $day);
 		$upper = strtotime('+23 hour +59 minute', $lower);
