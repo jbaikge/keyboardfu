@@ -13,7 +13,7 @@ class Archive extends Map {
 	}
 	public function getCalendarTree() {
 		$tree = array();
-		foreach (array_reverse(self::$map) as $a) {
+		foreach (self::$map as $a) {
 			++$tree[date('Y-m-01', $a['published'])];
 		}
 		return $tree;
