@@ -1,9 +1,10 @@
 @import "_colors";
 @import "_layout";
 
+@headerHeight:32px;
 body {
 	background:@colorBackground url(../images/layout/bg-striping.png) repeat-y center top;
-	font:1em/1.35em "PT Sans", "Droid Sans", "Bitstream Vera Sans", Arial, sans;
+	font:0.85em/1.50em "PT Sans", "Droid Sans", "Bitstream Vera Sans", Arial, sans;
 	color:white;
 	margin:0;
 }
@@ -15,61 +16,56 @@ a:hover {
 	text-decoration:none;
 }
 body > header {
-	@gradientLength:32px;
-	height:@gradientLength;
-	background-image:-webkit-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Webkit (Chrome 11+)
-	background-image:   -moz-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Mozilla Firefox
-	background-image:    -ms-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // IE10 Consumer Preview
-	background-image:     -o-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // Opera
-	background-image:       -webkit-gradient(linear, left top, left bottom, color-stop(0, @colorHeaderFrom), color-stop(@gradientLength, @colorHeaderTo)); // Webkit (Safari/Chrome 10)
-	background-image:        linear-gradient(to bottom, @colorHeaderFrom 0, @colorHeaderTo @gradientLength); // W3C Markup, IE10 Release Preview
+	height:@headerHeight;
+	background-image:-webkit-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @headerHeight); // Webkit (Chrome 11+)
+	background-image:   -moz-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @headerHeight); // Mozilla Firefox
+	background-image:    -ms-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @headerHeight); // IE10 Consumer Preview
+	background-image:     -o-linear-gradient(top, @colorHeaderFrom 0, @colorHeaderTo @headerHeight); // Opera
+	background-image:       -webkit-gradient(linear, left top, left bottom, color-stop(0, @colorHeaderFrom), color-stop(@headerHeight, @colorHeaderTo)); // Webkit (Safari/Chrome 10)
+	background-image:        linear-gradient(to bottom, @colorHeaderFrom 0, @colorHeaderTo @headerHeight); // W3C Markup, IE10 Release Preview
 	.container {
 		.layout-container;
-		#Logo {
-			background:url(../images/layout/logo.png) no-repeat 165px -3px;
-			float:left;
-			height:66px;
-			// Takes up a double gutter on the right side to accomodate for the
-			// sword
-			padding:0 20px 0 10px;
-			width:220px;
-			a.text {
-				display:block;
-				height:100%;
-				text-decoration:none;
-				text-shadow:1px 1px 1px @colorHeaderFrom;
-			}
-			.keyboard {
-				color:@colorBackground;
-				font:28px/@gradientLength "IM Fell DW Pica SC" ;
-			}
-			.fu {
-				color:@colorRed;
-				font:28px/@gradientLength Julee;
-			}
-		}
+		background:url(../images/layout/logo.png) no-repeat 165px -3px;
+		height:66px;
 	}
 }
 body > footer {
 	.layout-container;
 	clear:both;
 	color:@colorHeaderFrom;
-	font-size:0.75em;
+	font-size:0.85em;
 	padding-top:1em;
-	.copyright, .credits {
-		float:left;
-		padding:0 10px;
-	}
 	.copyright {
-		width:140px;
+		.layout-grid(3);
 	}
 	.credits {
+		.layout-grid(9);
 		text-align:right;
-		width:780px;
 	}
+}
+#ArticleAside {
+	.layout-grid(3);
 }
 #Body {
 	.layout-container;
 	clear:both;
 	padding-top:1.5em;
+}
+#Logo {
+	.layout-grid(3);
+	height:66px;
+	a.text {
+		display:block;
+		height:100%;
+		text-decoration:none;
+		text-shadow:1px 1px 1px @colorHeaderFrom;
+	}
+	.keyboard {
+		color:@colorBackground;
+		font:28px/@headerHeight "IM Fell DW Pica SC" ;
+	}
+	.fu {
+		color:@colorRed;
+		font:28px/@headerHeight Julee;
+	}
 }
