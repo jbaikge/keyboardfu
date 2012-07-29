@@ -35,18 +35,16 @@
 	-->
 	</div>
 </header>
-<div id="Body" class="container_12">
+<div id="Body">
 <?php echo $content; ?>
 </div>
-<footer class="container_12">
-	<div class="grid_6 copyright">
-		<p>Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?></p>
+<footer>
+	<div class="copyright">
+		Copyright &copy; 2012 <?php if (date('Y') > 2012) echo '- ' . date('Y'); ?>
 	</div>
-	<div class="grid_6 credits">
-		<p>
-			<a href="https://github.com/netcarver/textile" target="_blank">Textile</a> by <a href="https://github.com/netcarver/textile" target="_blank">netcarver</a>
-			<a href="https://github.com/leafo/lessphp" target="_blank">LessPHP</a> by <a href="http://leafo.net" target="_blank">Leafo</a>
-		</p>
+	<div class="credits">
+		<a href="https://github.com/netcarver/textile" target="_blank">Textile</a> by <a href="https://github.com/netcarver/textile" target="_blank">netcarver</a><br>
+		<a href="https://github.com/leafo/lessphp" target="_blank">LessPHP</a> by <a href="http://leafo.net" target="_blank">Leafo</a>
 	</div>
 </footer>
 </body>
