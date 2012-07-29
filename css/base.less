@@ -45,6 +45,15 @@ body > footer {
 }
 #ArticleAside {
 	.layout-grid(3);
+	h1 {
+		background:@colorBackgroundTransparent;
+		margin:0 @gutterWidth * -1;
+		padding:@gutterWidth / 2 @gutterWidth;
+	}
+}
+#ArticleList {
+	float:left;
+	width:@gridWidth * 9 + @gutterWidth * 2 * 9;
 }
 #Body {
 	.layout-container;
