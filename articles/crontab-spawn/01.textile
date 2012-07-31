@@ -1,0 +1,45 @@
+h1. Crontab Spawns More Than Intended
+
+I was running a regular cronjob with a script which depended on network throughput. This meant that the time the script ran could be short or could take forever.
+
+Within the first few lines was a check for the number of instances running to prevent too much overlap. I kept a debug statement in to spit out whether a new process failed to run due to too many cuncurrent processes. The output continued to reveal more processes running than I alotted for (12 running when I requested only 10).
+
+A little snooping revealed that my script to check running processes was something along the lines of:
+
+bc. ps axo args | grep $0
+
+Except in PHP, with some more goo. Turns out, in my crontab definition:
+
+bc. * * * * * /path/to/my/script.php
+
+Was actually running:
+
+bc. sh -c /path/to/my/script.php
+
+That reads the first line of script.php and finds #!/usr/bin/env php, then spawns a new process for php /path/to/my/script.php
+
+h2. Try It For Yourself
+
+test.php:
+
+bc. #!/usr/bin/env php
+<?php
+sleep(10);
+
+Then, in a terminal:
+
+bc. jake@sable:~$ nohup sh -c ./test.php&
+[1] 28500
+jake@sable:~$ ps axo args | grep test.php
+sh -c ./test.php
+php ./test.php
+grep test.php
+jake@sable:~$
+
+h2. Fix It
+
+Even if you place /usr/bin/php in front of the script you're trying to execute, it won't fix the problem. The additional shell spawns and that filename shows up twice.
+
+The fix comes in the form of the humble ampersand (&). Just append to the end of the line and each process runs as intended:
+
+bc. * * * * * /path/to/my/script.php &
