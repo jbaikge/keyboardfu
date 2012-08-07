@@ -2,3 +2,4 @@ cache
 .sass-cache
 *.pyc
 *.sublime-workspace
+invoices/*.json
