@@ -5,7 +5,8 @@ if (isset($_SERVER['PATH_INFO'])) {
 } else {
 	$i = new stdClass;
 }
-$subtotal = array_reduce($i->lineItems, function(&$sum, &$v) { return $sum += $v->quantity * $v->unitPrice; }, 0);
+$subtotal_hours = array_reduce($i->lineItems, function(&$sum, &$v) { return $sum += $v->quantity; }, 0);
+$subtotal       = array_reduce($i->lineItems, function(&$sum, &$v) { return $sum += $v->quantity * $v->unitPrice; }, 0);
 
 ?>
 <!DOCTYPE html>
@@ -197,23 +198,23 @@ table .total th {
 		</thead>
 		<tfoot>
 			<tr>
-				<td colspan="2"></td>
-				<th colspan="2">Subtotal</th>
+				<th colspan="3">Subtotal</th>
+				<td class="float"><?php printf('%0.2f', $subtotal_hours); ?></td>
 				<td class="float"><?php printf('$%0.2f', $subtotal); ?></td>
 			</tr>
 			<tr>
-				<td colspan="2"></td>
-				<th colspan="2">Tax</th>
+				<th colspan="3">Tax</th>
+				<td></td>
 				<td class="float"><?php printf('$%0.2f', $i->tax); ?></td>
 			</tr>
 			<tr>
-				<td colspan="2"></td>
-				<th colspan="2">Miscellaneous</th>
+				<th colspan="3">Miscellaneous</th>
+				<td></td>
 				<td class="float"><?php printf('$%0.2f', $i->misc); ?></td>
 			</tr>
 			<tr class="total">
-				<td colspan="2"></td>
-				<th colspan="2">Total</th>
+				<th colspan="3">Total</th>
+				<td></td>
 				<td class="float"><?php printf('$%0.2f', $subtotal + $i->tax + $i->misc); ?></td>
 			</tr>
 		</tfoot>
