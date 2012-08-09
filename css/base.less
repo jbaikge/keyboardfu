@@ -5,7 +5,6 @@
 body {
 	background:@colorBackground url(../images/layout/bg-striping.png) repeat-y center top;
 	font:0.85em/1.50em "PT Sans", "Droid Sans", "Bitstream Vera Sans", Arial, sans;
-	color:white;
 	margin:0;
 }
 a {
@@ -81,5 +80,15 @@ body > footer {
 	.fu {
 		color:@colorRed;
 		font:28px/@headerHeight Julee;
+	}
+}
+.article {
+	aside {
+		.layout-grid(2);
+		background:@colorBackgroundTransparent;
+	}
+	article {
+		.layout-grid(7);
+		background:@colorBackgroundArticle;
 	}
 }

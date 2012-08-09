@@ -1,4 +1,4 @@
-<section>
+<section class="article">
 	<aside>
 		<div><?php echo FString::date($article->published); ?></div>
 	</aside>
