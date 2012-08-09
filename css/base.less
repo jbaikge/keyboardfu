@@ -86,9 +86,32 @@ body > footer {
 	aside {
 		.layout-grid(2);
 		background:@colorBackgroundTransparent;
+		color:@colorArticleAside;
+		padding-top:1em;
+		text-align:right;
+		.date {
+			.month, .day {
+				color:@colorArticleAsideBright;
+				font-size:2em;
+				text-transform:uppercase;
+			}
+			.year {
+				display:block;
+				font-size:0.85em;
+				margin-top:-0.5em;
+			}
+		}
+		.email {
+			span:first-child:after {
+				content:'@';
+			}
+		}
 	}
 	article {
 		.layout-grid(7);
 		background:@colorBackgroundArticle;
+		h1 {
+			font-size:2em;
+		}
 	}
 }

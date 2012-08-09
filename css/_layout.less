@@ -7,6 +7,7 @@
 }
 .layout-grid(@n) {
 	float:left;
-	padding:0 @gutterWidth;
+	padding-left:@gutterWidth;
+	padding-right:@gutterWidth;
 	width:@n * @gridWidth + (@n - 1) * (@gutterWidth * 2);
 }

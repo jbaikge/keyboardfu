@@ -1,6 +1,12 @@
 <section class="article">
 	<aside>
-		<div><?php echo FString::date($article->published); ?></div>
+		<div class="date">
+			<span class="month"><?php echo FString::date($article->published, 'M'); ?></span>
+			<span class="day"><?php echo FString::date($article->published, 'd'); ?></span>
+			<span class="year"><?php echo FString::date($article->published, 'Y'); ?></span>
+		</div>
+		<div class="author"><?php echo $article->author; ?></div>
+		<div class="email"><span><?php echo 'jake'; ?></span><span><?php echo 'keyboardfu.com'; ?></span></div>
 	</aside>
 	<article>
 <?php
