@@ -86,7 +86,7 @@ body > footer {
 	aside {
 		.layout-grid(2);
 		background:@colorBackgroundTransparent;
-		color:@colorArticleAside;
+		color:@colorLinkLight;
 		padding-top:1em;
 		text-align:right;
 		.date {
@@ -110,8 +110,33 @@ body > footer {
 	article {
 		.layout-grid(7);
 		background:@colorBackgroundArticle;
+		color:@colorArticleBody;
+		padding-top:1em;
 		h1 {
+			color:@colorRed;
 			font-size:2em;
+			font-weight:normal;
+			margin:0;
 		}
+	}
+	pre {
+		background:@colorArticleAside;
+		font-family:"Droid Sans Mono";
+		overflow:auto;
+		padding:0.5em 1em;
+	}
+	table {
+		border-collapse:collapse;
+		width:100%;
+	}
+	th, td {
+		border:1px solid @colorLinkLight;
+		padding:0.25em;
+	}
+	thead th {
+		background:@colorArticleAside;
+	}
+	tbody th {
+		text-align:left;
 	}
 }
