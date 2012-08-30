@@ -197,5 +197,12 @@ thing through w3's validator.
 		</ul>
 	</article>
 </section>
+<section>
+	<h1>Proficiencies</h1>
+	<article>
+		PHP &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
+		Go  &#x2605; &#x2605; &#x2605; &#x2606; &#x2606;
+	</article>
+</section>
 </body>
 </html>
