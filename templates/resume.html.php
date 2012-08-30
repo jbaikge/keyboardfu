@@ -3,7 +3,7 @@
 <head>
 	<title>Jacob Tews - Resume</title>
 	<meta charset="UTF-8">
-	<link href="http://fonts.googleapis.com/css?family=Trykker|Metrophobic|Federo" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Trykker|Federo" rel="stylesheet">
 	<style type="text/css">
 		@media screen {
 			/* Turn page into paper */
@@ -37,6 +37,9 @@
 			margin-top:0;
 			padding-left:67%;
 		}
+		section h1 {
+			font-size:2em;
+		}
 		#Contact {
 			width:33%;
 			float:right;
@@ -45,6 +48,12 @@
 			color:#888;
 			height:1.5em;
 			margin-bottom:-1.5em;
+		}
+		@media print {
+			#Contact dt {
+				/* Tricks the browser printers into printing a lighter gray */
+				color:#EEE;
+			}
 		}
 		#Contact dd {
 			min-height:1.5em;
@@ -57,6 +66,7 @@
 		}
 		#Experience {
 			clear:both;
+			padding-top:1em;
 		}
 		#Experience article {
 			clear:both;
@@ -70,8 +80,15 @@
 		#Experience article header a {
 			color:#888;
 		}
-		#Experience article p,
-		#Experience article ul {
+		@media print {
+			#Experience article header div,
+			#Experience article header a {
+				/* Tricks the browser printers into printing a lighter gray */
+				color:#EEE;
+			}
+		}
+		#Experience article > p,
+		#Experience article > ul {
 			-moz-box-sizing:border-box;
 			 box-sizing:border-box;
 			width:64%;
