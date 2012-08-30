@@ -74,6 +74,7 @@
 		#Experience article header div {
 			clear:right;
 			float:right;
+			padding-bottom:0.50em;
 			width:33%;
 		}
 		#Experience article header div,
@@ -131,7 +132,7 @@ thing through w3's validator.
 			<div class="dates">May, 2009 - Present</div>
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 			<div class="location">Alexandria, VA</div>
-			<div class="position">Lead Developer, Database Administrator, System Administrator</div>
+			<div class="position">Lead Developer<br>System Administrator<br>Database Administrator</div>
 		</header>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -146,7 +147,7 @@ thing through w3's validator.
 			<div class="dates">March, 2006 - May, 2009</div>
 			<div class="url"><a href="http://www.webteks.com" target="_blank">http://www.webteks.com</a></div>
 			<div class="location">Chesapeake, VA</div>
-			<div class="position">Lead Developer, Database Administrator, System Administrator</div>
+			<div class="position">Lead Developer<br>Database Administrator<br>System Administrator</div>
 		</header>
 		<ul>
 			<li>Website creation and maintenance for over 250 clients</li>
