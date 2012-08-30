@@ -3,21 +3,78 @@
 <head>
 	<title>Jacob Tews - Resume</title>
 	<meta charset="UTF-8">
+	<link href="http://fonts.googleapis.com/css?family=Trykker|Metrophobic|Federo" rel="stylesheet">
 	<style type="text/css">
 		@media screen {
 			/* Turn page into paper */
 			html {
-				background:#222;
+				background:#CCC;
 			}
 			body {
-				background:#444;
+				background:#FFF;
 				box-shadow:0 0 0.5em 0 #333;
-				color:#CCC;
 				height:10in;
 				margin:1em auto;
-				padding:1in;
+				padding:0.5in;
 				width:7.5in;
 			}
+		}
+		body {
+			color:#222;
+			font-family:Trykker, serif;
+			font-size:0.75em;
+			line-height:1.5em;
+		}
+		a {
+			color:#222;
+			text-decoration:none;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family:"Federo", sans;
+		}
+		header > h1 {
+			font-size:2.5em;
+			margin-top:0;
+			padding-left:67%;
+		}
+		#Contact {
+			width:33%;
+			float:right;
+		}
+		#Contact dt {
+			color:#888;
+			height:1.5em;
+			margin-bottom:-1.5em;
+		}
+		#Contact dd {
+			min-height:1.5em;
+			margin-left:5em;
+			padding-left:0;
+		}
+		#Objective {
+			float:left;
+			width:64%;
+		}
+		#Experience {
+			clear:both;
+		}
+		#Experience article {
+			clear:both;
+		}
+		#Experience article header div {
+			clear:right;
+			float:right;
+			width:33%;
+		}
+		#Experience article header div,
+		#Experience article header a {
+			color:#888;
+		}
+		#Experience article p,
+		#Experience article ul {
+			-moz-box-sizing:border-box;
+			 box-sizing:border-box;
+			width:64%;
 		}
 	</style>
 </head>
@@ -29,22 +86,23 @@ thing through w3's validator.
 <header>
 	<h1>Jacob Tews</h1>
 </header>
+<section id="Contact">
+	<dl>
+		<dt>Phone</dt>
+		<dd>571.572.9577</dd>
+		<dt>Email</dt>
+		<dd><a href="mailto:jake@keyboardfu.com">jake@keyboardfu.com</a></dd>
+		<dt>Website</dt>
+		<dd><a href="http://keyboardfu.com" target="_blank">http://keyboardfu.com</a></dd>
+		<dt>Address</dt>
+		<dd>Available upon request</dd>
+	</dl>
+</section>
 <section id="Objective">
 	<h1>Objective</h1>
 	<article>
 		<p>Continue along the path of programming Zen through exploratory projects utilizing: Go, PHP, data management, distributed computing, web frontends, Linux backends, and massive amounts of brain power.</p>
 	</article>
-</section>
-<section id="Contact">
-	<h1>Contact Information</h1>
-	<dl>
-		<dt>Phone</dt>
-		<dd>571.572.9577</dd>
-		<dt>Email</dt>
-		<dd>jake@keyboardfu.com</dd>
-		<dt>Address</dt>
-		<dd>Available upon request</dd>
-	</dl>
 </section>
 <section id="Experience">
 	<h1>Experience</h1>
@@ -56,6 +114,12 @@ thing through w3's validator.
 			<div class="location">Alexandria, VA</div>
 			<div class="position">Lead Developer, Database Administrator, System Administrator</div>
 		</header>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</article>
 	<article>
 		<header>
@@ -65,6 +129,9 @@ thing through w3's validator.
 			<div class="location">Chesapeake, VA</div>
 			<div class="position">Lead Developer, Database Administrator, System Administrator</div>
 		</header>
+		<ul>
+
+		</ul>
 	</article>
 	<article>
 		<header>
@@ -74,6 +141,13 @@ thing through w3's validator.
 			<div class="location">Virginia Beach, VA</div>
 			<div class="position">Assistant Webmaster</div>
 		</header>
+		<ul>
+			<li>Refactored entire backend of website consisting of 3800 pages to make website more Web Standards Compliant and rely on CSS instead of HTML design elements</li>
+			<li>Created e-commerce applications using PayPal and ASP</li>
+			<li>Created database applications using Microsoft Access with ASP</li>
+			<li>Worked with ActionScript in Flash and integrated ASP-generated XML into applications</li>
+			<li>Integrated XML with ASP for structured data listings (schools, statistics, employees)</li>
+		</ul>
 	</article>
 </section>
 </body>
