@@ -111,6 +111,8 @@ thing through w3's validator.
 		<dd><a href="mailto:jake@keyboardfu.com">jake@keyboardfu.com</a></dd>
 		<dt>Website</dt>
 		<dd><a href="http://keyboardfu.com" target="_blank">http://keyboardfu.com</a></dd>
+		<dt>Github</dt>
+		<dd><a href="http://git.io/__" target="_blank">http://git.io/__</a></dd>
 		<dt>Address</dt>
 		<dd>Available upon request</dd>
 	</dl>
@@ -147,7 +149,34 @@ thing through w3's validator.
 			<div class="position">Lead Developer, Database Administrator, System Administrator</div>
 		</header>
 		<ul>
-
+			<li>Website creation and maintenance for over 250 clients</li>
+			<li>Utilized PHP to its full potential through Object Oriented Programming (OOP)</li>
+			<li>Optimized internal PHP4 framework update and utilize enhancements in PHP5</li>
+			<li>Utilized CSS to make site layouts lightweight and Section 508 compliant</li>
+			<li>Improved on the DOM in HTML to use fewer elements to create better structured pages</li>
+			<li>Diagrammed database layouts to help developers visualize structure and create more normalized data structures</li>
+			<li>Managed server operations for eight (8) Linux hosting servers. Tasks included:
+				<ul>
+					<li>Taking new sites live</li>
+					<li>Database administration</li>
+					<li>Mail server administration</li>
+					<li>Building new servers</li>
+				</ul>
+			</li>
+			<li>Migrated over 150 websites from a sparse web server environment to a consolidated, load balanced environment. New environment included two load balanced web servers, a master database server, a slave database server, and a secondary slave server for taking nightly backups. Tasks include:
+				<ul>
+					<li>Uploaded file synchronization between web servers</li>
+					<li>Website codebase management with subversion</li>
+					<li>Database administration</li>
+					<li>Firewall and network management</li>
+				</ul>
+			</li>
+			<li>Changed internal site file management from a Samba share to version control (Subversion)</li>
+			<li>Optimized caching mechanisms to allow a client site to run on one server with a load below 1.00 under heavy traffic instead of four servers with a load above 50.00</li>
+			<li>Created a page-flipping system utilizing both Flash and server-side processes to convert PDF documents into zoomable and flippable documents</li>
+			<li>Utilized Subversion's capabilities to create a defacement resistance system</li>
+			<li>Created a fax service with SOAP, 2D barcodes, and fax modems to allow clients to fax documents into the server and associate the documents with specific items on a website</li>
+			<li>Developed desktop application to drag and drop files and send to a secure server for processing by a robotic CD burner and labeler</li>
 		</ul>
 	</article>
 	<article>
