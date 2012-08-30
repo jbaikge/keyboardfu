@@ -35,13 +35,13 @@
 		header > h1 {
 			font-size:2.5em;
 			margin-top:0;
-			padding-left:67%;
+			padding-left:73%;
 		}
 		section h1 {
 			font-size:2em;
 		}
 		#Contact {
-			width:33%;
+			width:27%;
 			float:right;
 		}
 		#Contact dt {
@@ -62,7 +62,7 @@
 		}
 		#Objective {
 			float:left;
-			width:64%;
+			width:70%;
 		}
 		#Experience {
 			clear:both;
@@ -75,7 +75,7 @@
 			clear:right;
 			float:right;
 			padding-bottom:0.50em;
-			width:33%;
+			width:27%;
 		}
 		#Experience article header div,
 		#Experience article header a {
@@ -92,7 +92,7 @@
 		#Experience article > ul {
 			-moz-box-sizing:border-box;
 			 box-sizing:border-box;
-			width:64%;
+			width:70%;
 		}
 	</style>
 </head>
