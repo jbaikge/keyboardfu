@@ -21,7 +21,7 @@
 		body {
 			color:#222;
 			font-family:Trykker, serif;
-			font-size:0.75em;
+			font-size:0.70em;
 			line-height:1.5em;
 		}
 		a {
@@ -141,18 +141,35 @@ thing through w3's validator.
 	<h1>Experience</h1>
 	<article>
 		<header>
-			<h2>300Brand</h2>
+			<hgroup>
+				<h2>300Brand</h2>
+				<h3>Formerly O'Keeffe &amp; Company</h3>
+			</hgroup>
 			<div class="dates">May, 2009 - Present</div>
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 			<div class="location">Alexandria, VA</div>
 			<div class="position">Lead Developer<br>System Administrator<br>Database Administrator</div>
 		</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<ul>
+			<li>Maintained websites for 30 internal and external clients</li>
+			<li>Hired and managed developers with varying skill levels and skill sets</li>
+			<li>Converted site file management of all sites from FTP to Subversion</li>
+			<li>Completed development of PHP 5.3+ framework after four years of development to aid in rapid development of websites and supporting CLI scripts:
+				<ul>
+					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
+					<li>"Stay out of your way" mentality allowed new developers to write PHP instead of work around the framework</li>
+					<li>May 2012 - Released framework to open source community: <a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
+				</ul>
+			</li>
+			<li>Utilized Subversion to implement an infinite nightly database backup system where developers could extract all or part of a production database at any point in the past</li>
+			<li>Set up staging server for internal and external review of site changes:
+				<ul>
+					<li>Subversion post-commit hooks update files server</li>
+					<li>New branches become subdomains of the site domain (new-branch.clientdomain.com)</li>
+					<li>Aforementioned nightly database backups pushed into staging server to keep development data fresh</li>
+				</ul>
+			</li>
+		</ul>
 	</article>
 	<article>
 		<header>
