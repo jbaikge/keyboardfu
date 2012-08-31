@@ -165,7 +165,7 @@ thing through w3's validator.
 <section id="Objective">
 	<h1>Objective</h1>
 	<article>
-		<p>Exercise programming prowess with copious amounts of problem solving in exploratory projects which utilize: Go, PHP, dynamic data, distributed computing, and web frontends.</p>
+		<p>Exercise currently mastered skills, while growing abilities, to build successful exploratory projects which utilize: Go, PHP, dynamic data, distributed computing, and Web frontends.</p>
 	</article>
 </section>
 <section id="Experience">
@@ -183,36 +183,49 @@ thing through w3's validator.
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 		</header>
 		<ul>
-			<li>Maintained websites for over 30 internal and external clients</li>
-			<li>Developed ticket management website for internal projects:
+			<li>Maintained websites for over 30 internal and external clients:
 				<ul>
-					<li>Replaced email for work tasks</li>
+					<li>Converted site file management of all sites from FTP to Subversion</li>
+					<li>GTSY - Good To See You; A social network to support an internal G-1 priority mission within the U.S. Army</li>
+					<li>495 Express Lanes - <a href="http://495expresslanes.com" target="_blank">http://495expresslanes.com</a></li>
+					<li>MeriTalk - <a href="http://meritalk.com" target="_blank">http://meritalk.com</a></li>
+					<li>Telework Exchange - <a href="http://teleworkexchange.com" target="_blank">http://teleworkexchange.com</a></li>
+				</ul>
+			</li>
+			<li>Developed PHP 5.3+ framework for company websites:
+				<ul>
+					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
+					<li>Unobtrusive nature allowed freedom and flexibility during development</li>
+					<li>May, 2012 - Released framework to open source community:<br><a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
+				</ul>
+			</li>
+			<li>Developed and launched multi-functional creative traffic and ticket management system:
+				<ul>
+					<li>Delivered alternative to email to enable better cross-team visibility and historical referencing</li>
 					<li>Increased visibility for employee workloads</li>
 					<li>Decreased overlooked and erroneous tasks</li>
 					<li>Decreased "ownership" of entire sites - helped distribute workloads across team</li>
 				</ul>
 			</li>
-			<li>Completed Android app compliment to a social networking website:
+			<li>Hired and managed developers:
 				<ul>
-					<li>Acquired code from third party contractor; fixed bugs and added new features</li>
-					<li>Created SOAP and REST APIs to communicate from Android, iOS, and Blackberry apps to website</li>
+					<li>Instilled strong teamwork practices by making members accountable</li>
+					<li>Utilized IRC and IRC bots to communicate development actions</li>
+					<li>Measured skills prior to interviews with coding exercises</li>
 				</ul>
 			</li>
-			<li>Hired and managed developers with varying skill levels and skill sets</li>
-			<li>Converted site file management of all sites from FTP to Subversion</li>
-			<li>Completed development of PHP 5.3+ framework after four years of development to aid in rapid development of websites and supporting CLI scripts:
+			<li>Capitalized on Subversion storage to implement infinite nightly database backups:
 				<ul>
-					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
-					<li>"Stay out of your way" mentality allowed new developers to write PHP instead of work around the framework</li>
-					<li>May, 2012 - Released framework to open source community:<br><a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
+					<li>Developers could pull a copy of the production database at any point in history</li>
+					<li>Only diffs stored, keeping storage requirements low</li>
 				</ul>
 			</li>
-			<li>Utilized Subversion to implement an infinite nightly database backup system where developers could extract all or part of a production database at any point in the past</li>
-			<li>Set up staging server for internal and external review of site changes:
+			<li>Set up company's first staging server:
 				<ul>
-					<li>Subversion post-commit hooks update files server</li>
+					<li>Subversion post-commit hooks pushed changes to server</li>
 					<li>New branches become subdomains of the site domain (new-branch.clientdomain.com)</li>
-					<li>Aforementioned nightly database backups pushed into staging server to keep development data fresh</li>
+					<li>Databases always kept fresh by using the latest nightly backup</li>
+					<li>DNS configuration allowed internal and external review of changes</li>
 				</ul>
 			</li>
 		</ul>
@@ -243,9 +256,9 @@ thing through w3's validator.
 					<li>Mail server administration (exim)</li>
 				</ul>
 			</li>
-			<li>Migrated over 150 websites from a sparse web server environment to a consolidated, load balanced environment:
+			<li>Migrated over 150 websites from a sparse Web server environment to a consolidated, load balanced environment:
 				<ul>
-					<li>Configured upload file synchronization between web servers with unison</li>
+					<li>Configured upload file synchronization between Web servers with unison</li>
 					<li>Migrated dangling FTP-only sites to Subversion to keep code consistent</li>
 					<li>Configured database master/slave relationship</li>
 				</ul>
