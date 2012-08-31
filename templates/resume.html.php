@@ -260,12 +260,14 @@ thing through w3's validator.
 				<dt>JavaScript     </dt><dd><?php stars(5); ?></dd>
 				<dt>PHP            </dt><dd><?php stars(5); ?></dd>
 				<dt>Shell Scripting</dt><dd><?php stars(5); ?></dd>
+				<dt>SQL            </dt><dd><?php stars(5); ?></dd>
 			</dl>
 			<dl>
-				<dt>SQL            </dt><dd><?php stars(5); ?></dd>
 				<dt>ASP Classic    </dt><dd><?php stars(4); ?></dd>
 				<dt>Go             </dt><dd><?php stars(4); ?></dd>
 				<dt>Java           </dt><dd><?php stars(3); ?></dd>
+				<dt>Python         </dt><dd><?php stars(2); ?></dd>
+				<dt>C              </dt><dd><?php stars(2); ?></dd>
 			</dl>
 		</div>
 		<div id="Software">
