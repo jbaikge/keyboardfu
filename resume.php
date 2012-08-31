@@ -36,6 +36,5 @@ foreach ($proficiency_list as $name => $prof) {
 	}
 }
 ksort($profs);
-echo implode(null, $profs);
 
 FTemplate::render('templates/resume.html.php');
