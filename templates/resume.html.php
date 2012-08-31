@@ -183,18 +183,15 @@ thing through w3's validator.
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 		</header>
 		<ul>
-			<li>Maintained websites for over 30 internal and external clients:
+			<li> Lead developer on various teams to concept, design, develop, and maintained websites for more than 30 internal and external clients:
 				<ul>
+					<li>Actively represented the development teams in client conferences in-person and over the phone; communicated directly with client representatives and account leads</li>
 					<li>Converted site file management of all sites from FTP to Subversion</li>
-					<li>GTSY - Good To See You; A social network to support an internal G-1 priority mission within the U.S. Army</li>
-					<li>495 Express Lanes - <a href="http://495expresslanes.com" target="_blank">http://495expresslanes.com</a></li>
-					<li>MeriTalk - <a href="http://meritalk.com" target="_blank">http://meritalk.com</a></li>
-					<li>Telework Exchange - <a href="http://teleworkexchange.com" target="_blank">http://teleworkexchange.com</a></li>
 				</ul>
 			</li>
 			<li>Developed PHP 5.3+ framework for company websites:
 				<ul>
-					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
+					<li>Enhanced performance through trace analysis to optimize memory and time usage; achieved 100kb and 40ms initialization</li>
 					<li>Unobtrusive nature allowed freedom and flexibility during development</li>
 					<li>May, 2012 - Released framework to open source community:<br><a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
 				</ul>
@@ -207,26 +204,29 @@ thing through w3's validator.
 					<li>Decreased "ownership" of entire sites - helped distribute workloads across team</li>
 				</ul>
 			</li>
-			<li>Hired and managed developers:
+			<li>Managed staffing, including  requirements assessment; acquisition; training; and management across varying skill levels and skill sets:
 				<ul>
-					<li>Instilled strong teamwork practices by making members accountable</li>
+					<li>managed day-to day development team as well as ongoing job performance and growth, including metrics tracking; team communications and progress reports; and annual reviews</li>
 					<li>Utilized IRC and IRC bots to communicate development actions</li>
-					<li>Measured skills prior to interviews with coding exercises</li>
 				</ul>
 			</li>
-			<li>Capitalized on Subversion storage to implement infinite nightly database backups:
+			<li>Leveraged existing technology to maximize the company's return on investment
+				<!--
 				<ul>
 					<li>Developers could pull a copy of the production database at any point in history</li>
 					<li>Only diffs stored, keeping storage requirements low</li>
 				</ul>
+				-->
 			</li>
-			<li>Set up company's first staging server:
+			<li>Evaluated technology and implemented the organization's first ever staging server
+				<!--
 				<ul>
 					<li>Subversion post-commit hooks pushed changes to server</li>
 					<li>New branches become subdomains of the site domain (new-branch.clientdomain.com)</li>
 					<li>Databases always kept fresh by using the latest nightly backup</li>
 					<li>DNS configuration allowed internal and external review of changes</li>
 				</ul>
+				-->
 			</li>
 		</ul>
 	</article>
@@ -289,6 +289,19 @@ thing through w3's validator.
 		</ul>
 	</article>
 </section>
+<section id="Work">
+	<h1>Work Samples</h1>
+	<article>
+		<p>The following are examples of recent development websites:</p>
+		<ul>
+			<li>GTSY - Good To See You; A social network to support an internal G-1 priority mission within the U.S. Army</li>
+			<li>495 Express Lanes - <a href="http://495expresslanes.com" target="_blank">http://495expresslanes.com</a></li>
+			<li>MeriTalk - <a href="http://meritalk.com" target="_blank">http://meritalk.com</a></li>
+			<li>Telework Exchange - <a href="http://teleworkexchange.com" target="_blank">http://teleworkexchange.com</a></li>
+		</ul>
+	</article>
+</section>
+
 <section id="Proficiency">
 	<h1>Skill Proficiencies</h1>
 	<article id="Languages">
