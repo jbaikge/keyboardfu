@@ -13,7 +13,6 @@
 			body {
 				background:#FFF;
 				box-shadow:0 0 0.5em 0 #333;
-				height:10in;
 				margin:1em auto;
 				padding:0.5in;
 				width:7.5in;
@@ -71,19 +70,23 @@
 		#Experience article {
 			clear:both;
 		}
-		#Experience article header div {
+		#Experience header div {
 			clear:right;
 			float:right;
 			padding-bottom:0.75em;
 			width:27%;
 		}
-		#Experience article header div,
-		#Experience article header a {
+		#Experience hgroup h3 {
+			color:#BBB;
+			margin-top: -1em;
+		}
+		#Experience header div,
+		#Experience header a {
 			color:#888;
 		}
 		@media print {
-			#Experience article header div,
-			#Experience article header a {
+			#Experience header div,
+			#Experience header a {
 				/* Tricks the browser printers into printing a lighter gray */
 				color:#EEE;
 			}
@@ -95,14 +98,14 @@
 			width:70%;
 		}
 		#Proficiency dt {
-			float:left;
-			width:18%;
+			display:inline-block;
+			width:15%;
 		}
 		#Proficiency dd {
-			float:left;
+			display:inline-block;
 			font-size:1.25em;
 			margin:0;
-			width:15%;
+			width:17%;
 		}
 	</style>
 </head>
