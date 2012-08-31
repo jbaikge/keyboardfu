@@ -69,6 +69,13 @@
 		}
 		#Experience article {
 			clear:both;
+			padding-top:0.75em;
+		}
+		#Experience header > hgroup {
+			float:left;
+		}
+		#Experience header h2 {
+			margin-top:0;
 		}
 		#Experience header div {
 			clear:right;
@@ -99,6 +106,7 @@
 		}
 		#Experience article > p,
 		#Experience article > ul {
+			clear:left;
 			-moz-box-sizing:border-box;
 			 box-sizing:border-box;
 			width:72%;
@@ -186,7 +194,7 @@ thing through w3's validator.
 					<li>Replaced email for work tasks</li>
 					<li>Increased visibility for employee workloads</li>
 					<li>Decreased overlooked and erroneous tasks</li>
-					<li>Decreased "ownership" of entire sites - task history helped distribute workloads across team</li>
+					<li>Decreased "ownership" of entire sites - helped distribute workloads across team</li>
 				</ul>
 			</li>
 			<li>Hired and managed developers with varying skill levels and skill sets</li>
@@ -195,7 +203,7 @@ thing through w3's validator.
 				<ul>
 					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
 					<li>"Stay out of your way" mentality allowed new developers to write PHP instead of work around the framework</li>
-					<li>May, 2012 - Released framework to open source community: <a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
+					<li>May, 2012 - Released framework to open source community:<br><a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
 				</ul>
 			</li>
 			<li>Utilized Subversion to implement an infinite nightly database backup system where developers could extract all or part of a production database at any point in the past</li>
@@ -210,7 +218,9 @@ thing through w3's validator.
 	</article>
 	<article>
 		<header>
-			<h2>Web Teks, Inc.</h2>
+			<hgroup>
+				<h2>Web Teks, Inc.</h2>
+			</hgroup>
 			<div class="position"><strong>Lead Developer</strong><br>Database Administrator<br>System Administrator</div>
 			<div class="dates">March, 2006 - May, 2009</div>
 			<div class="location">Chesapeake, VA</div>
@@ -247,7 +257,9 @@ thing through w3's validator.
 	</article>
 	<article>
 		<header>
-			<h2>Virginia Beach City Public Schools</h2>
+			<hgroup>
+				<h2>Virginia Beach City Public Schools</h2>
+			</hgroup>
 			<div class="position"><strong>Assistant Webmaster</strong></div>
 			<div class="dates">October, 2004 - March, 2006</div>
 			<div class="location">Virginia Beach, VA</div>
