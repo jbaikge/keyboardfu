@@ -51,7 +51,7 @@
 		@media print {
 			#Contact dt {
 				/* Tricks the browser printers into printing a lighter gray */
-				color:#EEE;
+				color:#CCC;
 			}
 		}
 		#Contact dd {
@@ -88,8 +88,11 @@
 			#Experience header div,
 			#Experience header a {
 				/* Tricks the browser printers into printing a lighter gray */
-				color:#EEE;
+				color:#CCC;
 			}
+		}
+		#Experience header .position {
+			font-size:1.15em;
 		}
 		#Experience article > p,
 		#Experience article > ul {
@@ -168,13 +171,21 @@ thing through w3's validator.
 				<h2>300Brand</h2>
 				<h3>Formerly O'Keeffe &amp; Company</h3>
 			</hgroup>
+			<div class="position"><strong>Lead Developer</strong><br>System Administrator<br>Database Administrator</div>
 			<div class="dates">March, 2009 - Present</div>
-			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 			<div class="location">Alexandria, VA</div>
-			<div class="position">Lead Developer<br>System Administrator<br>Database Administrator</div>
+			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 		</header>
 		<ul>
 			<li>Maintained websites for 30 internal and external clients</li>
+			<li>Developed ticket management website for internal projects:
+				<ul>
+					<li>Replaced email for work tasks</li>
+					<li>Increased visibility for employee workloads</li>
+					<li>Decreased overlooked and erroneous tasks</li>
+					<li>Decreased "ownership" of entire sites - task history helped distribute workloads across team</li>
+				</ul>
+			</li>
 			<li>Hired and managed developers with varying skill levels and skill sets</li>
 			<li>Converted site file management of all sites from FTP to Subversion</li>
 			<li>Completed development of PHP 5.3+ framework after four years of development to aid in rapid development of websites and supporting CLI scripts:
@@ -197,10 +208,10 @@ thing through w3's validator.
 	<article>
 		<header>
 			<h2>Web Teks, Inc.</h2>
+			<div class="position"><strong>Lead Developer</strong><br>Database Administrator<br>System Administrator</div>
 			<div class="dates">March, 2006 - May, 2009</div>
-			<div class="url"><a href="http://www.webteks.com" target="_blank">http://www.webteks.com</a></div>
 			<div class="location">Chesapeake, VA</div>
-			<div class="position">Lead Developer<br>Database Administrator<br>System Administrator</div>
+			<div class="url"><a href="http://www.webteks.com" target="_blank">http://www.webteks.com</a></div>
 		</header>
 		<ul>
 			<li>Converted site file management of all sites from FTP to Subversion</li>
@@ -234,10 +245,10 @@ thing through w3's validator.
 	<article>
 		<header>
 			<h2>Virginia Beach City Public Schools</h2>
+			<div class="position"><strong>Assistant Webmaster</strong></div>
 			<div class="dates">October, 2004 - March, 2006</div>
-			<div class="url"><a href="http://www.vbschools.com" target="_blank">http://www.vbschools.com</a></div>
 			<div class="location">Virginia Beach, VA</div>
-			<div class="position">Assistant Webmaster</div>
+			<div class="url"><a href="http://www.vbschools.com" target="_blank">http://www.vbschools.com</a></div>
 		</header>
 		<ul>
 			<li>Refactored entire backend of website consisting of 3800 pages to make website more Web Standards Compliant and rely on CSS instead of HTML design elements</li>
