@@ -212,42 +212,13 @@ thing through w3's validator.
 	<article>
 		<dl>
 <?php
-$profs = array(
-	'PHP'             => 5,
-	'Go'              => 4,
-	'Shell Scripting' => 5,
-	'ASP Classic'     => 4,
-	'Java'            => 3,
-	'HTML4/5'         => 5,
-	'JavaScript'      => 5,
-	'MySQL SQL'       => 5,
-	'MySQL Admin'     => 4,
-	'SQLServer SQL'   => 4,
-	'SQLServer Admin' => 2,
-	'Linux'           => 5,
-	'Mac'             => 3,
-	'Windows'         => 3,
-	'Subversion'      => 5,
-	'Git'             => 4,
-	'Mercurial (hg)'  => 3,
-);
-$third = ceil(count($profs) / 3);
-$ordered = array();
-$i = 0;
-$m = 1;
-foreach ($profs as $name => $prof) {
-	$ordered[$i] = sprintf("\t\t\t<dt>%s</dt>\n\t\t\t<dd>%s</dd>\n",
+foreach ($profs as $prof) {
+	list($name, $rating, $filler) = $prof;
+	printf("\t\t\t<dt>%s</dt>\n\t\t\t<dd>%s</dd>\n",
 		$name,
-		str_repeat('&#x2605 ', $prof) . str_repeat('&#x2606 ', 5 - $prof)
+		str_repeat('&#x2605 ', $rating) . str_repeat('&#x2606 ', $filler)
 	);
-	$i += 3;
-	if (count($ordered) == $third * $m) {
-		$i = $m;
-		$m++;
-	}
 }
-ksort($ordered);
-echo implode(null, $ordered);
 ?>
 		</dl>
 	</article>
