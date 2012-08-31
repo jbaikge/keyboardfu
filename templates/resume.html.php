@@ -98,12 +98,6 @@
 				color:#CCC;
 			}
 		}
-		#Experience header strong {
-			letter-spacing:0.1em;
-		}
-		#Experience header .position {
-			font-size:1.15em;
-		}
 		#Experience article > p,
 		#Experience article > ul {
 			clear:left;
@@ -180,21 +174,28 @@ thing through w3's validator.
 		<header>
 			<hgroup>
 				<h2>300Brand</h2>
-				<h3>Formerly O'Keeffe &amp; Company</h3>
+				<h3>Lead Web Developer</h3>
 			</hgroup>
-			<div class="position"><strong>Lead Developer</strong><br>System Administrator<br>Database Administrator</div>
+			<div class="position">Additional Roles:<br>System Administrator<br>Database Administrator</div>
+			<div class="formerly">Formerly O'Keeffe &amp; Company</div>
 			<div class="dates">March, 2009 - Present</div>
 			<div class="location">Alexandria, VA</div>
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 		</header>
 		<ul>
-			<li>Maintained websites for 30 internal and external clients</li>
+			<li>Maintained websites for over 30 internal and external clients</li>
 			<li>Developed ticket management website for internal projects:
 				<ul>
 					<li>Replaced email for work tasks</li>
 					<li>Increased visibility for employee workloads</li>
 					<li>Decreased overlooked and erroneous tasks</li>
 					<li>Decreased "ownership" of entire sites - helped distribute workloads across team</li>
+				</ul>
+			</li>
+			<li>Completed Android app compliment to a social networking website:
+				<ul>
+					<li>Acquired code from third party contractor; fixed bugs and added new features</li>
+					<li>Created SOAP and REST APIs to communicate from Android, iOS, and Blackberry apps to website</li>
 				</ul>
 			</li>
 			<li>Hired and managed developers with varying skill levels and skill sets</li>
@@ -220,8 +221,9 @@ thing through w3's validator.
 		<header>
 			<hgroup>
 				<h2>Web Teks, Inc.</h2>
+				<h3>Lead Web Developer</h3>
 			</hgroup>
-			<div class="position"><strong>Lead Developer</strong><br>Database Administrator<br>System Administrator</div>
+			<div class="position">Additional Roles:<br>Database Administrator<br>System Administrator</div>
 			<div class="dates">March, 2006 - May, 2009</div>
 			<div class="location">Chesapeake, VA</div>
 			<div class="url"><a href="http://www.webteks.com" target="_blank">http://www.webteks.com</a></div>
@@ -259,8 +261,8 @@ thing through w3's validator.
 		<header>
 			<hgroup>
 				<h2>Virginia Beach City Public Schools</h2>
+				<h3>Assistant Webmaster</h3>
 			</hgroup>
-			<div class="position"><strong>Assistant Webmaster</strong></div>
 			<div class="dates">October, 2004 - March, 2006</div>
 			<div class="location">Virginia Beach, VA</div>
 			<div class="url"><a href="http://www.vbschools.com" target="_blank">http://www.vbschools.com</a></div>
