@@ -94,6 +94,16 @@
 			 box-sizing:border-box;
 			width:70%;
 		}
+		#Proficiency dt {
+			float:left;
+			width:18%;
+		}
+		#Proficiency dd {
+			float:left;
+			font-size:1.25em;
+			margin:0;
+			width:15%;
+		}
 	</style>
 </head>
 <body>
@@ -197,11 +207,49 @@ thing through w3's validator.
 		</ul>
 	</article>
 </section>
-<section>
-	<h1>Proficiencies</h1>
+<section id="Proficiency">
+	<h1>Skill Proficiencies</h1>
 	<article>
-		PHP &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;
-		Go  &#x2605; &#x2605; &#x2605; &#x2606; &#x2606;
+		<dl>
+<?php
+$profs = array(
+	'PHP'             => 5,
+	'Go'              => 3,
+	'Shell Scripting' => 5,
+	'ASP Classic'     => 4,
+	'Java'            => 4,
+	'HTML4/5'         => 5,
+	'JavaScript'      => 5,
+	'MySQL SQL'       => 5,
+	'MySQL Admin'     => 4,
+	'SQLServer SQL'   => 4,
+	'SQLServer Admin' => 2,
+	'Linux'           => 5,
+	'Mac'             => 3,
+	'Windows'         => 3,
+	'Subversion'      => 5,
+	'Git'             => 4,
+	'Mercurial (hg)'  => 3,
+);
+$third = ceil(count($profs) / 3);
+$ordered = array();
+$i = 0;
+$m = 1;
+foreach ($profs as $name => $prof) {
+	$ordered[$i] = sprintf("\t\t\t<dt>%s</dt>\n\t\t\t<dd>%s</dd>\n",
+		$name,
+		str_repeat('&#x2605 ', $prof) . str_repeat('&#x2606 ', 5 - $prof)
+	);
+	$i += 3;
+	if (count($ordered) == $third * $m) {
+		$i = $m;
+		$m++;
+	}
+}
+ksort($ordered);
+echo implode(null, $ordered);
+?>
+		</dl>
 	</article>
 </section>
 </body>
