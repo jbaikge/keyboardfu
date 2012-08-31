@@ -56,7 +56,7 @@
 		}
 		#Contact dd {
 			min-height:1.5em;
-			margin-left:5em;
+			margin-left:4.5em;
 			padding-left:0;
 		}
 		#Objective {
