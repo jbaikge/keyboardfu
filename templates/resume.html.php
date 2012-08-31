@@ -65,7 +65,7 @@
 		}
 		#Experience {
 			clear:both;
-			padding-top:1em;
+			padding-top:0.001em;
 		}
 		#Experience article {
 			clear:both;
@@ -168,7 +168,7 @@ thing through w3's validator.
 				<h2>300Brand</h2>
 				<h3>Formerly O'Keeffe &amp; Company</h3>
 			</hgroup>
-			<div class="dates">May, 2009 - Present</div>
+			<div class="dates">March, 2009 - Present</div>
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 			<div class="location">Alexandria, VA</div>
 			<div class="position">Lead Developer<br>System Administrator<br>Database Administrator</div>
@@ -181,7 +181,7 @@ thing through w3's validator.
 				<ul>
 					<li>Heavy concentration on performance through trace analysis to optimize memory and time usage</li>
 					<li>"Stay out of your way" mentality allowed new developers to write PHP instead of work around the framework</li>
-					<li>May 2012 - Released framework to open source community: <a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
+					<li>May, 2012 - Released framework to open source community: <a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
 				</ul>
 			</li>
 			<li>Utilized Subversion to implement an infinite nightly database backup system where developers could extract all or part of a production database at any point in the past</li>
@@ -203,30 +203,28 @@ thing through w3's validator.
 			<div class="position">Lead Developer<br>Database Administrator<br>System Administrator</div>
 		</header>
 		<ul>
-			<li>Website creation and maintenance for over 250 clients</li>
-			<li>Utilized PHP to its full potential through Object Oriented Programming (OOP)</li>
-			<li>Optimized internal PHP4 framework update and utilize enhancements in PHP5</li>
+			<li>Converted site file management of all sites from FTP to Subversion</li>
+			<li>Managed maintenance and build-outs for over 150 clients</li>
+			<li>Optimized internal PHP4 framework to utilize enhancements in PHP5</li>
 			<li>Utilized CSS to make site layouts lightweight and Section 508 compliant</li>
-			<li>Improved on the DOM in HTML to use fewer elements to create better structured pages</li>
-			<li>Diagrammed database layouts to help developers visualize structure and create more normalized data structures</li>
-			<li>Managed server operations for eight (8) Linux hosting servers. Tasks included:
+			<li>Improved developer's usage of the DOM to use fewer elements and create better structured pages</li>
+			<li>Diagrammed database layouts to help developers visualize structures and utilize more normalized data</li>
+			<li>Managed server operations for eight (8) Linux hosting servers:
 				<ul>
-					<li>Taking new sites live</li>
-					<li>Database administration</li>
-					<li>Mail server administration</li>
-					<li>Building new servers</li>
+					<li>Configured Apache for new sites upon deployment</li>
+					<li>Database server security and administration</li>
+					<li>Built and configured new servers when needed</li>
+					<li>Mail server administration (exim)</li>
 				</ul>
 			</li>
-			<li>Migrated over 150 websites from a sparse web server environment to a consolidated, load balanced environment. New environment included two load balanced web servers, a master database server, a slave database server, and a secondary slave server for taking nightly backups. Tasks include:
+			<li>Migrated over 150 websites from a sparse web server environment to a consolidated, load balanced environment:
 				<ul>
-					<li>Uploaded file synchronization between web servers</li>
-					<li>Website codebase management with subversion</li>
-					<li>Database administration</li>
-					<li>Firewall and network management</li>
+					<li>Configured upload file synchronization between web servers with unison</li>
+					<li>Migrated dangling FTP-only sites to Subversion to keep code consistent</li>
+					<li>Configured database master/slave relationship</li>
 				</ul>
 			</li>
-			<li>Changed internal site file management from a Samba share to version control (Subversion)</li>
-			<li>Optimized caching mechanisms to allow a client site to run on one server with a load below 1.00 under heavy traffic instead of four servers with a load above 50.00</li>
+			<li>Optimized major client site to run on one server with a load below 1.00 under heavy traffic instead of four servers with a load above 50.00</li>
 			<li>Created a page-flipping system utilizing both Flash and server-side processes to convert PDF documents into zoomable and flippable documents</li>
 			<li>Utilized Subversion's capabilities to create a defacement resistance system</li>
 			<li>Created a fax service with SOAP, 2D barcodes, and fax modems to allow clients to fax documents into the server and associate the documents with specific items on a website</li>
@@ -252,42 +250,40 @@ thing through w3's validator.
 </section>
 <section id="Proficiency">
 	<h1>Skill Proficiencies</h1>
-	<article>
-		<div id="Languages">
-			<h2>Languages</h2>
-			<dl>
-				<dt>HTML4/5        </dt><dd><?php stars(5); ?></dd>
-				<dt>JavaScript     </dt><dd><?php stars(5); ?></dd>
-				<dt>PHP            </dt><dd><?php stars(5); ?></dd>
-				<dt>Shell Scripting</dt><dd><?php stars(5); ?></dd>
-				<dt>SQL            </dt><dd><?php stars(5); ?></dd>
-			</dl>
-			<dl>
-				<dt>ASP Classic    </dt><dd><?php stars(4); ?></dd>
-				<dt>Go             </dt><dd><?php stars(4); ?></dd>
-				<dt>Java           </dt><dd><?php stars(3); ?></dd>
-				<dt>Python         </dt><dd><?php stars(2); ?></dd>
-				<dt>C              </dt><dd><?php stars(2); ?></dd>
-			</dl>
-		</div>
-		<div id="Software">
-			<h2>Software</h2>
-			<dl>
-				<dt>Subversion     </dt><dd><?php stars(5); ?></dd>
-				<dt>Git            </dt><dd><?php stars(4); ?></dd>
-				<dt>MySQL          </dt><dd><?php stars(4); ?></dd>
-				<dt>Mercurial (hg) </dt><dd><?php stars(3); ?></dd>
-				<dt>SQLServer      </dt><dd><?php stars(2); ?></dd>
-			</dl>
-		</div>
-		<div id="Platforms">
-			<h2>Platforms</h2>
-			<dl>
-				<dt>Linux          </dt><dd><?php stars(5); ?></dd>
-				<dt>Mac            </dt><dd><?php stars(3); ?></dd>
-				<dt>Windows        </dt><dd><?php stars(3); ?></dd>
-			</dl>
-		</div>
+	<article id="Languages">
+		<h2>Languages</h2>
+		<dl>
+			<dt>HTML4/5        </dt><dd><?php stars(5); ?></dd>
+			<dt>JavaScript     </dt><dd><?php stars(5); ?></dd>
+			<dt>PHP            </dt><dd><?php stars(5); ?></dd>
+			<dt>Shell Scripting</dt><dd><?php stars(5); ?></dd>
+			<dt>SQL            </dt><dd><?php stars(5); ?></dd>
+		</dl>
+		<dl>
+			<dt>ASP Classic    </dt><dd><?php stars(4); ?></dd>
+			<dt>Go             </dt><dd><?php stars(4); ?></dd>
+			<dt>Java           </dt><dd><?php stars(3); ?></dd>
+			<dt>Python         </dt><dd><?php stars(2); ?></dd>
+			<dt>C              </dt><dd><?php stars(2); ?></dd>
+		</dl>
+	</article>
+	<article id="Software">
+		<h2>Software</h2>
+		<dl>
+			<dt>Subversion     </dt><dd><?php stars(5); ?></dd>
+			<dt>Git            </dt><dd><?php stars(4); ?></dd>
+			<dt>MySQL          </dt><dd><?php stars(4); ?></dd>
+			<dt>Mercurial (hg) </dt><dd><?php stars(3); ?></dd>
+			<dt>SQLServer      </dt><dd><?php stars(2); ?></dd>
+		</dl>
+	</article>
+	<article id="Platforms">
+		<h2>Platforms</h2>
+		<dl>
+			<dt>Linux          </dt><dd><?php stars(5); ?></dd>
+			<dt>Mac            </dt><dd><?php stars(3); ?></dd>
+			<dt>Windows        </dt><dd><?php stars(3); ?></dd>
+		</dl>
 	</article>
 </section>
 </body>
