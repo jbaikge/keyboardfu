@@ -34,13 +34,13 @@
 		header > h1 {
 			font-size:2.5em;
 			margin-top:0;
-			padding-left:73%;
+			padding-left:75%;
 		}
 		section h1 {
 			font-size:2em;
 		}
 		#Contact {
-			width:27%;
+			width:25%;
 			float:right;
 		}
 		#Contact dt {
@@ -61,7 +61,7 @@
 		}
 		#Objective {
 			float:left;
-			width:70%;
+			width:72%;
 		}
 		#Experience {
 			clear:both;
@@ -74,7 +74,7 @@
 			clear:right;
 			float:right;
 			padding-bottom:0.75em;
-			width:27%;
+			width:25%;
 		}
 		#Experience hgroup h3 {
 			color:#BBB;
@@ -95,17 +95,40 @@
 		#Experience article > ul {
 			-moz-box-sizing:border-box;
 			 box-sizing:border-box;
-			width:70%;
+			width:72%;
+		}
+		#Proficiency {
+			overflow:hidden;
+			width:100%;
+		}
+		#Proficiency h2 {
+			margin-top:0em;
+		}
+		#Proficiency dl {
+			margin:0;
 		}
 		#Proficiency dt {
-			display:inline-block;
-			width:15%;
+			float:left;
+			width:50%;
 		}
 		#Proficiency dd {
-			display:inline-block;
+			float:left;
 			font-size:1.25em;
 			margin:0;
-			width:17%;
+			text-align:left;
+			width:50%;
+		}
+		#Languages {
+			width:50%;
+			float:left;
+		}
+		#Languages dl {
+			float:left;
+			width:50%;
+		}
+		#Software, #Platforms {
+			float:left;
+			width:25%;
 		}
 	</style>
 </head>
@@ -230,18 +253,41 @@ thing through w3's validator.
 <section id="Proficiency">
 	<h1>Skill Proficiencies</h1>
 	<article>
-		<dl>
-<?php
-foreach ($profs as $prof) {
-	list($name, $rating, $filler) = $prof;
-	printf("\t\t\t<dt>%s</dt>\n\t\t\t<dd>%s</dd>\n",
-		$name,
-		str_repeat('&#x2605 ', $rating) . str_repeat('&#x2606 ', $filler)
-	);
-}
-?>
-		</dl>
+		<div id="Languages">
+			<h2>Languages</h2>
+			<dl>
+				<dt>HTML4/5        </dt><dd><?php stars(5); ?></dd>
+				<dt>JavaScript     </dt><dd><?php stars(5); ?></dd>
+				<dt>PHP            </dt><dd><?php stars(5); ?></dd>
+				<dt>Shell Scripting</dt><dd><?php stars(5); ?></dd>
+			</dl>
+			<dl>
+				<dt>SQL            </dt><dd><?php stars(5); ?></dd>
+				<dt>ASP Classic    </dt><dd><?php stars(4); ?></dd>
+				<dt>Go             </dt><dd><?php stars(4); ?></dd>
+				<dt>Java           </dt><dd><?php stars(3); ?></dd>
+			</dl>
+		</div>
+		<div id="Software">
+			<h2>Software</h2>
+			<dl>
+				<dt>Subversion     </dt><dd><?php stars(5); ?></dd>
+				<dt>Git            </dt><dd><?php stars(4); ?></dd>
+				<dt>MySQL          </dt><dd><?php stars(4); ?></dd>
+				<dt>Mercurial (hg) </dt><dd><?php stars(3); ?></dd>
+				<dt>SQLServer      </dt><dd><?php stars(2); ?></dd>
+			</dl>
+		</div>
+		<div id="Platforms">
+			<h2>Platforms</h2>
+			<dl>
+				<dt>Linux          </dt><dd><?php stars(5); ?></dd>
+				<dt>Mac            </dt><dd><?php stars(3); ?></dd>
+				<dt>Windows        </dt><dd><?php stars(3); ?></dd>
+			</dl>
+		</div>
 	</article>
 </section>
 </body>
 </html>
+
