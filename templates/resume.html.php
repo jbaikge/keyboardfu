@@ -91,6 +91,9 @@
 				color:#CCC;
 			}
 		}
+		#Experience header strong {
+			letter-spacing:0.1em;
+		}
 		#Experience header .position {
 			font-size:1.15em;
 		}
