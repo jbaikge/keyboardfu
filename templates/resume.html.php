@@ -157,7 +157,7 @@ thing through w3's validator.
 <section id="Objective">
 	<h1>Objective</h1>
 	<article>
-		<p>Continue along the path of programming Zen through exploratory projects utilizing: Go, PHP, data management, distributed computing, web frontends, Linux backends, and massive amounts of brain power.</p>
+		<p>Exercise programming prowess with copious amounts of problem solving in exploratory projects which utilize: Go, PHP, dynamic data, distributed computing, and web frontends.</p>
 	</article>
 </section>
 <section id="Experience">
