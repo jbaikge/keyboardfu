@@ -165,7 +165,7 @@ thing through w3's validator.
 <section id="Objective">
 	<h1>Objective</h1>
 	<article>
-		<p>Exercise currently mastered skills, while growing abilities, to build successful exploratory projects which utilize: Go, PHP, dynamic data, distributed computing, and Web frontends.</p>
+		<p>Exercise currently mastered skills, while growing abilities, to build successful exploratory projects which utilize Go, PHP, dynamic data, distributed computing, and Web frontends.</p>
 	</article>
 </section>
 <section id="Experience">
@@ -183,7 +183,7 @@ thing through w3's validator.
 			<div class="url"><a href="http://300brand.com" target="_blank">http://300brand.com</a></div>
 		</header>
 		<ul>
-			<li> Lead developer on various teams to concept, design, develop, and maintained websites for more than 30 internal and external clients:
+			<li> Lead developer on various teams to concept, design, develop, and maintain websites for more than 30 internal and external clients:
 				<ul>
 					<li>Actively represented the development teams in client conferences in-person and over the phone; communicated directly with client representatives and account leads</li>
 					<li>Converted site file management of all sites from FTP to Subversion</li>
@@ -192,21 +192,19 @@ thing through w3's validator.
 			<li>Developed PHP 5.3+ framework for company websites:
 				<ul>
 					<li>Enhanced performance through trace analysis to optimize memory and time usage; achieved 100kb and 40ms initialization</li>
-					<li>Unobtrusive nature allowed freedom and flexibility during development</li>
 					<li>May, 2012 - Released framework to open source community:<br><a href="http://github.com/jbaikge/framework" target="_blank">http://github.com/jbaikge/framework</a></li>
 				</ul>
 			</li>
 			<li>Developed and launched multi-functional creative traffic and ticket management system:
 				<ul>
 					<li>Delivered alternative to email to enable better cross-team visibility and historical referencing</li>
-					<li>Increased visibility for employee workloads</li>
-					<li>Decreased overlooked and erroneous tasks</li>
-					<li>Decreased "ownership" of entire sites - helped distribute workloads across team</li>
+					<li>Improved team productivity by providing workload visibility, lowering erroneous communication and increasing work distribution</li>
 				</ul>
 			</li>
-			<li>Managed staffing, including  requirements assessment; acquisition; training; and management across varying skill levels and skill sets:
+			<li>Grew development team by 300%:
 				<ul>
-					<li>managed day-to day development team as well as ongoing job performance and growth, including metrics tracking; team communications and progress reports; and annual reviews</li>
+					<li>Managed staffing, including requirements assessment; acquisition; and training</li>
+					<li>Managed development team's day-to-day, as well as ongoing job performance and growth, including metrics tracking; team communications and progress reports; and annual reviews</li>
 					<li>Utilized IRC and IRC bots to communicate development actions</li>
 				</ul>
 			</li>
@@ -245,9 +243,6 @@ thing through w3's validator.
 			<li>Converted site file management of all sites from FTP to Subversion</li>
 			<li>Managed maintenance and build-outs for over 150 clients</li>
 			<li>Optimized internal PHP4 framework to utilize enhancements in PHP5</li>
-			<li>Utilized CSS to make site layouts lightweight and Section 508 compliant</li>
-			<li>Improved developer's usage of the DOM to use fewer elements and create better structured pages</li>
-			<li>Diagrammed database layouts to help developers visualize structures and utilize more normalized data</li>
 			<li>Managed server operations for eight (8) Linux hosting servers:
 				<ul>
 					<li>Configured Apache for new sites upon deployment</li>
@@ -260,11 +255,10 @@ thing through w3's validator.
 				<ul>
 					<li>Configured upload file synchronization between Web servers with unison</li>
 					<li>Migrated dangling FTP-only sites to Subversion to keep code consistent</li>
-					<li>Configured database master/slave relationship</li>
+					<li>Configured database master/slave with an extra chained slave to take backups from</li>
 				</ul>
 			</li>
 			<li>Optimized major client site to run on one server with a load below 1.00 under heavy traffic instead of four servers with a load above 50.00</li>
-			<li>Created a page-flipping system utilizing both Flash and server-side processes to convert PDF documents into zoomable and flippable documents</li>
 			<li>Utilized Subversion's capabilities to create a defacement resistance system</li>
 			<li>Created a fax service with SOAP, 2D barcodes, and fax modems to allow clients to fax documents into the server and associate the documents with specific items on a website</li>
 			<li>Developed desktop application to drag and drop files and send to a secure server for processing by a robotic CD burner and labeler</li>
@@ -297,6 +291,7 @@ thing through w3's validator.
 			<li>GTSY - Good To See You; A social network to support an internal G-1 priority mission within the U.S. Army</li>
 			<li>495 Express Lanes - <a href="http://495expresslanes.com" target="_blank">http://495expresslanes.com</a></li>
 			<li>MeriTalk - <a href="http://meritalk.com" target="_blank">http://meritalk.com</a></li>
+			<li>PRSourceCode - <a href="http://prsourcecode.com" target="_blank">http://prsourcecode.com</a></li>
 			<li>Telework Exchange - <a href="http://teleworkexchange.com" target="_blank">http://teleworkexchange.com</a></li>
 		</ul>
 	</article>
