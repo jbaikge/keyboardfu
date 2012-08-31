@@ -74,7 +74,7 @@
 		#Experience article header div {
 			clear:right;
 			float:right;
-			padding-bottom:0.50em;
+			padding-bottom:0.75em;
 			width:27%;
 		}
 		#Experience article header div,
