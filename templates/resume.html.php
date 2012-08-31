@@ -214,10 +214,10 @@ thing through w3's validator.
 <?php
 $profs = array(
 	'PHP'             => 5,
-	'Go'              => 3,
+	'Go'              => 4,
 	'Shell Scripting' => 5,
 	'ASP Classic'     => 4,
-	'Java'            => 4,
+	'Java'            => 3,
 	'HTML4/5'         => 5,
 	'JavaScript'      => 5,
 	'MySQL SQL'       => 5,
