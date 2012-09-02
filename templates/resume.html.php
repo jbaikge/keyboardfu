@@ -99,7 +99,8 @@
 			}
 		}
 		#Experience article > p,
-		#Experience article > ul {
+		#Experience article > ul,
+		#Work article > ul {
 			clear:left;
 			-moz-box-sizing:border-box;
 			 box-sizing:border-box;
@@ -302,15 +303,18 @@ thing through w3's validator.
 	<article id="Languages">
 		<h2>Languages</h2>
 		<dl>
+			<dt>CSS2/3         </dt><dd><?php stars(5); ?></dd>
 			<dt>HTML4/5        </dt><dd><?php stars(5); ?></dd>
 			<dt>JavaScript     </dt><dd><?php stars(5); ?></dd>
 			<dt>PHP            </dt><dd><?php stars(5); ?></dd>
 			<dt>Shell Scripting</dt><dd><?php stars(5); ?></dd>
 			<dt>SQL            </dt><dd><?php stars(5); ?></dd>
+			<dt>XML            </dt><dd><?php stars(5); ?></dd>
 		</dl>
 		<dl>
 			<dt>ASP Classic    </dt><dd><?php stars(4); ?></dd>
 			<dt>Go             </dt><dd><?php stars(4); ?></dd>
+			<dt>XSLT           </dt><dd><?php stars(4); ?></dd>
 			<dt>Java           </dt><dd><?php stars(3); ?></dd>
 			<dt>Python         </dt><dd><?php stars(2); ?></dd>
 			<dt>C              </dt><dd><?php stars(2); ?></dd>
@@ -319,9 +323,11 @@ thing through w3's validator.
 	<article id="Software">
 		<h2>Software</h2>
 		<dl>
+			<dt>MySQL          </dt><dd><?php stars(5); ?></dd>
+			<dt>Sublime Text 2 </dt><dd><?php stars(5); ?></dd>
 			<dt>Subversion     </dt><dd><?php stars(5); ?></dd>
+			<dt>Vim            </dt><dd><?php stars(5); ?></dd>
 			<dt>Git            </dt><dd><?php stars(4); ?></dd>
-			<dt>MySQL          </dt><dd><?php stars(4); ?></dd>
 			<dt>Mercurial (hg) </dt><dd><?php stars(3); ?></dd>
 			<dt>SQLServer      </dt><dd><?php stars(2); ?></dd>
 		</dl>
