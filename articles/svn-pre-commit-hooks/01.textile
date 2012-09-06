@@ -1,0 +1,64 @@
+h1. Subversion Pre-Commit Hook to Cover Your Bum
+
+It's well known that Subversion has a hooking mechanism to allow administrators to set up notification and ticket-system integration (Trac), but those purposes don't really prevent you or your teammates from pushing up bad code.
+
+h2. The Hook
+
+bc.. #!/bin/bash
+REPOS="$1"
+TXN="$2"
+
+# Make sure that the log message contains some text.
+SVNLOOK=/usr/bin/svnlook
+PHP=/usr/bin/php
+TIMER=/tmp/timer.pre-commit
+
+# Check for a commit message.
+$SVNLOOK log -t "$TXN" "$REPOS" | grep "[a-zA-Z0-9]" > /dev/null
+if [ $? -ne 0 ]; then
+	echo "*** Please provide a detailed commit message." >&2
+	exit 1
+fi
+
+# Check syntax of committed files.
+EXIT=0
+CHANGED=$($SVNLOOK changed -t "$TXN" "$REPOS" | grep '\.php$' | sed 's/^[^ ]* *//')
+for FILE in $CHANGED; do
+	$SVNLOOK cat -t "$TXN" "$REPOS" "$FILE" | $PHP -l &>/dev/null
+	if [ $? -ne 0 ]; then
+		echo >&2
+		echo "*** PHP syntax check failed for: $FILE" >&2
+		$SVNLOOK cat -t "$TXN" "$REPOS" "$FILE" | $PHP -l 2>&1 | grep -v 'Errors parsing -' | sed 's/in - //g' >&2
+		EXIT=2
+	fi
+	VAR_DUMPS=$($SVNLOOK cat -t "$TXN" "$REPOS" "$FILE" | grep 'var_dump(' | wc -l)
+	if [ $VAR_DUMPS -ne 0 ]; then
+		echo >&2
+		echo "*** PHP var_dump() call found in $FILE" >&2
+		$SVNLOOK cat -t "$TXN" "$REPOS" "$FILE" | grep 'var_dump(' >&2
+		EXIT=3
+	fi
+done
+exit $EXIT
+
+h2. What's Happening
+
+This isn't the place to cover all of the mysterious variables coming into the script or how to use the svn tools. That stuff is "already well documented"(http://google.com).
+
+h3. Commit Message Check
+
+Really simple check to ensure no one is committing without a message. This is typically only a problem with brand new employees who have no idea what to do with a version control system.
+
+h3. PHP Lint Check
+
+No, not dryer lint. Every PHP file for a commit gets a quick syntax check to ensure there are no glaring errors. To ensure the greatest compatibility, the settings on the Subversion server should be as strict as possible: This means @short_open_tag@ should be *off*.
+
+If a file fails the lint check, they're notified during the transmission and the commit fails. The line number and error message from the lint check come back to help the developer figure out what they did wrong.
+
+h3. var_dump Check
+
+This probably seems like a silly thing to have, but the number of times something made it to the production server with a var_dump in the header, spitting out NULL or other information we really didn't want showing, is almost comical. If anyone has a loose var_dump, commented out or otherwise, the commit will fail.
+
+h2. Keeping it Simple
+
+The pre-commit hook shouldn't be complex, developers waiting for their commit to finish really disrupts the development flow. Lint checks are super fast and allow a huge advantage without the developer noticing anything is happening. It is sometimes tempting to checkout a copy of the codebase and compile it to check for errors, but that type of thing should really get worked into the development process - coding in branches and using a CI(Continuous Integration) system.
