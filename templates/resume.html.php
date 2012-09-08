@@ -341,6 +341,10 @@ thing through w3's validator.
 		</dl>
 	</article>
 </section>
+
+<section id="Security Clearance">
+	<p>Acquired secret clearance as of May, 2011</p>
+</section>
 </body>
 </html>
 
