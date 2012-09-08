@@ -342,7 +342,8 @@ thing through w3's validator.
 	</article>
 </section>
 
-<section id="Security Clearance">
+<section id="Clearance">
+	<h1>Security Clearance</h1>
 	<p>Acquired secret clearance as of May, 2011</p>
 </section>
 </body>
