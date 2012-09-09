@@ -166,7 +166,7 @@ thing through w3's validator.
 <section id="Objective">
 	<h1>Objective</h1>
 	<article>
-		<p>Exercise currently mastered skills, while growing abilities, to build successful exploratory projects which utilize Go, PHP, dynamic data, distributed computing, and Web frontends.</p>
+		<p>Exercise currently mastered skills, while expanding abilities, to build successful exploratory projects which utilize Go, PHP, dynamic data, distributed computing, and Web frontends.</p>
 	</article>
 </section>
 <section id="Experience">
