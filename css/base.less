@@ -44,6 +44,7 @@ body > footer {
 }
 #ArticleAside {
 	.layout-grid(3);
+	font-size:0.85em;
 	h1 {
 		color:@colorArticleAside;
 		background:@colorBackgroundTransparent;
@@ -52,7 +53,7 @@ body > footer {
 		text-transform:uppercase;
 	}
 	a {
-		color:@colorRed;
+		color:@colorAsideLink;
 		text-decoration:none;
 		text-shadow:1px 1px 1px @colorBackground;
 	}
@@ -106,11 +107,12 @@ body > footer {
 		.layout-grid(2);
 		background:@colorBackgroundTransparent;
 		color:@colorLinkLight;
-		padding-bottom:1em;
-		padding-top:1em;
+		font-size:0.85em;
+		padding-bottom:1.33em;
+		padding-top:1.33em;
 		text-align:right;
 		a {
-			color:@colorRed;
+			color:@colorAsideLink;
 			text-decoration:none;
 			text-shadow:1px 1px 1px @colorBackground;
 		}
@@ -127,13 +129,13 @@ body > footer {
 		}
 		.date {
 			.month, .day {
-				color:@colorArticleAside;
-				font-size:2em;
+				color:@colorRed;
+				font-size:2.35em;
 				text-transform:uppercase;
 			}
 			.year {
 				display:block;
-				font-size:0.85em;
+				font-size:1em;
 				margin-top:-0.5em;
 			}
 		}
