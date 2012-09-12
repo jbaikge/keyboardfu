@@ -106,8 +106,25 @@ body > footer {
 		.layout-grid(2);
 		background:@colorBackgroundTransparent;
 		color:@colorLinkLight;
+		padding-bottom:1em;
 		padding-top:1em;
 		text-align:right;
+		a {
+			color:@colorRed;
+			text-decoration:none;
+			text-shadow:1px 1px 1px @colorBackground;
+		}
+		a:hover {
+			color:@colorArticleAsideDark;
+		}
+		ol {
+			list-style:none;
+			margin:0 0 1em;
+			padding:0;
+		}
+		.author {
+			display:none;
+		}
 		.date {
 			.month, .day {
 				color:@colorArticleAside;
@@ -121,9 +138,16 @@ body > footer {
 			}
 		}
 		.email {
+			display:none;
 			span:first-child:after {
 				content:'@';
 			}
+		}
+		.tagHeading {
+			color:@colorArticleAside;
+			font-weight:bold;
+			margin-top:1em;
+			text-transform:uppercase;
 		}
 	}
 	article {

@@ -7,6 +7,13 @@
 		</div>
 		<div class="author"><?php echo $article->author; ?></div>
 		<div class="email"><span><?php echo 'jake'; ?></span><span><?php echo 'keyboardfu.com'; ?></span></div>
+		<div class="tagHeading">Tags</div>
+		<ol class="tags">
+<?php foreach ($article->tags as $tag) { ?>
+			<li><a href="/tag/<?php echo rawurlencode($tag); ?>"><?php e($tag); ?></a></li>
+<?php } ?>
+		</ol>
+		<div class="comments"><a href="<?php echo $article->url; ?>#Comments">Comments</a></div>
 	</aside>
 	<article>
 <?php
