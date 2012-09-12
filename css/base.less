@@ -45,14 +45,33 @@ body > footer {
 #ArticleAside {
 	.layout-grid(3);
 	h1 {
+		color:@colorArticleAside;
 		background:@colorBackgroundTransparent;
 		margin:0 @gutterWidth * -1;
 		padding:@gutterWidth / 2 @gutterWidth;
+		text-transform:uppercase;
 	}
-	ol {
-		list-style:none;
+	a {
+		color:@colorArticleAsideDark;
+		text-decoration:none;
+		text-shadow:1px 1px 1px @colorBackground;
+	}
+	// Why we have to re-define a:hover, I may never understand
+	a:hover {
+		color:@colorRed;
+	}
+	dl {
 		margin:0;
 		padding:@gutterWidth / 2 0;
+	}
+	dt {
+		padding:0.5em 4em 0.5em 0;
+	}
+	dd {
+		color:@colorRed;
+		margin:-2.00em 0 0.5em;
+		text-align:right;
+		text-shadow:1px 1px 1px @colorBackground;
 	}
 }
 #ArticleList {
@@ -91,7 +110,7 @@ body > footer {
 		text-align:right;
 		.date {
 			.month, .day {
-				color:@colorArticleAsideBright;
+				color:@colorRed;
 				font-size:2em;
 				text-transform:uppercase;
 			}
