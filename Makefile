@@ -1,9 +1,9 @@
-SRCDIRS := $(dir $(wildcard articles/*/meta.json))
-OBJDIRS := $(addprefix cache/,$(SRCDIRS))
+SRCDIRS := $(dir $(wildcard articles/*/*/meta.json))
+OBJDIRS := $(SRCDIRS)
 DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
 OUTLINE_OBJ := $(addsuffix outline.html.php,$(OBJDIRS))
-TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,cache/%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
-STATIC_TEXTILE_OBJ := $(patsubst %.textile,cache/%.html.php,$(wildcard static/*.textile))
+TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
+STATIC_TEXTILE_OBJ := $(patsubst %.textile,%.html.php,$(wildcard static/*.textile))
 
 .PHONY: all
 all: textile data outline map static
@@ -18,15 +18,15 @@ data: $(DATA_OBJ)
 outline: $(OUTLINE_OBJ)
 
 .PHONY: map
-map: cache/articles/map.php
+map: cache/article_map.php
 
 .PHONY: static
 static: $(STATIC_TEXTILE_OBJ)
 
 .PHONY: clean
 clean:
-	rm -rf cache/articles
-	rm -rf cache/static
+	rm -rf articles/*/*/*.html.php
+	rm -rf static/*.html.php
 
 .PHONY: info
 info:
@@ -38,35 +38,21 @@ info:
 	@for F in $(DATA_OBJ); do echo '    '$$F; done
 	@echo Compiled HTML:
 	@for F in $(TEXTILE_OBJ); do echo '    '$$F; done
+	@echo Static Textile:
+	@for F in $(STATIC_TEXTILE_OBJ); do echo '    '$$F; done
 
-cache/articles/map.php: $(DATA_OBJ) .bin/compile_map
+%/article_map.php: $(DATA_OBJ) .bin/compile_map
 	@printf "%8s: %s\n" MAP $@
 	@./.bin/compile_map $(DATA_OBJ) > $@
 
-# .SECONDEXPANSION used to turn "cache/articles/<title>/01.html.php" into
-# "cache/articles/<title>" and call the rule below. The expansion is used to hit
-# $$(@D) which is $@D which is $(dir $@), or "cache/articles/<title>"
-#
-# The pipe (|) represents an order-only rule where it is only called once as a
-# prerequisite if it does not exist.
-.SECONDEXPANSION:
-cache/%.html.php: %.textile .bin/compile_textile | $$(@D)
+%.html.php: %.textile .bin/compile_textile
 	@printf "%8s: %s\n" TEXTILE $@
 	@./.bin/compile_textile $< $@
 
-# .SECONDEXPANSION not needed here, but left for doc purposes
-.SECONDEXPANSION:
-cache/%/data.php: %/meta.json %/[0-9][0-9].textile .bin/compile_data | $$(@D)
+%/data.php: %/meta.json %/[0-9][0-9].textile .bin/compile_data
 	@printf "%8s: %s\n" DATA $@
 	@./.bin/compile_data $< $@
 
-# .SECONDEXPANSION not needed here, but left for doc purposes
-.SECONDEXPANSION:
-cache/%/outline.html.php: %/[0-9][0-9].textile .bin/compile_outline | $$(@D)
+%/outline.html.php: %/[0-9][0-9].textile .bin/compile_outline
 	@printf "%8s: %s\n" OUTLINE $@
 	@./.bin/compile_outline $< $@
-
-# cache/articles/<title>
-$(OBJDIRS) cache/static:
-	@printf "%8s: %s\n" MKDIR $@
-	@mkdir -p dir $@
