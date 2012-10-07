@@ -2,3 +2,6 @@ cache
 .sass-cache
 *.pyc
 *.sublime-workspace
+articles/*/*/data.php
+articles/*/*/*.html.php
+static/*.html.php
