@@ -50,7 +50,7 @@ $data['abstract'] = $textile->TextileThis($line);
 $data['published'] = FString::date($data['published'], 'c');
 $data['modified'] = FString::date($oldest, 'c');
 $data['name'] = basename(dirname($argv[1]));
-$data['url'] = dirname($argv[1]);
+$data['url'] = preg_replace('#^.*?articles/#', '', dirname($argv[1]));
 $data['dir'] = realpath(dirname($argv[1]));
 
 // Generate data output/file
