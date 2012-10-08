@@ -8,7 +8,8 @@
  * @date Sun Jul 29 12:05:46 EDT 2012
  */
 abstract class Map {
-	protected static $map;
+	protected static $dateMap;
+	protected static $urlMap;
 	public function __construct() {
 		$this->load();
 	}
@@ -25,13 +26,18 @@ abstract class Map {
 		$this->trimFuture();
 	}
 	private function loadMap($filename) {
-		include($filename);
-		self::$map = $map;
+		if (self::$dateMap == null) {
+			include($filename);
+			self::$dateMap = $_date_map;
+			self::$urlMap = $_url_map;
+		}
 	}
 	private function trimFuture() {
 		$now = time();
-		$this->map = array_filter($this->map, function($v) use($now) {
+		$filter = function($v) use($now) {
 			return $v['published'] <= $now;
-		});
+		};
+		self::$dateMap = array_filter(self::$dateMap, $filter);
+		self::$urlMap = array_filter(self::$urlMap, $filter);
 	}
 }

@@ -4,6 +4,13 @@
  * @date Fri Jan 13 18:36:46 EST 2012
  */
 class Archive extends Map {
+	public function fromURL($path) {
+		if (isset(self::$urlMap[$path])) {
+			return new Article(self::$urlMap[$path]['dir']);
+		} else {
+			return null;
+		}
+	}
 	public static function &getInstance() {
 		static $instance;
 		if ($instance == null) {
@@ -13,7 +20,7 @@ class Archive extends Map {
 	}
 	public function getCalendarTree() {
 		$tree = array();
-		foreach (self::$map as $a) {
+		foreach (self::$dateMap as $a) {
 			++$tree[date('Y-m-01', $a['published'])];
 		}
 		return $tree;
@@ -24,11 +31,11 @@ class Archive extends Map {
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
 	public function getLastN($n) {
-		return $this->makeArticles(array_slice(self::$map, 0, $n));
+		return $this->makeArticles(array_slice(self::$dateMap, 0, $n));
 	}
 	public function getLatest() {
-		reset(self::$map);
-		$data = current(self::$map);
+		reset(self::$dateMap);
+		$data = current(self::$dateMap);
 		return new Article($data['dir']);
 	}
 	public function getMonthly($year, $month) {
@@ -42,7 +49,7 @@ class Archive extends Map {
 		return $this->makeArticles($this->filterDateRange($lower, $upper));
 	}
 	private function filterDateRange($lower, $upper) {
-		return array_filter(self::$map, function($v) use($lower, $upper) {
+		return array_filter(self::$dateMap, function($v) use($lower, $upper) {
 			return $lower <= $v['published'] && $v['published'] <= $upper;
 		});
 	}

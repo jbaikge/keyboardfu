@@ -8,6 +8,10 @@ $config['latest'] = 5;
 
 require(dirname(__FILE__) . '/lib/framework/load.php');
 
+if (defined('BAIL_EARLY')) {
+	return;
+}
+
 Meta::addStylesheet('/css/base.less');
 Meta::addStylesheet('//fonts.googleapis.com/css?family=Droid+Sans+Mono|PT+Sans');
 Meta::addStylesheet('//fonts.googleapis.com/css?family=Julee&text=FU');

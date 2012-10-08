@@ -27,6 +27,7 @@ static: $(STATIC_TEXTILE_OBJ)
 clean:
 	rm -rf articles/*/*/*.html.php
 	rm -rf static/*.html.php
+	rm -f cache/article_map.php
 
 .PHONY: info
 info:

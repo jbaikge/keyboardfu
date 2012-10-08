@@ -12,7 +12,7 @@ if ($path == '') {
 	exit;
 }
 
-$article = Article::getFromURL($path);
+$article = Archive::getInstance()->fromURL($path);
 if ($article == null) {
 	header('HTTP 1.1 404 Not Found');
 	echo 'article not found';
