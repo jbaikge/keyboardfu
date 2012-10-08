@@ -5,7 +5,8 @@
 function get_map($filename) {
 	require($filename);
 	return array(
-		'dir' => realpath(dirname($filename)),
+		'dir' => $data['dir'],
+		'url' => $data['url'],
 		'published' => strtotime($data['published']),
 		'tags' => $data['tags']
 	);
@@ -16,16 +17,21 @@ if ($argc == 1) {
 	exit(1);
 }
 
-$map = array();
+$date_map = array();
+$url_map  = array();
 foreach (array_slice($argv, 1) as $file) {
 	$m = get_map($file);
-	$map[$m['published']] = $m;
+	$date_map[$m['published']] = $m;
+	$url_map[$m['url']] = $m;
 }
 // Save a ton of time later by just ordering the keys now.
-krsort($map, SORT_NUMERIC);
+krsort($date_map, SORT_NUMERIC);
 
 ob_start();
 echo "<?php\n";
-echo '$map = ';
-var_export($map);
+echo '$_date_map = ';
+var_export($date_map);
+echo ";\n";
+echo '$_url_map = ';
+var_export($url_map);
 echo ";\n";
