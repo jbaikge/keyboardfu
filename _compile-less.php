@@ -1,13 +1,10 @@
 <?php
-define('BAIL_EARLY', true);
-require('webroot.conf.php');
-
 header("Content-Type: text/css");
 
-$source = $_SERVER["PATH_TRANSLATED"];
+$source = realpath($_SERVER["PATH_TRANSLATED"]);
 $source_modified = filemtime($source);
 
-$compiled_dir = $_ENV['config']['cache.dir'] . '/css/';
+$compiled_dir = __DIR__ . '/cache/css/';
 $compiled_filename = sha1($source);
 $compiled_path = $compiled_dir . $compiled_filename;
 $compiled_cache = $compiled_dir . 'cache.php';
@@ -51,7 +48,7 @@ switch (true) {
 	case !file_exists($compiled_path):
 	case $source_modified != $cache[$source]['modified']:
 		# Preload class since we know we'll need it. No need to use the autoloader
-		require(SITEROOT . '/lib/lessphp/lessc.inc.php');
+		require(__DIR__ . '/lib/lessphp/lessc.inc.php');
 		$less = new lessc($source);
 		#$less->setFormatter("compressed");
 		try {
