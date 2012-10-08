@@ -14,14 +14,14 @@ abstract class Map {
 	}
 	protected function makeArticles(array $values) {
 		return array_map(function($v) {
-				return new Article($v['basename']);
+				return new Article($v['dir']);
 			},
 			$values
 		);
 		return $values;
 	}
 	private function load() {
-		$this->loadMap($_ENV['config']['cache.dir'] . '/articles/map.php');
+		$this->loadMap($_ENV['config']['cache.dir'] . '/article_map.php');
 		$this->trimFuture();
 	}
 	private function loadMap($filename) {

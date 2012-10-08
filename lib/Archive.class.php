@@ -29,7 +29,7 @@ class Archive extends Map {
 	public function getLatest() {
 		reset(self::$map);
 		$data = current(self::$map);
-		return new Article($data['basename']);
+		return new Article($data['dir']);
 	}
 	public function getMonthly($year, $month) {
 		$lower = strtotime($year . '-' . $month . '-01');

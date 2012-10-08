@@ -4,37 +4,26 @@
  * @date Tue Dec 13 19:00:35 2011 -0500
  */
 class Article extends FObject {
-	public function __construct($name) {
-		if (!file_exists($this->getFilename($name))) {
-			throw new ArticleDoesNotExistException($name);
+	public function __construct($dir) {
+		$this->dir = $dir;
+		if (!file_exists($this->getFilename())) {
+			throw new ArticleDoesNotExistException($dir);
 		} else {
-			require($this->getFilename($name));
+			require($this->getFilename());
 			$this->autoData($data);
 		}
 	}
-	public function getFilename($name) {
-		return $this->getStorageDir($name) . '/data.php';
+	public function getFilename() {
+		return $this->dir . '/data.php';
 	}
 	public static function getFromURL($url) {
 		return new Article(basename($url));
-	}
-	public static function getLatest() {
-		// Import $date_map
-		require($_ENV['config']['cache.dir'] . '/articles/date_map.php');
-		$latest = array_reduce(array_keys($date_map), function ($state, $value) {
-			static $t;
-			if ($t == null) { $t = time(); }
-			if ($value > $state && $value <= $t) {
-				$state = $value;
-			}
-			return $state;
-		}, 0);
-		return new Article($date_map[$latest]);
 	}
 	public static function getModel() {
 		return new FModelManager(
 			FField::make('author'),
 			FField::make('abstract'),
+			FField::make('dir'),
 			FField::make('modified'),
 			FField::make('name'),
 			FField::make('pages'),
@@ -53,18 +42,11 @@ class Article extends FObject {
 	 * @return Filepath to the HTML template.
 	 */
 	public function getPage($num = 1) {
-		$dir = $this->getStorageDir();
-		$filename = sprintf("%s/%02d.html.php", $dir, $num);
+		$filename = sprintf("%s/%02d.html.php", $this->dir, $num);
 		if ($num != 1 && !file_exists($filename)) {
 			return $this->getPage();
 		}
 		return $filename;
-	}
-	public function getStorageDir($name = null) {
-		if ($name === null) {
-			$name = $this->name;
-		}
-		return $_ENV['config']['cache.dir'] . '/articles/' . $name;
 	}
 	public function getStylesheets() {
 		return is_array($this->stylesheets) ? $this->stylesheets : array();
