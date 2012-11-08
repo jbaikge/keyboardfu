@@ -60,4 +60,5 @@ $body = FTemplate::fetch($article->getPage($page));
 
 // Render
 $content = FTemplate::fetch('templates/article.html.php');
+$content .= FTemplate::fetch('templates/article-aside.html.php');
 FTemplate::render();

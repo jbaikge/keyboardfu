@@ -9,10 +9,8 @@
 class Tags extends Map implements IteratorAggregate {
 	public function getAll() {
 		$heap = new TagHeap;
-		foreach (self::$map as $a) {
-			foreach ($a['tags'] as $t) {
-				$heap->insert($t);
-			}
+		foreach (self::$tagMap as $tag => $pages) {
+			$heap->insert($tag);
 		}
 		return $heap;
 	}

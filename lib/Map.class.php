@@ -9,6 +9,7 @@
  */
 abstract class Map {
 	protected static $dateMap;
+	protected static $tagMap;
 	protected static $urlMap;
 	public function __construct() {
 		$this->load();
@@ -29,6 +30,7 @@ abstract class Map {
 		if (self::$dateMap == null) {
 			include($filename);
 			self::$dateMap = $_date_map;
+			self::$tagMap = $_tag_map;
 			self::$urlMap = $_url_map;
 		}
 	}

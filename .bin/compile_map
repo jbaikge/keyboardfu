@@ -19,10 +19,15 @@ if ($argc == 1) {
 
 $date_map = array();
 $url_map  = array();
+$tag_map  = array();
 foreach (array_slice($argv, 1) as $file) {
 	$m = get_map($file);
 	$date_map[$m['published']] = $m;
 	$url_map[$m['url']] = $m;
+	foreach ($m['tags'] as $t) {
+		$tag_map[$t][$m['published']] = $m['url'];
+		ksort($tag_map[$t], SORT_NUMERIC);
+	}
 }
 // Save a ton of time later by just ordering the keys now.
 krsort($date_map, SORT_NUMERIC);
@@ -34,4 +39,7 @@ var_export($date_map);
 echo ";\n";
 echo '$_url_map = ';
 var_export($url_map);
+echo ";\n";
+echo '$_tag_map = ';
+var_export($tag_map);
 echo ";\n";

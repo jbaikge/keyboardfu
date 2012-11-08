@@ -23,6 +23,7 @@ if ($page > 1) {
 echo FTemplate::fetch($article->getPage($page));
 
 ?>
+	<div id="Comments"></div>
 	</article>
 <?php
 if ($article->pages > 1) {
