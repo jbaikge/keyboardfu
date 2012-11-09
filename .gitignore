@@ -1,7 +1,11 @@
 cache
-.sass-cache
-*.pyc
 *.sublime-workspace
-articles/*/*/data.php
-articles/*/*/*.html.php
-static/*.html.php
+
+## Compiled static pages
+static/*.body
+
+## Compiled articles
+20??/*/*.body
+20??/*/*.object
+20??/*/*.outline
+20??/*/*.php
