@@ -1,3 +1,8 @@
+DATE   Feb 29, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    PHP
+TAG    Built-Ins
+
 h1. PHP's Array Handling Red-Headed Stepchildren
 
 PHP handles two data types particularly well: strings and arrays. String handling shelved for another day, let's have a gather at some of the array handling functions that have been around forever, but are rarely used. With the advent of PHP 5.3's -lambda- anonymous functions, these array functions are much easier to whip out and use more frequently.
@@ -73,3 +78,56 @@ array(
 A few things to note about the above code block:
 # The number of iterations is based on the longest array passed in
 # @min()@ evaluates everything as an integer and then spits out the original value. When comparing @NULL@ and 0, 0 comes back, but when comparing @NULL@ and 1, @NULL@ comes back
+
+h2. @array_filter@
+
+This one is pretty straightforward, but often forgotten when you're in a hornet's nest of nested loops.
+
+Take this terrifying example of something I wrote:
+
+bc. function getStorageFields($type) {
+	$fields = $type::getModel()->storage_database();
+	foreach ($fields as $field => $info) {
+		if (isset($info['ignore']) && $info['ignore']) {
+			unset($fields[$field]);
+		}
+	}
+	return $fields;
+}
+
+It takes a copy of the fields array, then iterates over it to see if a key exists, and it's value is true, then unsets it from the array. Like I said, I like doing things backwards. Now, let's try that again, forwards:
+
+bc. function getStorageFields($type) {
+	return array_filter($type::getModel()->storage_fields(), function($i) {
+		return !(isset($i['ignore'] && $i['ignore'] == true));
+	});
+}
+
+It does the exact same thing, but looks way more legible and maintainable.
+
+h2. @array_reduce@
+
+Generally shown in mathy applications, @array_reduce@ typically shows up when you want to turn an array into a scalar of some sort. However, it's more fun to use tools in ways they weren't designed.
+
+For instance, let's say I have a flat array of Animal objects with the definition below. We'll just say I'm a farmer and I need to inventory my animals.. or something.
+
+bc. class Animal {
+	public $type;
+	public $name;
+}
+
+I'd like to turn my flat array into one where each index is the animal type and the value is an array of the different names. The most common way to do this is with something like this:
+
+bc. $organized = array();
+foreach ($animals as &$animal) {
+	$organized[$animal->type][] = $animal->name;
+}
+
+But what fun is that?
+
+bc. $organized = array_reduce($animals, function($organized, $animal) {
+	$organized[$animal->type][] = $animal->name;
+	return $organized;
+}, array());
+
+Same number of code lines, however if you're doing the same type of operation often enough, you could extract that function out and put it in a single spot. Then use it for reductions throughout the site. If the structure of the Animal object changes, a change to a single function updates all of the transformations.

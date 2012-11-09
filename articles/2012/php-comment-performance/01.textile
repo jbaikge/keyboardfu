@@ -1,3 +1,8 @@
+DATE   Feb 15,2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    PHP
+TAG    Performance
+
 h1. Documentation is Making Your Site Explode
 
 Seems a pretty bold claim that something which is designed to hide code is actually causing a performance hit. Since the introduction of PHP's "Reflection":http://php.net/manual/en/book.reflection.php library, JavaDoc comments have started adding to memory usage.

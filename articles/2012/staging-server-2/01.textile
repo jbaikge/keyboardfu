@@ -1,6 +1,12 @@
+DATE   Mar 14, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    Servers
+TAG    Linux
+TAG    Team Development
+
 h1. Building a Staging Server of Doom, Part 2
 
-The "saga continues":/2012/02/28/staging-server-1 as I encounter a drive failure and increase the overall performance of updates a million-fold.
+The "saga continues":/2012/staging-server-1 as I encounter a drive failure and increase the overall performance of updates a million-fold.
 
 h2. Sensing a Problem
 

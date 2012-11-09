@@ -1,3 +1,8 @@
+DATE   Feb 1, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    PHP
+TAG    Filters
+
 h1. Safe Input With PHP's Filter Functions, II
 
 Continuing from "Safe Input With PHP's Filter Functions, I":/2012/01/18/php-input-filters-1, it's time to nail down efficient filter definitions.
@@ -55,3 +60,58 @@ bc.. class CustomFilters {
 $values = filter_input_array(INPUT_POST, array(
 	'ints_rule' => CustomFilters::validInt()
 ));
+
+h3. Turning Custom Filters Up
+
+I want a filter that will take any user's convoluted representation of money and turn it into a consistent value - both for presentation and processing.
+
+bc.. class CustomFilters {
+	public static function prettyMoney () {
+		if (func_num_args()) {
+			$raw = func_get_arg(0);
+			$stripped = preg_replace('/[^\d.]/', '', $raw);
+			if ($stripped != '') {
+				return money_format('%n', $stripped);
+			} else {
+				return false;
+			}
+		} else {
+			return array(
+				'filter' => FILTER_CALLBACK,
+				'options' => array(__CLASS__, __FUNCTION__)
+			);
+		}
+	}
+}
+
+$values = filter_input_array(INPUT_POST, array(
+	'money' => CustomFilters::prettyMoney()
+));
+
+p. On initial execution, @func_num_args()@ returns zero, which causes the following to return:
+
+bc. array(
+	'filter' => FILTER_CALLBACK,
+	'options' => array(__CLASS__, __FUNCTION__)
+);
+
+It's best to leave @__CLASS__@ and @__FUNCTION__@ as is since manually filling those values in is just another thing to remember when making new filters.
+
+When the form posts and sends data in, the callback is called with the value from the user. @func_get_arg(0)@ snags the only value sent in, trims it, strips non-digits, and then returns the value formatted to the locale's representation of money.
+
+How good is it? It'll take practically anything and make it money.
+* $1,234,567.00
+* 1234567.00
+* 1234567
+* 1,234,567
+* $12,34,56,7
+* $1234567.00
+* 1,2 skip a few 34567
+
+All of the above will turn into *$1,234,567.00* upon posting. Additionally, the formatted value is reposted if another part of the form fails.
+
+h2. To the Filter-Mobile
+
+And with that, I conclude filtering user input. This method of centralizing custom filters will help save time, especially in a collaborative environment. Other developers can optimize what you build and you can optimize what you find, as well.
+
+The prettyMoney filter above is actually something I've used on many a production website. It went through a few iterations and a ton of failures before reaching it's current point - Never stop fiddling.

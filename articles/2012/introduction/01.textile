@@ -1,3 +1,7 @@
+DATE   Jan 4, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    Non-Technical
+
 h1. Introducing: KeyboardFu
 
 Ahh, the smell of a new website. It's like a fresh pancake on a cold morning. With some bacon, and always with coffee. Ever notice how websites smell like stale coffee? That's because the developer spilled at least one or two cups on the code to make it go faster. It's like a spoiler on, well, just about anything. It just plain goes faster.

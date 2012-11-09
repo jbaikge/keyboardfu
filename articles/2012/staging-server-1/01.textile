@@ -1,3 +1,9 @@
+DATE   Feb 29, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    Servers
+TAG    Linux
+TAG    Team Development
+
 h1. Building a Staging Server of Doom, Part 1
 
 Web development is a finicky task when it comes to deploying new features to existing sites. A staging server can really help the approval process for new features - and let the client -break- test the site before a regular user does.
@@ -61,3 +67,194 @@ There are a million different ways to set this up, but that's the closest to my 
 h3. DNS Configuration
 
 This was the shakiest of all, since DNS is more like dark magic. Known as a "wildcard DNS record":http://en.wikipedia.org/wiki/Wildcard_DNS_record, one simply supplies an A record to define _*.mydomain.com_. This allows any subdomain request that isn't previously defined to hit the IP defined by the wildcard record.
+
+h2. First Steps Down the Staging Brick Road
+
+Now that Point A and Point B are defined, it's time to plot the path to completion. If you're doing this, give yourself about a week to plan out every detail you can think of. Draw pictures, converse with peers, ask someone over at a Q&A site; just don't go into the configuration stage alone. As you'll see here, everything was done perfectly the first time and I never had to backtrack[#lies].
+
+note#lies. Lies, damned lies, and statistics. _-Benjamin Disraeli, Earl of Beaconsfield, 1895_
+
+h3. Additional Hardware
+
+Since the server has four drive bays, I feel compelled to fill all of them to make sure this thing has no issues. In case a drive goes sideways and fails, there should be little downtime. The server came with two 1TB drives, so I dropped some dosh for three more. The third one is actually sitting on the box itself, ready to go.
+
+h3. OS Installation
+
+I'm not going to start any riots by discussing <acronym title="D">what</acronym> <acronym title="E">distribution</acronym> <acronym title="B">of</acronym> <acronym title="I">Linux</acronym> <acronym title="A">to</acronym> <acronym title="N">use</acronym>, just that one should be installed. The hard drive layout I chose is an attempt to push the performance a bit since the post-commit hook will run a lot of updates on the web files.
+
+|=. Device partitions
+|^.
+|_. Partition|_. Bootable|_. Type|_. Format|_. Size|
+|-.
+| /dev/sd[abcd]1 | Yes | Primary | linux_raid |>.  20GB |
+| /dev/sd[abcd]2 | No  | Primary | linux_raid |>.   5GB |
+| /dev/sd[abcd]3 | No  | Primary | linux_raid |>.   5GB |
+| /dev/sd[abcd]5 | No  | Logical | linux_raid |>. 969GB |
+| /dev/sd[abcd]6 | No  | Logical | swap       |>.   1GB |
+
+|=. RAID configurations
+|^.
+|_. Devices |_. RAID Level |_. Mount Point |_. Final Size |
+|-.
+| /dev/sd[abcd]1 |=. 1 | / |>. 20GB |
+| /dev/sd[abcd]2 |=. 0 | /tmp |>. 20GB |
+| /dev/sd[abcd]3 |=. 0 | /var/lib/mysql |>. 20GB |
+| /dev/sd[abcd]5 |=. 5 | /var/www |>. 2.7TB |
+
+The configurations above are still undergoing scrutiny. The RAID0 for /var/lib/mysql was initially a RAID1, but it was laughably slow. Additionally, the RAID5 for /var/www has appalling performance at this juncture.
+
+h3. Server Setups
+
+MySQL, PHP, and Apache all get installed from apt, making things pretty straight forward. Our sites are built specifically to be as flexible as possible so we can develop in nearly any environment.
+
+Apache gained some special configuration with the following added to /etc/apache2/sites-available/staging-sites:
+
+bc.. ServerName q
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	VirtualDocumentRoot /var/www/%2+/%1
+
+	<Directory /var/www/%2+/%1>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride all
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+p. After this configuration change, we wanted to emulate our production server as much as possible, which uses suExec. The easiest way to imitate this behavior is to change the @APACHE_RUN_USER@ and @APACHE_RUN_GROUP@ in /etc/apache2/envvars
+
+Since our maintenance user is @q@, I updated those values in envvars and set to enabling modules and sites:
+
+bc.. root@q:~# a2ensite staging-sites
+root@q:~# a2enmod rewrite
+root@q:~# a2enmod vhost_alias
+root@q:~# /etc/init.d/apache2 restart
+
+p. Note, using @apache2ctl restart@ instead of @/etc/init.d/apache2 restart@ won't work. The former is more of a 'reload' instead of a 'restart'.
+
+
+
+h2. Synchronization
+
+After installing and configuring all of the servers and testing out a few items in /var/www, it's time to set up a synchronization script to automatically check out sites if they aren't already, or update sites that already exist.
+
+The script will run in the post-commit hook of all of our subversion repositories, so I found it more convenient to have the subversion server SSH over to the staging server and run the sync script. This way, I can manually sync sites whenever I feel like it to debug or improve performance.
+
+Enough about the explanation, though. Time for some bash-fu:
+
+bc.. #!/bin/bash
+
+REPOS=$1
+BASE_PATH=/var/www
+REPOS_PATH=/var/www/$REPOS
+
+if [ -z $REPOS ]; then
+	echo Usage: $0 REPOSITORY
+	exit 1
+fi
+
+# Create the base path for the repository if it doesn't exist yet
+if [ ! -d $REPOS_PATH ]; then
+	mkdir $REPOS_PATH $REPOS_PATH/uploads_
+fi
+
+# Establish logging
+LOG_FILE=$REPOS_PATH/logs_/`date +%Y/%m/%d.log`
+mkdir -p `dirname $LOG_FILE`
+
+# Timestamp log file
+date '+--SYNC START %F %T %Z' >> $LOG_FILE
+
+# Checkout/Update trunk
+if [ -d $REPOS_PATH/trunk ]; then
+	echo '--UPDATE TRUNK' >> $LOG_FILE
+	svn up $REPOS_PATH/trunk 2>&1 >> $LOG_FILE
+else
+	echo '--CHECKOUT TRUNK' >> $LOG_FILE
+	svn co svn://okcodev/$REPOS/trunk $REPOS_PATH/trunk 2>&1 >> $LOG_FILE
+	ln -sf $REPOS_PATH/uploads_ $REPOS_PATH/trunk/uploads
+	mkdir -p $REPOS_PATH/trunk/cache
+fi
+
+# Branch management
+REPOS_BRANCHES=`tempfile`
+STAGE_BRANCHES=`tempfile`
+
+svn ls svn://okcodev/$REPOS/branches | sed 's#/$##' > $REPOS_BRANCHES
+ls -d $REPOS_PATH/* | xargs -n1 basename | egrep -v '^logs_|uploads_|trunk$' > $STAGE_BRANCHES
+
+# Remove branches which exist on the server, but not in the repository
+REMOVED_BRANCHES=`comm -13 $REPOS_BRANCHES $STAGE_BRANCHES`
+if [ -n "$REMOVED_BRANCHES" ]; then
+	echo '--REMOVE BRANCHES: '$REMOVED_BRANCHES >> $LOG_FILE
+	for REMOVE in $REMOVED_BRANCHES; do
+		rm -rf $REPOS_PATH/$REMOVE
+	done
+fi
+
+# Add/update branches from repository
+for BRANCH in `cat $REPOS_BRANCHES`; do
+	if [ -d $REPOS_PATH/$BRANCH ]; then
+		echo '--UPDATE BRANCH' $BRANCH >> $LOG_FILE
+		svn up $REPOS_PATH/$BRANCH 2>&1 >> $LOG_FILE
+	else
+		echo '--CHECKOUT BRANCH' $BRANCH >> $LOG_FILE
+		svn co svn://okcodev/$REPOS/branches/$BRANCH $REPOS_PATH/$BRANCH 2>&1 >> $LOG_FILE
+		ln -sf $REPOS_PATH/uploads_ $REPOS_PATH/$BRANCH/uploads
+		mkdir -p $REPOS_PATH/$BRANCH/cache
+	fi
+done
+
+# Check if there is an additional setup script to run
+for D in $REPOS_PATH/*; do
+	F=$D/setup.sh
+	if [ -e $F ]; then
+		echo '--SETUP' $F >> $LOG_FILE
+		CWD=`pwd`
+		cd $D
+		source $F
+		cd $CWD
+	fi
+done
+
+# Timestamp log file for ending
+date '+--SYNC END %F %T %Z' >> $LOG_FILE
+
+p. I capitalized on the fact that I could link up any folder, so logs of updates are placed in such a way that I can hit any of our sites which are set up and go to http://logs_.mysite.com and view the update logs.
+
+The post commit hook just needed a few extra lines of code to it as well:
+
+bc.. #!/bin/sh
+REPOS="$1"
+REV="$2"
+REPOS_NAME=`/usr/bin/basename $REPOS`
+AUTHOR=`/usr/bin/svnlook author -r $REV $REPOS`
+CHANGES=`/usr/bin/svnlook changed -r $REV $REPOS | sed 's/ /~/g'`
+MESSAGE=`/usr/bin/svnlook log $REPOS -r $REV | sed 's/"/\\"/g'`
+
+if [ $REPOS_NAME != 'database-backups' ]; then
+	ssh staging "./sync $REPOS_NAME"
+fi
+
+h2. Databases
+
+The database backup configuration became simpler overall. Instead of backing up the databases one at a time and taking almost an hour to do so due to the expanded nature of the queries, I figured I'd capitalize on the LAN.
+
+Databases are ALL backed up from the production server down to the staging server at 2am every morning. I use the biggest chunk size and most compression possible to get that query data down as quickly as possible.
+
+As soon as the big backup completes, the normal backup procedure commences using the staging server as the origin. The staging server is then responsible for generating the expanded queries and utilizes the LAN speeds to transmit them to the archive.
+
+h2. Conclusions
+
+Commits now take a little longer to push up due to the I/O of updating all of the branches of some of the bigger sites. Some sites had some really stale branches left over from previous development. These branches needed a good pruning, but it's good to remember every time a developer makes a new branch, they are checking out an entirely new copy of the site.
+
+Feedback from clients is pretty positive, be sure to explain that the data is wiped every morning and that -some- none of the uploads aren't synchronized yet.
+
+Internally, it's great to have a single platform where all of the sites work the exact same way and some minute configuration on a developer's machine doesn't get in the way of the site's function when hunting down a bug.
+
+Stay tuned, many optimizations to come.

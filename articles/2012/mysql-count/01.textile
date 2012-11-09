@@ -1,3 +1,8 @@
+DATE   Mar 28, 2012
+AUTHOR Jake jake@keyboardfu.com
+TAG    MySQL
+TAG    Pro Tips
+
 h1. Making the Most of MySQL: COUNT
 
 Happens all the time, you need multiple counts within the same table of data and it really needs to happen in one query. You try the @UNION@ with multiple queries, subqueries, or when desperate, selecting all the data and then incrementing variables in some code.
