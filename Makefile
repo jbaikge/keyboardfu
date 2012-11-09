@@ -1,59 +1,57 @@
-SRCDIRS := $(dir $(wildcard articles/*/*/meta.json))
-OBJDIRS := $(SRCDIRS)
-DATA_OBJ := $(addsuffix data.php,$(OBJDIRS))
-OUTLINE_OBJ := $(addsuffix outline.html.php,$(OBJDIRS))
-TEXTILE_OBJ := $(foreach dir,$(SRCDIRS),$(patsubst %.textile,%.html.php,$(wildcard $(dir)[0-9][0-9].textile)))
-STATIC_TEXTILE_OBJ := $(patsubst %.textile,%.html.php,$(wildcard static/*.textile))
+ARTICLE_TEXTILES  := $(wildcard 20??/*/*.textile)
 
-.PHONY: all
-all: textile data outline map static
+ARTICLE_OBJECTS   := $(patsubst %.textile,%.object,$(ARTICLE_TEXTILES))
+ARTICLE_OUTLINES  := $(patsubst %.textile,%.outline,$(ARTICLE_TEXTILES))
+ARTICLE_PAGES     := $(patsubst %.textile,%.php,$(ARTICLE_TEXTILES))
+ARTICLE_BODIES    := $(patsubst %.textile,%.body,$(ARTICLE_TEXTILES))
 
-.PHONY: textile
-textile: $(TEXTILE_OBJ)
+STATIC_BODIES     := $(patsubst %.textile,%.body,$(wildcard static/*.textile))
 
-.PHONY: data
-data: $(DATA_OBJ)
+all: objects outlines pages bodies static
 
-.PHONY: outline
-outline: $(OUTLINE_OBJ)
+bodies: $(ARTICLE_BODIES)
 
-.PHONY: map
-map: cache/article_map.php
+objects: $(ARTICLE_OBJECTS)
 
-.PHONY: static
-static: $(STATIC_TEXTILE_OBJ)
+outlines: $(ARTICLE_OUTLINES)
 
-.PHONY: clean
+pages: $(ARTICLE_PAGES)
+
+static: $(STATIC_BODIES)
+
 clean:
-	rm -rf articles/*/*/*.html.php
-	rm -rf static/*.html.php
-	rm -f cache/article_map.php
+	rm -f $(ARTICLE_PAGES)
+	rm -f $(ARTICLE_OBJECTS)
+	rm -f $(ARTICLE_OUTLINES)
+	rm -f $(ARTICLE_BODIES)
+	rm -f $(STATIC_BODIES)
 
-.PHONY: info
 info:
-	@echo Source Directories:
-	@for D in $(SRCDIRS); do echo '    '$$D; done
-	@echo Object Directories:
-	@for D in $(OBJDIRS); do echo '    '$$D; done
-	@echo Compiled Data:
-	@for F in $(DATA_OBJ); do echo '    '$$F; done
-	@echo Compiled HTML:
-	@for F in $(TEXTILE_OBJ); do echo '    '$$F; done
-	@echo Static Textile:
-	@for F in $(STATIC_TEXTILE_OBJ); do echo '    '$$F; done
+	@echo Article Textiles
+	@for F in $(ARTICLE_TEXTILES); do echo '    '$$F; done
+	@echo Article Objects
+	@for F in $(ARTICLE_OBJECTS); do echo '    '$$F; done
+	@echo Article Outlines
+	@for F in $(ARTICLE_OUTLINES); do echo '    '$$F; done
+	@echo Article Bodies
+	@for F in $(ARTICLE_BODIES); do echo '    '$$F; done
+	@echo Article Pages
+	@for F in $(ARTICLE_PAGES); do echo '    '$$F; done
 
-%/article_map.php: $(DATA_OBJ) .bin/compile_map
-	@printf "%8s: %s\n" MAP $@
-	@./.bin/compile_map $(DATA_OBJ) > $@
+%.object: %.textile .bin/compile_object
+	@printf "%8s: %s\n" OBJECT $@
+	@.bin/compile_object $< $@
 
-%.html.php: %.textile .bin/compile_textile
+%.body: %.textile .bin/compile_textile
 	@printf "%8s: %s\n" TEXTILE $@
-	@./.bin/compile_textile $< $@
+	@.bin/compile_textile $< $@
 
-%/data.php: %/meta.json %/[0-9][0-9].textile .bin/compile_data
-	@printf "%8s: %s\n" DATA $@
-	@./.bin/compile_data $< $@
-
-%/outline.html.php: %/[0-9][0-9].textile .bin/compile_outline
+%.outline: %.textile .bin/compile_outline
 	@printf "%8s: %s\n" OUTLINE $@
-	@./.bin/compile_outline $< $@
+	@.bin/compile_outline $< $@
+
+%.php: %.textile
+	@printf "%8s: %s\n" PAGE $@
+	@cp article.php $@
+
+.PHONY: all bodies clean info objects outlines pages static
