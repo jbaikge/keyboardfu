@@ -50,7 +50,7 @@ info:
 	@printf "%8s: %s\n" OUTLINE $@
 	@.bin/compile_outline $< $@
 
-%.php: article.php
+$(ARTICLE_PAGES): article.php
 	@printf "%8s: %s\n" PAGE $@
 	@cp article.php $@
 
