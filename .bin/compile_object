@@ -1,0 +1,60 @@
+#!/usr/bin/env php
+<?php
+require(__DIR__ . '/../webroot.conf.php');
+
+if ($argc < 2 || $argc > 3) {
+	echo "USAGE: {$argv[0]} file.textile [file.object]\n";
+	exit(1);
+}
+
+if (($fh = fopen($argv[1], 'r')) == false) {
+	printf("Could not open %s\n", $argv[1]);
+	exit(2);
+}
+
+ob_start();
+
+echo "<?php\n";
+echo "\$article = new Article;\n";
+
+// URL
+$url = str_replace(SITEROOT, '', dirname(realpath($argv[1])));
+printf("\$article->url = %s;\n", var_export($url, true));
+
+// Extract header
+while (($line = trim(fgets($fh))) != '') {
+	list($key, $value) = preg_split('/\s+/', $line, 2);
+	switch ($key) {
+		case 'DATE':
+			printf("\$article->published = %s;\n", var_export(FString::date($value), true));
+			break;
+		case 'AUTHOR':
+			echo "\$article->author = new stdClass;\n";
+			$offset = strrpos($value, ' ');
+			printf("\$article->author->name = %s;\n", var_export(substr($value, 0, $offset), true));
+			printf("\$article->author->email = %s;\n", var_export(substr($value, $offset+1), true));
+			break;
+		case 'TAG':
+			printf("\$article->tags[] = %s;\n", var_export($value, true));
+			break;
+		default:
+			printf("Not sure how to handle `%s'\n", $value);
+			exit(3);
+	}
+}
+
+// Extract article title
+while (!FString::startsWith($line = fgets($fh), 'h1.'));
+$title = trim(str_replace('h1.', '', $line));
+printf("\$article->title = %s;\n", var_export($title, true));
+
+// Extract article abstract
+while (($line = trim(fgets($fh))) == '');
+$textile = new Textile();
+$abstract = $textile->TextileThis($line);
+printf("\$article->abstract = %s;\n", var_export($abstract, true));
+
+// Save data if an output filename supplied
+if ($argc == 3) {
+	file_put_contents($argv[2], ob_get_clean());
+}
