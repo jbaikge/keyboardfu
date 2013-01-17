@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>1/17/2013</title>
 	<style type="text/css">
 	body {
@@ -71,34 +72,34 @@
 	<p>12:32PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Lord Fairfax House (607 Cameron St, Alexandria, VA)</p>
 	<p>12:32PM	<span class="res">jbaikge</span> captured Lord Fairfax House (607 Cameron St, Alexandria, VA)</p>
 	<p>12:32PM	<span class="res">jbaikge</span> deployed an L4 Resonator on Lord Fairfax House (607 Cameron St, Alexandria, VA)</p>
-	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> deployed an L4 Resonator on Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:36PM	<span class="res">jbaikge</span> captured Washington’s Town House (508 Cameron St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:41PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:41PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:42PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:42PM	<span class="res">jbaikge</span> captured Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
-	<p>12:42PM	<span class="res">jbaikge</span> deployed an L4 Resonator on Gadsby’s Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:34PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:35PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> deployed an L4 Resonator on Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:36PM	<span class="res">jbaikge</span> captured Washington's Town House (508 Cameron St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L3 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:40PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:41PM	<span class="res">jbaikge</span> destroyed an L5 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:41PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:42PM	<span class="res">jbaikge</span> destroyed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:42PM	<span class="res">jbaikge</span> captured Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
+	<p>12:42PM	<span class="res">jbaikge</span> deployed an L4 Resonator on Gadsby's Tavern (134 N Royal St, Alexandria, VA)</p>
 	<p>12:43PM	<span class="res">jbaikge</span> destroyed an L1 Resonator on Site of First Services of the (King St &amp; N Royal St, Alexandria, VA)</p>
 	<p>12:43PM	<span class="res">jbaikge</span> destroyed an L1 Resonator on Site of First Services of the (King St &amp; N Royal St, Alexandria, VA)</p>
 	<p>12:43PM	<span class="res">jbaikge</span> destroyed an L2 Resonator on Site of First Services of the (King St &amp; N Royal St, Alexandria, VA)</p>
