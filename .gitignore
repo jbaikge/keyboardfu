@@ -3,3 +3,4 @@ cache
 *.pyc
 *.sublime-workspace
 invoices/*.json
+lib/google/local_config.php
