@@ -8,6 +8,7 @@ require(dirname(__FILE__) . '/lib/framework/load.php');
 
 if (defined('USE_BOOTSTRAP')) {
 	Meta::addStylesheet('/css/bootstrap.min.css');
+	Meta::addJavascript('//code.jquery.com/jquery-latest.js');
 	Meta::addJavascript('/js/bootstrap.min.js');
 } else {
 	Meta::addStylesheet('/css/base.css');
