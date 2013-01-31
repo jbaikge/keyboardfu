@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php echo Meta::toString(); ?>
+	<meta charset="UTF-8">
+	<title><?php e($community_name); ?> - Google+ Community Vetting</title>
+	<link href="http://commondatastorage.googleapis.com/ingress/css/style.css" rel="stylesheet">
+	<link href="http://commondatastorage.googleapis.com/ingress/css/basic.css" rel="stylesheet">
+	<style type="text/css">
+		h2 {
+			padding-top:25px;
+			padding-bottom:0;
+		}
+		.container {
+			width:960px;
+			margin:0 auto;
+		}
+		.plext_tab_title {
+			cursor:default;
+		}
+	</style>
 	<link rel="shortcut icon" href="//<?php echo $_SERVER['SERVER_NAME']; ?>/favicon.ico">
 	<?php if ($_ENV['config']['mode.production']) { ?><script>
 		var _gaq = _gaq || [];
@@ -18,88 +34,37 @@
 </head>
 <body>
 	<div class="container">
-		<h1><?php e($community_name); ?></h1>
-		<p class="lead">Something pontiferous should go here. "The following vetting process is to insure all members of the <?php e($community_name); ?> are indeed members of the <?php echo $faction; ?> faction."</p>
-		<div class="row">
-			<div class="span3 invite-sidebar">
-				<ul class="nav nav-list invite-sidenav">
-					<li><a href="#qualifications"><i class="icon-chevron-right"></i> Qualifications</a></li>
-					<li><a href="#authentication"><i class="icon-chevron-right"></i> Authentication</a></li>
-					<li><a href="#activation-code"><i class="icon-chevron-right"></i> Activation Code</a></li>
-					<li><a href="#announce"><i class="icon-chevron-right"></i> Announce Your Code</a></li>
-					<li><a href="#wait"><i class="icon-chevron-right"></i> Await Confirmation</a></li>
-					<li><a href="#what-next"><i class="icon-chevron-right"></i> What Next?</a></li>
-				</ul>
-			</div>
-			<div class="span9">
-				<section id="qualifications">
-					<h2>Qualifications</h2>
-					<ol>
-						<li>You must be a member of the <?php echo $faction; ?> faction in Ingress</li>
-						<li>You must only possess a single Ingress account</li>
-						<li>By continuing with the vetting process, you agree to all of the above. If a moderator determines misbehavior, he or she reserves the right to remove you from the community</li>
-					</ol>
-				</section>
-				<section id="authentication">
-					<h2>Authentication</h2>
-<?php if (isset($user)) { ?>
-					<div class="row">
-						<div class="span2">
-							<img src="<?php e($user->picture); ?>" class="img-polaroid" width="100%">
-						</div>
-						<div class="span7">
-							<h3><?php e($user->name); ?></h3>
-							<p class="text-success">Authentication successful, continue to the next step</p>
-						</div>
-					</div>
-<?php } else { ?>
-					<p>Authenticate your Google account to receive your activation code. We only need your Google+ name. If the grant request does not look like below, something fishy is going on and you should contact us.</p>
-					<p><img src="/ingress/images/auth-shot.png" class="img-polaroid" width="100%"></p>
-					<p><a class="btn btn-large btn-primary" href="<?php e($auth_url); ?>">Authenticate</a></p>
-<?php } ?>
-				</section>
-				<section id="activation-code">
-					<h2>Activation Code</h2>
-<?php if (isset($user)) { ?>
-					<p>Your activation code is: <code><?php e($user->code); ?></code></p>
-					<p>Copy the code above and continue to the next step</p>
-<?php } else { ?>
-					<p>You must authenticate to receive your activation code</p>
-<?php } ?>
-				</section>
-				<section id="announce">
-					<h2>Announce Your Code</h2>
-<?php if (isset($user)) { ?>
-					<ol>
-						<li>Click Announce, and log in if necessary</li>
-						<li>Once the map loads, click <strong>Faction</strong> in the lower left <em>COMM</em> area of the screen</li>
-						<li>Paste the code in the bottom of the <em>COMM</em> window and click <strong>Transmit</strong></li>
-					</ol>
-					<p><a class="btn btn-large btn-primary" href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank">Announce</a></p>
-<?php } else { ?>
-					<p>You must authenticate to announce your code</p>
-<?php } ?>
-				</section>
-				<section id="wait">
-					<h2>Await Confirmation</h2>
-					<p>Moderators will monitor faction chat for the code you entered above.</p>
-					<p>Please make sure you clicked <strong>Ask to Join</strong> on the community page, otherwise, moderators will have no way to let you in!</p>
-				</section>
-				<section id="what-next">
-					<h2>What Next?</h2>
-					<ul>
-						<li>Be sure to announce your Ingress username and your stomping ground(s)</li>
-						<li>Read through past posts, especially tips and tricks</li>
-						<li>Ask for help, Ingress is a team sport, no single player is too big or too small</li>
-					</ul>
-				</section>
-			</div>
-		</div>
+		<header class="<?php echo strtoupper($faction); ?>">
+			<h1><?php e($community_name); ?></h1>
+			<p class="lead">Something pontiferous should go here. "The following vetting process is to insure all members of the <?php e($community_name); ?> are indeed members of the <?php echo $faction; ?> faction."</p>
+		</header>
+		<section id="qualifications">
+			<h2>Qualifications</h2>
+			<ul>
+				<li>You must be a member of the <?php echo $faction; ?> faction in Ingress</li>
+				<li>You must only possess a single Ingress account</li>
+				<li>By continuing with the vetting process, you agree to all of the above. If a moderator determines misbehavior, he or she reserves the right to remove you from the community</li>
+			</ul>
+		</section>
+		<section id="authentication">
+			<h2>Authentication</h2>
+			<p>Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ here ]</span></a></p>
+			<p><span class="plext_tab_title">All</span><span class="plext_tab_title tab_selected">Faction</span> - Be sure the upper-right area of the COMM window looks like this</p>
+			<p><span class="plext_tab_title tab_selected">All</span><span class="plext_tab_title">Faction</span> - Not this</p>
+		</section>
+		<section id="wait">
+			<h2>Confirmation</h2>
+			<p>Moderators will monitor <span class="plext_tab_title tab_selected">Faction</span> chat for your name</p>
+			<p>Please make sure you clicked <strong>Ask to Join</strong> on the community page, otherwise, moderators will have no way to let you in!</p>
+		</section>
+		<section id="what-next">
+			<h2>Once You're In</h2>
+			<ul>
+				<li>Be sure to announce your Ingress username and your stomping ground(s)</li>
+				<li>Read through past posts, especially tips and tricks</li>
+				<li>Ask for help, Ingress is a team sport, no single player is too big or too small</li>
+			</ul>
+		</section>
 	</div>
-	<script>
-	$('a#oauth').click(function() {
-		_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled'])
-	})
-	</script>
 </body>
 </html>
