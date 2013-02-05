@@ -9,6 +9,13 @@ $communities = array(
 		'lat'     => 38000000,
 		'lon'     => -77000000,
 	),
+	'hr-resistance' => array(
+		'title'   => "Hampton Roads Resistance",
+		'faction' => "Resistance",
+		'link'    => "https://plus.google.com/communities/107799543110624446726",
+		'lat'     => 36942758,
+		'lon'     => -75475044,
+	),
 );
 
 $key = trim($_SERVER['PATH_INFO'], '/');
