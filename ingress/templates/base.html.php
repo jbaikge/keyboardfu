@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><?php e($community_name); ?> - Google+ Community Vetting</title>
+	<title><?php e($title); ?> - Google+ Community Vetting</title>
 	<link href="http://commondatastorage.googleapis.com/ingress/css/style.css" rel="stylesheet">
 	<link href="http://commondatastorage.googleapis.com/ingress/css/basic.css" rel="stylesheet">
 	<style type="text/css">
 		h2 {
 			padding-top:25px;
 			padding-bottom:0;
+		}
+		li {
+			margin-bottom:0.5em;
 		}
 		.container {
 			width:960px;
@@ -35,8 +38,8 @@
 <body>
 	<div class="container">
 		<header class="<?php echo strtoupper($faction); ?>">
-			<h1><?php e($community_name); ?></h1>
-			<p class="lead">Something pontiferous should go here. "The following vetting process is to insure all members of the <?php e($community_name); ?> are indeed members of the <?php echo $faction; ?> faction."</p>
+			<h1><?php e($title); ?></h1>
+			<p class="lead">The following vetting process is to ensure all members of the <?php e($title); ?> Google+ Community are indeed members of the <?php echo $faction; ?>.</p>
 		</header>
 		<section id="qualifications">
 			<h2>Qualifications</h2>
@@ -48,14 +51,17 @@
 		</section>
 		<section id="authentication">
 			<h2>Authentication</h2>
-			<p>Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ here ]</span></a></p>
-			<p><span class="plext_tab_title">All</span><span class="plext_tab_title tab_selected">Faction</span> - Be sure the upper-right area of the COMM window looks like this</p>
-			<p><span class="plext_tab_title tab_selected">All</span><span class="plext_tab_title">Faction</span> - Not this</p>
-		</section>
-		<section id="wait">
-			<h2>Confirmation</h2>
-			<p>Moderators will monitor <span class="plext_tab_title tab_selected">Faction</span> chat for your name</p>
-			<p>Please make sure you clicked <strong>Ask to Join</strong> on the community page, otherwise, moderators will have no way to let you in!</p>
+			<ol>
+				<li>Ask to join the <a href="<?php e($link); ?>" target="_blank"><span class="color_orange">[ <?php e($title); ?> Google+ Community ]</span></a></li>
+				<li>
+					Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ here ]</span></a>
+					<blockquote>
+						<p><span class="plext_tab_title">All</span><span class="plext_tab_title tab_selected">Faction</span> - Be sure the upper-right area of the COMM window looks like this</p>
+						<p><span class="plext_tab_title tab_selected">All</span><span class="plext_tab_title">Faction</span> - Not this</p>
+					</blockquote>
+				</li>
+				<li>A moderator will verify your name in <span class="plext_tab_title tab_selected">Faction</span> chat and match it with your Google+ name on your community application, then approve you</li>
+			</ol>
 		</section>
 		<section id="what-next">
 			<h2>Once You're In</h2>
