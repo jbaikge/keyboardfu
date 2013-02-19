@@ -104,9 +104,13 @@
 			for (var i = 0; i < catLen; i++) {
 				var count = s[i].length
 				var sum = s[i][0] * count || 0
+
 				if (totalSums[i].length == 0) totalSums[i] = [0,0]
-				totalSums[i][0] += total[0] += count
-				totalSums[i][1] += total[1] += sum
+				totalSums[i][0] += count
+				totalSums[i][1] += sum
+
+				total[0] += count
+				total[1] += sum
 				tr.append($("<td/>").text(count).append($("<small>").text(sum)))
 			}
 			tr.append($("<td/>").text(total[0]).append($("<small>").text(total[1])))
