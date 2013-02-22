@@ -126,7 +126,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27470</td>
@@ -368,7 +368,7 @@
 <td>13.5</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>24078</td>
@@ -547,6 +547,17 @@
 <td></td>
 </tr>
 <tr>
+<td>24458</td>
+<td>Blended Whiskey</td>
+<td>Kessler</td>
+<td>1750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>27500</td>
 <td>Blended Whiskey</td>
 <td>Kopper Kettle Whiskey</td>
@@ -555,7 +566,7 @@
 <td>25.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>25208</td>
@@ -622,6 +633,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>25208</td>
+<td>Blended Whiskey</td>
+<td>Paul Jones</td>
+<td>1750ml</td>
+<td>15.4</td>
+<td>13.4</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>77256</td>
@@ -808,7 +830,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>51036</td>
@@ -1174,6 +1196,17 @@
 <td></td>
 </tr>
 <tr>
+<td>50686</td>
+<td>Brandy Imported</td>
+<td>St. Remy VSOP</td>
+<td>750ml</td>
+<td>13.5</td>
+<td>12.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>50688</td>
 <td>Brandy Imported</td>
 <td>St. Remy VSOP</td>
@@ -1655,7 +1688,7 @@
 <td>16.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>10628</td>
@@ -1790,6 +1823,17 @@
 <td></td>
 </tr>
 <tr>
+<td>10628</td>
+<td>Canadian Whisky</td>
+<td>Canadian Club</td>
+<td>1750ml</td>
+<td>30.9</td>
+<td>27.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64593</td>
 <td>Canadian Whisky</td>
 <td>Canadian Club Dock 57</td>
@@ -1831,7 +1875,7 @@
 <td>16.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>10806</td>
@@ -1977,6 +2021,17 @@
 <td></td>
 </tr>
 <tr>
+<td>10846</td>
+<td>Canadian Whisky</td>
+<td>Canadian Club Small Batch Classic</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>12308</td>
 <td>Canadian Whisky</td>
 <td>Canadian Hunter</td>
@@ -2109,6 +2164,17 @@
 <td></td>
 </tr>
 <tr>
+<td>12308</td>
+<td>Canadian Whisky</td>
+<td>Canadian Hunter</td>
+<td>1750ml</td>
+<td>18.9</td>
+<td>16.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>11058</td>
 <td>Canadian Whisky</td>
 <td>Canadian MacNaughton</td>
@@ -2239,6 +2305,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>11058</td>
+<td>Canadian Whisky</td>
+<td>Canadian MacNaughton</td>
+<td>1750ml</td>
+<td>19.95</td>
+<td>17.45</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>12476</td>
@@ -2384,6 +2461,17 @@
 <td></td>
 </tr>
 <tr>
+<td>11930</td>
+<td>Canadian Whisky</td>
+<td>Canadian Mist Black Diamond</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>12478</td>
 <td>Canadian Whisky</td>
 <td>Canadian Mist Easy Pour</td>
@@ -2492,6 +2580,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>11296</td>
+<td>Canadian Whisky</td>
+<td>Crown Royal</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>24.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>11298</td>
@@ -2613,6 +2712,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>11366</td>
+<td>Canadian Whisky</td>
+<td>Crown Royal Special Reserve</td>
+<td>750ml</td>
+<td>43.9</td>
+<td>40.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>10890</td>
@@ -2868,6 +2978,17 @@
 <td></td>
 </tr>
 <tr>
+<td>13248</td>
+<td>Canadian Whisky</td>
+<td>Harwood Canadian</td>
+<td>1750ml</td>
+<td>16.95</td>
+<td>14.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>13638</td>
 <td>Canadian Whisky</td>
 <td>Lord Calvert</td>
@@ -3000,6 +3121,17 @@
 <td></td>
 </tr>
 <tr>
+<td>13638</td>
+<td>Canadian Whisky</td>
+<td>Lord Calvert</td>
+<td>1750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>14192</td>
 <td>Canadian Whisky</td>
 <td>Pendleton Canadian</td>
@@ -3042,6 +3174,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>14192</td>
+<td>Canadian Whisky</td>
+<td>Pendleton Canadian</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>22.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>12888</td>
@@ -3173,7 +3316,7 @@
 <td>14.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>12858</td>
@@ -3262,6 +3405,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>12858</td>
+<td>Canadian Whisky</td>
+<td>Rich &amp; Rare Reserve Canadian</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>22.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>11326</td>
@@ -3481,7 +3635,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>11416</td>
@@ -3602,7 +3756,7 @@
 <td>14.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>57108</td>
@@ -5794,6 +5948,17 @@
 <td></td>
 </tr>
 <tr>
+<td>63528</td>
+<td>Cocktails (domestic)</td>
+<td>Salvador's Margarita</td>
+<td>1750ml</td>
+<td>10.95</td>
+<td>8.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>63355</td>
 <td>Cocktails (domestic)</td>
 <td>Skinnygirl Margarita</td>
@@ -7001,7 +7166,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>47556</td>
@@ -7232,7 +7397,7 @@
 <td>31.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>47805</td>
@@ -7276,7 +7441,7 @@
 <td>37.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>47833</td>
@@ -7409,6 +7574,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>47833</td>
+<td>Cognac/armagnac</td>
+<td>Courvoisier Exclusif VSOP</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>34.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>47798</td>
@@ -7510,6 +7686,17 @@
 <td></td>
 </tr>
 <tr>
+<td>64795</td>
+<td>Cognac/armagnac</td>
+<td>Courvoisier Rose</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>27.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>47786</td>
 <td>Cognac/armagnac</td>
 <td>Courvoisier VS</td>
@@ -7640,6 +7827,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>47786</td>
+<td>Cognac/armagnac</td>
+<td>Courvoisier VS</td>
+<td>750ml</td>
+<td>30.9</td>
+<td>28.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>47776</td>
@@ -7771,7 +7969,7 @@
 <td>38.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>48146</td>
@@ -8280,6 +8478,17 @@
 <td></td>
 </tr>
 <tr>
+<td>48360</td>
+<td>Cognac/armagnac</td>
+<td>Kelt VSOP</td>
+<td>750ml</td>
+<td>56.95</td>
+<td>52.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>48404</td>
 <td>Cognac/armagnac</td>
 <td>Landy VS</td>
@@ -8465,6 +8674,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>48766</td>
+<td>Cognac/armagnac</td>
+<td>Meukow VS Cognac</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>24.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>49086</td>
@@ -8871,7 +9091,7 @@
 <td>18.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>84159</td>
@@ -9674,6 +9894,17 @@
 <td>11.7</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>73986</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Amaretto Di Amore Classico</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>11.7</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -9806,7 +10037,7 @@
 <td>11.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>82207</td>
@@ -9941,6 +10172,17 @@
 <td></td>
 </tr>
 <tr>
+<td>72304</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Art In The Age Rhuby</td>
+<td>750ml</td>
+<td>31.95</td>
+<td>29.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>72302</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Art In The Age Snap</td>
@@ -9961,6 +10203,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>72302</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Art In The Age Snap</td>
+<td>750ml</td>
+<td>31.95</td>
+<td>29.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>82706</td>
@@ -10095,6 +10348,17 @@
 <td></td>
 </tr>
 <tr>
+<td>82706</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>California Butterscotch</td>
+<td>750ml</td>
+<td>10.95</td>
+<td>9.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>72948</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Catdaddy Carolina Moonshine</td>
@@ -10216,6 +10480,17 @@
 <td></td>
 </tr>
 <tr>
+<td>72948</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Catdaddy Carolina Moonshine</td>
+<td>750ml</td>
+<td>21.9</td>
+<td>17.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>72956</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Chateau Monet Raspberry</td>
@@ -10334,7 +10609,7 @@
 <td>15.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>72722</td>
@@ -10477,6 +10752,17 @@
 <td>10.5</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>72722</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Christian Brothers Honey Liqueur</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -10675,7 +10961,7 @@
 <td>9.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>85526</td>
@@ -10763,6 +11049,17 @@
 <td>9.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>73571</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Dekuyper Crave Chocolate Cherry</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -10786,6 +11083,28 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>73574</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Dekuyper Crave Chocolate Chili</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>73533</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Dekuyper O3 Orange</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>82849</td>
@@ -11327,6 +11646,17 @@
 <td></td>
 </tr>
 <tr>
+<td>73721</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Evan Williams Cinnamon Reserve</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>11.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>73702</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Evan Williams Honey Reserve</td>
@@ -11457,6 +11787,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>73702</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Evan Williams Honey Reserve</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>11.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>3333</td>
@@ -11511,7 +11852,7 @@
 <td>16.75</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>82956</td>
@@ -12119,6 +12460,17 @@
 <td></td>
 </tr>
 <tr>
+<td>80826</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Ice 101 Peppermint</td>
+<td>750ml</td>
+<td>19.9</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>86670</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Jack Daniel Tennessee Honey</td>
@@ -12218,6 +12570,17 @@
 <td></td>
 </tr>
 <tr>
+<td>86670</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Jack Daniel Tennessee Honey</td>
+<td>750ml</td>
+<td>24.5</td>
+<td>22.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>76034</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Junior Johnson's Midnight Moon Lightning Lemonade</td>
@@ -12282,6 +12645,17 @@
 <td>2011-11-01</td>
 <td>2011-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>75210</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Kinky Liqueur</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>75876</td>
@@ -12535,6 +12909,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>76478</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>PAMA Pomegranate</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>86746</td>
@@ -12776,6 +13161,17 @@
 <td>9.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>80456</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Ryan's Cream</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>9.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -12832,6 +13228,17 @@
 <td>2012-08-01</td>
 <td>2012-08-31</td>
 <td></td>
+</tr>
+<tr>
+<td>86886</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Southern Comfort</td>
+<td>750ml</td>
+<td>16.95</td>
+<td>14.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>86888</td>
@@ -13040,7 +13447,7 @@
 <td>34.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>86813</td>
@@ -13208,6 +13615,17 @@
 <td></td>
 </tr>
 <tr>
+<td>86885</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Southern Comfort Pet</td>
+<td>750ml</td>
+<td>16.95</td>
+<td>14.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>77076</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Southern Comfort Sweet Tea RTP</td>
@@ -13604,6 +14022,17 @@
 <td></td>
 </tr>
 <tr>
+<td>3768</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Tequila Rose Valentine Gift 2013</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>71530</td>
 <td>Cordials-liqueurs-specialties (domestic)</td>
 <td>Tooter Lingo Ala Bama Slama</td>
@@ -13821,6 +14250,17 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>77532</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Trader Vic's Chocolate Liqueur</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -13909,7 +14349,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>77786</td>
@@ -13965,6 +14405,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>77577</td>
+<td>Cordials-liqueurs-specialties (domestic)</td>
+<td>Twenty Grand</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>26.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>77585</td>
@@ -14275,6 +14726,17 @@
 <td></td>
 </tr>
 <tr>
+<td>64000</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Absente</td>
+<td>750ml</td>
+<td>42.9</td>
+<td>39.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64098</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Agavero Orange</td>
@@ -14471,6 +14933,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>64196</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Amaretto Di Sabroso</td>
+<td>750ml</td>
+<td>8.95</td>
+<td>7.75</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>67866</td>
@@ -14737,6 +15210,17 @@
 <td></td>
 </tr>
 <tr>
+<td>68022</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Bailey's Caramel Irish Cream</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>68043</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Bailey's Coffee</td>
@@ -14869,6 +15353,17 @@
 <td></td>
 </tr>
 <tr>
+<td>68043</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Bailey's Coffee</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>68047</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Bailey's Hazelnut</td>
@@ -15122,6 +15617,17 @@
 <td></td>
 </tr>
 <tr>
+<td>68036</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Bailey's Original Irish Cream</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64356</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Barenjager</td>
@@ -15252,6 +15758,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>64356</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Barenjager</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>27.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>64336</td>
@@ -15449,7 +15966,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>64607</td>
@@ -15738,6 +16255,17 @@
 <td></td>
 </tr>
 <tr>
+<td>68128</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Carolan's Irish Cream</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>25.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64666</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Celtic Honey Liqueur</td>
@@ -15780,6 +16308,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>64666</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Celtic Honey Liqueur</td>
+<td>750ml</td>
+<td>21.9</td>
+<td>19.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>64776</td>
@@ -15901,6 +16440,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>64778</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Cointreau</td>
+<td>1750ml</td>
+<td>87.9</td>
+<td>77.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>67426</td>
@@ -16035,6 +16585,17 @@
 <td></td>
 </tr>
 <tr>
+<td>67426</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Copa De Oro Coffee</td>
+<td>750ml</td>
+<td>9.9</td>
+<td>7.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64626</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Courvoisier Gold</td>
@@ -16055,6 +16616,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>64626</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Courvoisier Gold</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>27.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>64138</td>
@@ -16121,6 +16693,17 @@
 <td>2012-09-01</td>
 <td>2012-09-30</td>
 <td></td>
+</tr>
+<tr>
+<td>64136</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Disaronno Amaretto</td>
+<td>750ml</td>
+<td>30.45</td>
+<td>28.45</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>64827</td>
@@ -16593,7 +17176,7 @@
 <td>66.4</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>66936</td>
@@ -16857,7 +17440,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>65229</td>
@@ -17111,6 +17694,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>65195</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Hpnotiq Liqueur</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>19.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>65185</td>
@@ -17330,7 +17924,7 @@
 <td>10.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>67586</td>
@@ -17465,6 +18059,17 @@
 <td></td>
 </tr>
 <tr>
+<td>67586</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Kapali Coffee</td>
+<td>750ml</td>
+<td>9.9</td>
+<td>7.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>65386</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Labelle Orange</td>
@@ -17583,7 +18188,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>65426</td>
@@ -17872,6 +18477,17 @@
 <td></td>
 </tr>
 <tr>
+<td>65943</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Meukow Vanilla Cognac</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>24.8</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>66058</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>NV Absinthe Verte By La Fee</td>
@@ -18180,6 +18796,17 @@
 <td></td>
 </tr>
 <tr>
+<td>66145</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Pallini Lemoncello</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>64736</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Patron Citronge Orange Liqueur</td>
@@ -18367,6 +18994,28 @@
 <td></td>
 </tr>
 <tr>
+<td>67595</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Patron XO Cafe</td>
+<td>750ml</td>
+<td>27.9</td>
+<td>24.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>67599</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Patron XO Cafe Dark Cocoa</td>
+<td>750ml</td>
+<td>27.9</td>
+<td>24.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>66160</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>Pitu Aguardente Cachaca</td>
@@ -18475,6 +19124,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>66160</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Pitu Aguardente Cachaca</td>
+<td>1000ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>66566</td>
@@ -18686,6 +19346,17 @@
 <td></td>
 </tr>
 <tr>
+<td>68846</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>St. Brendan's Superior Irish Cream</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>66836</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>St. Germain Liqueur</td>
@@ -18917,6 +19588,17 @@
 <td></td>
 </tr>
 <tr>
+<td>67159</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>TY KU Premium Liqueur</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>21.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>67067</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>TY KU Premium Soju</td>
@@ -19071,6 +19753,17 @@
 <td></td>
 </tr>
 <tr>
+<td>65200</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>Tequila Rose PET</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>67192</td>
 <td>Cordials-liqueurs-specialties (imported)</td>
 <td>X-Rated Fusion</td>
@@ -19190,6 +19883,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>67192</td>
+<td>Cordials-liqueurs-specialties (imported)</td>
+<td>X-Rated Fusion</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>23.65</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>54786</td>
@@ -19357,6 +20061,17 @@
 <td></td>
 </tr>
 <tr>
+<td>28890</td>
+<td>Flavored Gin</td>
+<td>Tanqueray Rangpur</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>22.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41019</td>
 <td>Flavored Vodka</td>
 <td>360 Double Chocolate Vodka</td>
@@ -19420,7 +20135,7 @@
 <td>13.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40669</td>
@@ -19904,7 +20619,7 @@
 <td>25.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34161</td>
@@ -20072,6 +20787,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34092</td>
+<td>Flavored Vodka</td>
+<td>Belvedere Pink Grapefruit Flavored Vodka</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>25.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41269</td>
 <td>Flavored Vodka</td>
 <td>Burnett's Blueberry Flavored Vodka</td>
@@ -20204,6 +20930,17 @@
 <td></td>
 </tr>
 <tr>
+<td>41269</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Blueberry Flavored Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41301</td>
 <td>Flavored Vodka</td>
 <td>Burnett's Cherry Vodka</td>
@@ -20336,6 +21073,17 @@
 <td></td>
 </tr>
 <tr>
+<td>41301</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Cherry Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41328</td>
 <td>Flavored Vodka</td>
 <td>Burnett's Citrus Vodka</td>
@@ -20466,6 +21214,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41328</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Citrus Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41330</td>
@@ -20597,7 +21356,7 @@
 <td>14.2</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41176</td>
@@ -21015,7 +21774,7 @@
 <td>14.2</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41335</td>
@@ -21148,6 +21907,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41335</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Lime Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41842</td>
@@ -21403,6 +22173,28 @@
 <td></td>
 </tr>
 <tr>
+<td>41315</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Mango Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>40610</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Maple Syrup Flavored Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41852</td>
 <td>Flavored Vodka</td>
 <td>Burnett's Orange Cream Flavored Vodka</td>
@@ -21511,6 +22303,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41852</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Orange Cream Flavored Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41338</td>
@@ -21766,6 +22569,17 @@
 <td></td>
 </tr>
 <tr>
+<td>41292</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Peach Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41415</td>
 <td>Flavored Vodka</td>
 <td>Burnett's Pineapple Flavored Vodka</td>
@@ -21896,6 +22710,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41415</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Pineapple Flavored Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41062</td>
@@ -22160,6 +22985,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41221</td>
+<td>Flavored Vodka</td>
+<td>Burnett's Pomegrante Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41318</td>
@@ -22291,7 +23127,7 @@
 <td>14.2</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41308</td>
@@ -22423,7 +23259,7 @@
 <td>14.2</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41224</td>
@@ -22863,7 +23699,7 @@
 <td>14.2</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>42033</td>
@@ -23095,6 +23931,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41322</td>
+<td>Flavored Vodka</td>
+<td>Burnetts Watermelon Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34138</td>
@@ -23227,6 +24074,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>34138</td>
+<td>Flavored Vodka</td>
+<td>Chambord Flavored Vodka</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41350</td>
@@ -23339,6 +24197,17 @@
 <td></td>
 </tr>
 <tr>
+<td>42035</td>
+<td>Flavored Vodka</td>
+<td>Cupcake Vodka Frosting</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34189</td>
 <td>Flavored Vodka</td>
 <td>Effen Black Cherry Vanilla Vodka</td>
@@ -23600,7 +24469,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35136</td>
@@ -23732,7 +24601,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34346</td>
@@ -24007,7 +24876,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34318</td>
@@ -24084,7 +24953,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35388</td>
@@ -25473,6 +26342,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35769</td>
+<td>Flavored Vodka</td>
+<td>Ivanabitch Red Berry Vodka</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41076</td>
 <td>Flavored Vodka</td>
 <td>Jeremiah Weed Sweet Tea</td>
@@ -25690,7 +26570,7 @@
 <td>25.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35543</td>
@@ -25825,6 +26705,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35543</td>
+<td>Flavored Vodka</td>
+<td>Ketel One Oranje</td>
+<td>750ml</td>
+<td>28.45</td>
+<td>26.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40694</td>
 <td>Flavored Vodka</td>
 <td>Little Black Dress Vodka Blueberry Pomegranate</td>
@@ -25869,6 +26760,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40694</td>
+<td>Flavored Vodka</td>
+<td>Little Black Dress Vodka Blueberry Pomegranate</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40697</td>
 <td>Flavored Vodka</td>
 <td>Little Black Dress Vodka Pineapple Honey</td>
@@ -25911,6 +26813,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>40697</td>
+<td>Flavored Vodka</td>
+<td>Little Black Dress Vodka Pineapple Honey</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34619</td>
@@ -26122,6 +27035,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40857</td>
+<td>Flavored Vodka</td>
+<td>Naked Jay Big Dill</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40838</td>
 <td>Flavored Vodka</td>
 <td>Naked Jay Whip Cream Vodka</td>
@@ -26208,6 +27132,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>40838</td>
+<td>Flavored Vodka</td>
+<td>Naked Jay Whip Cream Vodka</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35699</td>
@@ -26504,7 +27439,7 @@
 <td>14.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35221</td>
@@ -26626,6 +27561,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>36002</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Blackberry</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35222</td>
@@ -26757,7 +27703,7 @@
 <td>14.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35780</td>
@@ -26857,6 +27803,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35780</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Cake Vodka</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34642</td>
@@ -27002,6 +27959,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34643</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Cherry</td>
+<td>1750ml</td>
+<td>22.9</td>
+<td>20.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35495</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Cherry Lemonade</td>
@@ -27134,6 +28102,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35495</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Cherry Lemonade</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35770</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Cherry Whipped</td>
@@ -27209,6 +28188,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35770</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Cherry Whipped</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35743</td>
@@ -27319,6 +28309,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35743</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Chocolate Whipped</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34573</td>
@@ -27483,7 +28484,7 @@
 <td>20.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35907</td>
@@ -27527,7 +28528,7 @@
 <td>14.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35538</td>
@@ -27649,6 +28650,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35538</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle County Fair Cotton</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34785</td>
@@ -27783,6 +28795,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34782</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Grape</td>
+<td>1750ml</td>
+<td>22.9</td>
+<td>20.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35950</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Key Lime Whipped</td>
@@ -27814,6 +28837,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>35950</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Key Lime Whipped</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35225</td>
@@ -27945,7 +28979,7 @@
 <td>14.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35881</td>
@@ -28023,6 +29057,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35881</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Marshmallow</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34697</td>
@@ -28176,7 +29221,7 @@
 <td>20.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35773</td>
@@ -28289,6 +29334,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35773</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Orange Whipped</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35953</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Pineapple</td>
@@ -28309,6 +29365,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35953</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Pineapple</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34656</td>
@@ -28451,7 +29518,7 @@
 <td>20.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35873</td>
@@ -28529,6 +29596,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35873</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Red Liquorice</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34630</td>
@@ -28663,6 +29741,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34628</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Strawberry Kiwi</td>
+<td>1750ml</td>
+<td>22.9</td>
+<td>20.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35505</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Tropical Punch</td>
@@ -28795,6 +29884,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35505</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Tropical Punch</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34246</td>
 <td>Flavored Vodka</td>
 <td>Pinnacle Vanilla</td>
@@ -28924,7 +30024,7 @@
 <td>20.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35626</td>
@@ -28980,6 +30080,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35626</td>
+<td>Flavored Vodka</td>
+<td>Pinnacle Whipped</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>14.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35628</td>
@@ -29092,6 +30203,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40845</td>
+<td>Flavored Vodka</td>
+<td>Pucker Vodka Citrus Squeeze</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40849</td>
 <td>Flavored Vodka</td>
 <td>Pucker Vodka Grape Gone Wild</td>
@@ -29191,6 +30313,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40849</td>
+<td>Flavored Vodka</td>
+<td>Pucker Vodka Grape Gone Wild</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40678</td>
 <td>Flavored Vodka</td>
 <td>Pucker Vodka Lemonade Lust</td>
@@ -29233,6 +30366,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>40678</td>
+<td>Flavored Vodka</td>
+<td>Pucker Vodka Lemonade Lust</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>40853</td>
@@ -29334,6 +30478,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40853</td>
+<td>Flavored Vodka</td>
+<td>Pucker Vodka Sour Apple Sass</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40841</td>
 <td>Flavored Vodka</td>
 <td>Pucker Vodka Wild Cherry Tease</td>
@@ -29433,6 +30588,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40841</td>
+<td>Flavored Vodka</td>
+<td>Pucker Vodka Wild Cherry Tease</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41161</td>
 <td>Flavored Vodka</td>
 <td>Rain Organics Cucumber Lime</td>
@@ -29463,7 +30629,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41167</td>
@@ -29595,7 +30761,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41719</td>
@@ -29870,7 +31036,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40800</td>
@@ -29994,6 +31160,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40800</td>
+<td>Flavored Vodka</td>
+<td>Skyy Infusions Cherry</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40804</td>
 <td>Flavored Vodka</td>
 <td>Skyy Infusions Citrus</td>
@@ -30013,7 +31190,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40802</td>
@@ -30170,6 +31347,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40661</td>
+<td>Flavored Vodka</td>
+<td>Skyy Infusions Coconut</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40835</td>
 <td>Flavored Vodka</td>
 <td>Skyy Infusions Dragon Fruit</td>
@@ -30277,7 +31465,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40826</td>
@@ -30596,6 +31784,17 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>40809</td>
+<td>Flavored Vodka</td>
+<td>Skyy Infusions Passion Fruit</td>
+<td>1000ml</td>
+<td>21.9</td>
+<td>19.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -30717,7 +31916,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40813</td>
@@ -30839,6 +32038,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>40813</td>
+<td>Flavored Vodka</td>
+<td>Skyy Infusions Raspberry</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>40986</td>
@@ -32213,7 +33423,7 @@
 <td>29.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35969</td>
@@ -32733,6 +33943,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35982</td>
+<td>Flavored Vodka</td>
+<td>Svedka Colada Vodka</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>13.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34680</td>
 <td>Flavored Vodka</td>
 <td>Svedka Grape Vodka</td>
@@ -32918,6 +34139,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41143</td>
+<td>Flavored Vodka</td>
+<td>Sweet Carolina Lemonade</td>
+<td>750ml</td>
+<td>16.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41193</td>
@@ -33126,7 +34358,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41172</td>
@@ -35359,7 +36591,7 @@
 <td>11.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41989</td>
@@ -35415,6 +36647,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>41989</td>
+<td>Flavored Vodka</td>
+<td>UV Cake</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>41704</td>
@@ -35546,7 +36789,7 @@
 <td>11.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40625</td>
@@ -35582,6 +36825,17 @@
 <td></td>
 </tr>
 <tr>
+<td>40625</td>
+<td>Flavored Vodka</td>
+<td>UV Chocolate Cake</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>9.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41876</td>
 <td>Flavored Vodka</td>
 <td>UV Coconut Vodka</td>
@@ -35934,6 +37188,17 @@
 <td></td>
 </tr>
 <tr>
+<td>41360</td>
+<td>Flavored Vodka</td>
+<td>UV Pink Lemonade Vodka</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35156</td>
 <td>Flavored Vodka</td>
 <td>Van Gogh Acai Blueberry Vodka</td>
@@ -36174,6 +37439,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35022</td>
+<td>Flavored Vodka</td>
+<td>Van Gogh Double Espresso Vodka</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>19.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35027</td>
@@ -36316,7 +37592,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34555</td>
@@ -36360,7 +37636,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>41778</td>
@@ -37232,6 +38508,17 @@
 <td></td>
 </tr>
 <tr>
+<td>28396</td>
+<td>Gin (imported)</td>
+<td>Caorunn Scottish Gin</td>
+<td>750ml</td>
+<td>34.95</td>
+<td>31.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>28406</td>
 <td>Gin (imported)</td>
 <td>Citadelle Gin</td>
@@ -37584,6 +38871,17 @@
 <td></td>
 </tr>
 <tr>
+<td>28716</td>
+<td>Gin (imported)</td>
+<td>Pinnacle Gin</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>11.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>28795</td>
 <td>Gin (imported)</td>
 <td>Plymouth Gin</td>
@@ -37648,6 +38946,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>28866</td>
+<td>Gin (imported)</td>
+<td>Tanqueray Gin</td>
+<td>750ml</td>
+<td>22.9</td>
+<td>21.45</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>28886</td>
@@ -37870,6 +39179,17 @@
 <td></td>
 </tr>
 <tr>
+<td>52316</td>
+<td>Grape Brandy (domestic)</td>
+<td>Christian Brothers Brandy</td>
+<td>750ml</td>
+<td>12.45</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>52136</td>
 <td>Grape Brandy (domestic)</td>
 <td>Christian Brothers Frost</td>
@@ -37999,7 +39319,7 @@
 <td>10.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>52186</td>
@@ -38131,7 +39451,7 @@
 <td>11.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>52376</td>
@@ -38263,7 +39583,7 @@
 <td>10.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>52806</td>
@@ -38387,6 +39707,17 @@
 <td></td>
 </tr>
 <tr>
+<td>52806</td>
+<td>Grape Brandy (domestic)</td>
+<td>Korbel Brandy</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>53216</td>
 <td>Grape Brandy (domestic)</td>
 <td>Paul Masson Grande Amber VS</td>
@@ -38516,7 +39847,7 @@
 <td>11.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>53220</td>
@@ -38648,7 +39979,7 @@
 <td>11.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>53206</td>
@@ -38783,6 +40114,17 @@
 <td></td>
 </tr>
 <tr>
+<td>53206</td>
+<td>Grape Brandy (domestic)</td>
+<td>Paul Masson Grande Amber VSOP</td>
+<td>750ml</td>
+<td>14.4</td>
+<td>13.4</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>52166</td>
 <td>Grape Brandy (domestic)</td>
 <td>The Christian Brothers X.O.</td>
@@ -38913,6 +40255,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>52166</td>
+<td>Grape Brandy (domestic)</td>
+<td>The Christian Brothers X.O.</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>11.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>15560</td>
@@ -39198,7 +40551,7 @@
 <td>24.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>15693</td>
@@ -39374,7 +40727,7 @@
 <td>23.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>15706</td>
@@ -39430,6 +40783,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>15778</td>
+<td>Irish Whiskey</td>
+<td>Old Bushmills</td>
+<td>1750ml</td>
+<td>49.95</td>
+<td>46.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>15856</td>
@@ -39542,6 +40906,17 @@
 <td></td>
 </tr>
 <tr>
+<td>15915</td>
+<td>Irish Whiskey</td>
+<td>Tullamore Dew 12 Irish</td>
+<td>750ml</td>
+<td>42.9</td>
+<td>39.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>15930</td>
 <td>Irish Whiskey</td>
 <td>Tyrconnell</td>
@@ -39594,7 +40969,7 @@
 <td>31.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>997302</td>
@@ -41929,6 +43304,17 @@
 <td></td>
 </tr>
 <tr>
+<td>997318</td>
+<td>Mixers (non Alcoholic)</td>
+<td>Tres Agaves Agave Nectar</td>
+<td>750ml</td>
+<td>9.95</td>
+<td>8.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>997330</td>
 <td>Mixers (non Alcoholic)</td>
 <td>Tres Agaves Margarita Mix</td>
@@ -42003,7 +43389,7 @@
 <td>7.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27326</td>
@@ -42047,7 +43433,7 @@
 <td>11.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>76032</td>
@@ -42424,6 +43810,17 @@
 <td></td>
 </tr>
 <tr>
+<td>27317</td>
+<td>Moonshine</td>
+<td>Southern Corn Whiskey</td>
+<td>750ml</td>
+<td>31.95</td>
+<td>28.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>55376</td>
 <td>Other (domestic) Brandy</td>
 <td>Hiram Walker Cherry Brandy</td>
@@ -42520,6 +43917,28 @@
 <td>13.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>64866</td>
+<td>Other (imported) Whiskey</td>
+<td>Fireball Cinnamon Whiskey</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>13.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>66790</td>
+<td>Other (imported) Whiskey</td>
+<td>Sinfire Cinnamon Whisky</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>13.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -42642,6 +44061,138 @@
 <td>2012-07-01</td>
 <td>2012-07-31</td>
 <td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>23.95</td>
+<td>2011-03-01</td>
+<td>2011-03-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>23.95</td>
+<td>2011-05-01</td>
+<td>2011-05-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>23.95</td>
+<td>2011-07-01</td>
+<td>2011-07-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>23.95</td>
+<td>2011-09-01</td>
+<td>2011-09-30</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>23.95</td>
+<td>2011-11-01</td>
+<td>2011-11-30</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.95</td>
+<td>2012-02-01</td>
+<td>2012-02-29</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.95</td>
+<td>2012-03-01</td>
+<td>2012-03-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.95</td>
+<td>2012-05-01</td>
+<td>2012-05-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.95</td>
+<td>2012-06-01</td>
+<td>2012-06-30</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.95</td>
+<td>2012-07-01</td>
+<td>2012-07-31</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>20.9</td>
+<td>2012-09-01</td>
+<td>2012-09-30</td>
+<td></td>
+</tr>
+<tr>
+<td>43079</td>
+<td>Rum (domestic)</td>
+<td>Admiral Nelson's Spiced 101</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>19.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>43028</td>
@@ -42773,127 +44324,6 @@
 <td>15.95</td>
 <td>2012-10-01</td>
 <td>2012-10-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>27.9</td>
-<td>23.95</td>
-<td>2011-03-01</td>
-<td>2011-03-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>27.9</td>
-<td>23.95</td>
-<td>2011-05-01</td>
-<td>2011-05-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>27.9</td>
-<td>23.95</td>
-<td>2011-07-01</td>
-<td>2011-07-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>27.9</td>
-<td>23.95</td>
-<td>2011-09-01</td>
-<td>2011-09-30</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>27.9</td>
-<td>23.95</td>
-<td>2011-11-01</td>
-<td>2011-11-30</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.95</td>
-<td>2012-02-01</td>
-<td>2012-02-29</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.95</td>
-<td>2012-03-01</td>
-<td>2012-03-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.95</td>
-<td>2012-05-01</td>
-<td>2012-05-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.95</td>
-<td>2012-06-01</td>
-<td>2012-06-30</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.95</td>
-<td>2012-07-01</td>
-<td>2012-07-31</td>
-<td></td>
-</tr>
-<tr>
-<td>43079</td>
-<td>Rum (domestic)</td>
-<td>Admiral Nelson's Spiced Rum 101</td>
-<td>1750ml</td>
-<td>24.9</td>
-<td>20.9</td>
-<td>2012-09-01</td>
-<td>2012-09-30</td>
 <td></td>
 </tr>
 <tr>
@@ -43920,6 +45350,17 @@
 <td></td>
 </tr>
 <tr>
+<td>44294</td>
+<td>Rum (domestic)</td>
+<td>Calico Jack Cake Rum</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>44350</td>
 <td>Rum (domestic)</td>
 <td>Calico Jack Cherry Rum</td>
@@ -44052,6 +45493,17 @@
 <td></td>
 </tr>
 <tr>
+<td>44350</td>
+<td>Rum (domestic)</td>
+<td>Calico Jack Cherry Rum</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>44410</td>
 <td>Rum (domestic)</td>
 <td>Calico Jack Coconut Rum</td>
@@ -44182,6 +45634,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>44410</td>
+<td>Rum (domestic)</td>
+<td>Calico Jack Coconut Rum</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>45423</td>
@@ -44305,6 +45768,17 @@
 <td></td>
 </tr>
 <tr>
+<td>45423</td>
+<td>Rum (domestic)</td>
+<td>Calico Jack Pineapple Coconut Rum</td>
+<td>1750ml</td>
+<td>21.9</td>
+<td>19.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>44308</td>
 <td>Rum (domestic)</td>
 <td>Calico Jack Spiced Rum</td>
@@ -44390,7 +45864,7 @@
 <td>15.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>45995</td>
@@ -44468,6 +45942,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>45995</td>
+<td>Rum (domestic)</td>
+<td>Calico Jack Whipped Rum</td>
+<td>750ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>43242</td>
@@ -44709,7 +46194,7 @@
 <td>17.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>43418</td>
@@ -45403,6 +46888,17 @@
 <td>2012-09-01</td>
 <td>2012-09-30</td>
 <td></td>
+</tr>
+<tr>
+<td>44488</td>
+<td>Rum (domestic)</td>
+<td>Cruzan Aged Dark</td>
+<td>1750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>44516</td>
@@ -46161,7 +47657,7 @@
 <td>24.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>44557</td>
@@ -46670,6 +48166,17 @@
 <td></td>
 </tr>
 <tr>
+<td>46262</td>
+<td>Rum (domestic)</td>
+<td>Flip Flop Silver Rum</td>
+<td>750ml</td>
+<td>14.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>42461</td>
 <td>Rum (domestic)</td>
 <td>George Bowman</td>
@@ -47107,7 +48614,7 @@
 <td>8.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>43788</td>
@@ -47239,7 +48746,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>43766</td>
@@ -47295,6 +48802,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>43846</td>
+<td>Rum (domestic)</td>
+<td>Ronrico White</td>
+<td>750ml</td>
+<td>9.9</td>
+<td>8.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>43848</td>
@@ -47429,6 +48947,17 @@
 <td></td>
 </tr>
 <tr>
+<td>43816</td>
+<td>Rum (domestic)</td>
+<td>Ronrico White Traveler</td>
+<td>750ml</td>
+<td>9.9</td>
+<td>8.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>45886</td>
 <td>Rum (domestic)</td>
 <td>Sailor Jerry Spiced Navy Rum</td>
@@ -47484,6 +49013,17 @@
 <td></td>
 </tr>
 <tr>
+<td>45886</td>
+<td>Rum (domestic)</td>
+<td>Sailor Jerry Spiced Navy Rum</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>20.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>45887</td>
 <td>Rum (domestic)</td>
 <td>Sailor Jerry Spiced Navy Rum</td>
@@ -47503,7 +49043,7 @@
 <td>22.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>45888</td>
@@ -47581,6 +49121,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>45889</td>
+<td>Rum (domestic)</td>
+<td>Sailor Jerry Spiced Navy Rum - Traveler</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>20.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>43030</td>
@@ -47922,6 +49473,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>42936</td>
+<td>Rum (imported)</td>
+<td>10 Cane</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>25.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>42066</td>
@@ -48353,6 +49915,17 @@
 <td></td>
 </tr>
 <tr>
+<td>44266</td>
+<td>Rum (imported)</td>
+<td>British Navy Pusser's Rum</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>22.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>42458</td>
 <td>Rum (imported)</td>
 <td>Brugal Anejo Rum</td>
@@ -48683,6 +50256,17 @@
 <td></td>
 </tr>
 <tr>
+<td>44341</td>
+<td>Rum (imported)</td>
+<td>Calypso Spiced Rum</td>
+<td>1000ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>43244</td>
 <td>Rum (imported)</td>
 <td>Captain Morgan 100 Proof Original Spice</td>
@@ -49076,7 +50660,7 @@
 <td>18.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>43338</td>
@@ -49219,7 +50803,7 @@
 <td>18.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>43316</td>
@@ -49286,6 +50870,17 @@
 <td>2012-08-01</td>
 <td>2012-08-31</td>
 <td></td>
+</tr>
+<tr>
+<td>43316</td>
+<td>Rum (imported)</td>
+<td>Captian Morgan's Private Stock</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>25.45</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>43318</td>
@@ -49373,7 +50968,7 @@
 <td>36.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>42542</td>
@@ -50289,6 +51884,17 @@
 <td></td>
 </tr>
 <tr>
+<td>42656</td>
+<td>Rum (imported)</td>
+<td>Flor De Cana Grand Reserve 7yr</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>20.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>42573</td>
 <td>Rum (imported)</td>
 <td>Gosling Gold Rum</td>
@@ -50476,6 +52082,17 @@
 <td></td>
 </tr>
 <tr>
+<td>42599</td>
+<td>Rum (imported)</td>
+<td>Leblon</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>24.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>42312</td>
 <td>Rum (imported)</td>
 <td>Malibu Red</td>
@@ -50507,6 +52124,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>42621</td>
+<td>Rum (imported)</td>
+<td>Mount Gay Black</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>19.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>42666</td>
@@ -50773,6 +52401,17 @@
 <td></td>
 </tr>
 <tr>
+<td>42686</td>
+<td>Rum (imported)</td>
+<td>Mount Gay Extra Old</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>36.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>42790</td>
 <td>Rum (imported)</td>
 <td>Mount Gay Silver Eclipse</td>
@@ -51332,6 +52971,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>42796</td>
+<td>Rum (imported)</td>
+<td>Rhum Barbancourt 5 Star Reserve Speciale</td>
+<td>750ml</td>
+<td>23.95</td>
+<td>21.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>42776</td>
@@ -52016,6 +53666,17 @@
 <td></td>
 </tr>
 <tr>
+<td>4357</td>
+<td>Scotch Whisky</td>
+<td>BALVENIE 17YR DOUBLEWOOD</td>
+<td>750ml</td>
+<td>129.9</td>
+<td>119.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>4226</td>
 <td>Scotch Whisky</td>
 <td>Ballantine's</td>
@@ -52214,6 +53875,17 @@
 <td></td>
 </tr>
 <tr>
+<td>6797</td>
+<td>Scotch Whisky</td>
+<td>Bowman's Scotch</td>
+<td>1000ml</td>
+<td>11.95</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>6798</td>
 <td>Scotch Whisky</td>
 <td>Bowman's Scotch</td>
@@ -52442,7 +54114,7 @@
 <td>43.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>4656</td>
@@ -52563,7 +54235,7 @@
 <td>52.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>4718</td>
@@ -52621,6 +54293,17 @@
 <td></td>
 </tr>
 <tr>
+<td>6996</td>
+<td>Scotch Whisky</td>
+<td>Clan MacGregor</td>
+<td>750ml</td>
+<td>10.95</td>
+<td>8.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>6998</td>
 <td>Scotch Whisky</td>
 <td>Clan Macgregor PET</td>
@@ -52662,7 +54345,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>4780</td>
@@ -52830,6 +54513,17 @@
 <td></td>
 </tr>
 <tr>
+<td>4798</td>
+<td>Scotch Whisky</td>
+<td>Cutty Sark</td>
+<td>1750ml</td>
+<td>36.9</td>
+<td>34.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>848</td>
 <td>Scotch Whisky</td>
 <td>Cutty Sark 1.75L W-Glass</td>
@@ -52915,7 +54609,7 @@
 <td>59.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>4852</td>
@@ -53578,6 +55272,17 @@
 <td></td>
 </tr>
 <tr>
+<td>5104</td>
+<td>Scotch Whisky</td>
+<td>Glenmorangie Nectar D' Or</td>
+<td>750ml</td>
+<td>69.9</td>
+<td>64.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>5105</td>
 <td>Scotch Whisky</td>
 <td>Glenmorangie Quinta Ruban Scotch</td>
@@ -53697,6 +55402,28 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>5130</td>
+<td>Scotch Whisky</td>
+<td>Glenmorangie The Original 10 Yr</td>
+<td>1750ml</td>
+<td>79.95</td>
+<td>69.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
+<td>5136</td>
+<td>Scotch Whisky</td>
+<td>Glenmorangie The Original 18 Yr</td>
+<td>750ml</td>
+<td>99.9</td>
+<td>89.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>5166</td>
@@ -53906,6 +55633,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>7790</td>
+<td>Scotch Whisky</td>
+<td>Grand MacNish</td>
+<td>1750ml</td>
+<td>21.9</td>
+<td>19.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>5816</td>
@@ -54216,6 +55954,17 @@
 <td></td>
 </tr>
 <tr>
+<td>8208</td>
+<td>Scotch Whisky</td>
+<td>House of Stuart</td>
+<td>1750ml</td>
+<td>18.5</td>
+<td>16.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>8346</td>
 <td>Scotch Whisky</td>
 <td>Inver House</td>
@@ -54348,6 +56097,17 @@
 <td></td>
 </tr>
 <tr>
+<td>8348</td>
+<td>Scotch Whisky</td>
+<td>Inver House</td>
+<td>1750ml</td>
+<td>20.95</td>
+<td>18.55</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>5286</td>
 <td>Scotch Whisky</td>
 <td>Isle of Jura</td>
@@ -54401,6 +56161,17 @@
 <td>2012-01-01</td>
 <td>2012-01-31</td>
 <td></td>
+</tr>
+<tr>
+<td>5286</td>
+<td>Scotch Whisky</td>
+<td>Isle of Jura</td>
+<td>750ml</td>
+<td>46.95</td>
+<td>43.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>8378</td>
@@ -54521,7 +56292,7 @@
 <td>18.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>8376</td>
@@ -54676,6 +56447,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>5326</td>
+<td>Scotch Whisky</td>
+<td>Johnnie Walker Black</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>36.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>5339</td>
@@ -55027,7 +56809,7 @@
 <td>56.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>5445</td>
@@ -55151,6 +56933,17 @@
 <td></td>
 </tr>
 <tr>
+<td>5445</td>
+<td>Scotch Whisky</td>
+<td>Laphroaig Single Malt</td>
+<td>750ml</td>
+<td>54.9</td>
+<td>51.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>5596</td>
 <td>Scotch Whisky</td>
 <td>McClelland's Highland</td>
@@ -55214,7 +57007,7 @@
 <td>24.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>5598</td>
@@ -55382,6 +57175,17 @@
 <td></td>
 </tr>
 <tr>
+<td>5606</td>
+<td>Scotch Whisky</td>
+<td>Mcclelland's Islay</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>24.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>5616</td>
 <td>Scotch Whisky</td>
 <td>Mcclelland's Lowland</td>
@@ -55401,7 +57205,7 @@
 <td>24.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>5756</td>
@@ -55424,6 +57228,17 @@
 <td>2012-09-01</td>
 <td>2012-09-30</td>
 <td></td>
+</tr>
+<tr>
+<td>5756</td>
+<td>Scotch Whisky</td>
+<td>Old Pulteney</td>
+<td>750ml</td>
+<td>42.9</td>
+<td>39.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>6100</td>
@@ -55467,7 +57282,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>6106</td>
@@ -55797,7 +57612,7 @@
 <td>36.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>4376</td>
@@ -55910,6 +57725,17 @@
 <td></td>
 </tr>
 <tr>
+<td>4558</td>
+<td>Scotch Whisky</td>
+<td>The Black Grouse</td>
+<td>1750ml</td>
+<td>56.95</td>
+<td>53.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>4825</td>
 <td>Scotch Whisky</td>
 <td>The Dalmore 12 YO</td>
@@ -55985,6 +57811,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>4825</td>
+<td>Scotch Whisky</td>
+<td>The Dalmore 12 YO</td>
+<td>750ml</td>
+<td>59.95</td>
+<td>54.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>4936</td>
@@ -56229,6 +58066,17 @@
 <td></td>
 </tr>
 <tr>
+<td>5482</td>
+<td>Scotch Whisky</td>
+<td>The Macallan 12yr Scotch</td>
+<td>1750ml</td>
+<td>114.9</td>
+<td>108.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>5492</td>
 <td>Scotch Whisky</td>
 <td>The Macallan Fine Oak 10yr</td>
@@ -56292,7 +58140,7 @@
 <td>46.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>5493</td>
@@ -57813,6 +59661,17 @@
 <td></td>
 </tr>
 <tr>
+<td>21236</td>
+<td>Straight Bourbon Whiskey</td>
+<td>1792 Ridgemont Reserve</td>
+<td>750ml</td>
+<td>31.95</td>
+<td>29.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>16518</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Ancient Age</td>
@@ -58055,6 +59914,17 @@
 <td></td>
 </tr>
 <tr>
+<td>16538</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Ancient Ancient Age</td>
+<td>1750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>16580</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Baker's</td>
@@ -58185,6 +60055,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>16580</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Baker's</td>
+<td>750ml</td>
+<td>46.95</td>
+<td>41.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>16676</td>
@@ -58316,7 +60197,7 @@
 <td>38.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>21482</td>
@@ -58448,7 +60329,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>16850</td>
@@ -58583,6 +60464,17 @@
 <td></td>
 </tr>
 <tr>
+<td>16850</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Blanton Single Barrel</td>
+<td>750ml</td>
+<td>53.95</td>
+<td>50.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>16906</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Booker's</td>
@@ -58668,7 +60560,7 @@
 <td>54.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>17020</td>
@@ -58801,6 +60693,17 @@
 <td>2012-06-01</td>
 <td>2012-06-30</td>
 <td></td>
+</tr>
+<tr>
+<td>17017</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Bowman's Bourbon</td>
+<td>1000ml</td>
+<td>9.9</td>
+<td>8.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>17086</td>
@@ -58935,6 +60838,17 @@
 <td></td>
 </tr>
 <tr>
+<td>17088</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Bulleit Bourbon</td>
+<td>1750ml</td>
+<td>55.9</td>
+<td>52.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>17516</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Corner Creek Reserve Bourbon Whiskey</td>
@@ -59141,7 +61055,7 @@
 <td>25.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>17836</td>
@@ -59252,6 +61166,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>17836</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Early Times Bourbon 354</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>17916</td>
@@ -59383,7 +61308,7 @@
 <td>24.45</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>17920</td>
@@ -59603,7 +61528,7 @@
 <td>24.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>18098</td>
@@ -59736,6 +61661,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>18098</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Evan Williams 1783</td>
+<td>1750ml</td>
+<td>27.9</td>
+<td>25.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>17958</td>
@@ -60002,6 +61938,17 @@
 <td></td>
 </tr>
 <tr>
+<td>18048</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Evan Williams Green</td>
+<td>1750ml</td>
+<td>20.5</td>
+<td>18.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>18120</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Evan Williams Single Barrel</td>
@@ -60244,6 +62191,17 @@
 <td></td>
 </tr>
 <tr>
+<td>18198</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Ezra Brooks</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>22.45</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>18276</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Fighting Cock</td>
@@ -60374,6 +62332,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>18276</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Fighting Cock</td>
+<td>750ml</td>
+<td>17.95</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>27493</td>
@@ -60582,7 +62551,7 @@
 <td>15.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>18350</td>
@@ -60670,7 +62639,7 @@
 <td>36.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>18348</td>
@@ -60803,6 +62772,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>18348</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Four Roses Small Batch Bourbon</td>
+<td>750ml</td>
+<td>32.95</td>
+<td>27.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>375</td>
@@ -60967,7 +62947,7 @@
 <td>19.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>18928</td>
@@ -61058,6 +63038,17 @@
 <td></td>
 </tr>
 <tr>
+<td>18928</td>
+<td>Straight Bourbon Whiskey</td>
+<td>J.T.S. Brown</td>
+<td>1750ml</td>
+<td>17.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>19006</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Jefferson Reserve</td>
@@ -61188,6 +63179,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>19006</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Jefferson Reserve</td>
+<td>750ml</td>
+<td>49.95</td>
+<td>47.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>19009</td>
@@ -61517,7 +63519,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>19078</td>
@@ -61726,7 +63728,7 @@
 <td>44.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>19112</td>
@@ -61793,6 +63795,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>19112</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Jim Beam Devil's Cut</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>24.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>16708</td>
@@ -61935,6 +63948,17 @@
 <td>33.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>16708</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Jim Beam's Choice</td>
+<td>1750ml</td>
+<td>35.95</td>
+<td>33.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -62001,7 +64025,7 @@
 <td>46.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>19338</td>
@@ -62089,7 +64113,7 @@
 <td>15.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>19226</td>
@@ -62178,6 +64202,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>19226</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Knob Creek</td>
+<td>750ml</td>
+<td>34.95</td>
+<td>30.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>19228</td>
@@ -62320,7 +64355,7 @@
 <td>40.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>18856</td>
@@ -62353,7 +64388,7 @@
 <td>24.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>19476</td>
@@ -62563,6 +64598,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>19638</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Mattingly &amp; Moore</td>
+<td>1750ml</td>
+<td>18.9</td>
+<td>16.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>20908</td>
@@ -62782,7 +64828,7 @@
 <td>29.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>20116</td>
@@ -62871,6 +64917,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>20116</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Old Grand Dad 114</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>20.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>20446</td>
@@ -63266,7 +65323,7 @@
 <td>16.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27551</td>
@@ -63343,7 +65400,7 @@
 <td>16.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27582</td>
@@ -63398,7 +65455,7 @@
 <td>16.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>957</td>
@@ -63497,7 +65554,7 @@
 <td>16.5</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>21758</td>
@@ -63907,6 +65964,17 @@
 <td></td>
 </tr>
 <tr>
+<td>22121</td>
+<td>Straight Bourbon Whiskey</td>
+<td>Wild Turkey 81</td>
+<td>750ml</td>
+<td>22.95</td>
+<td>20.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>22123</td>
 <td>Straight Bourbon Whiskey</td>
 <td>Wild Turkey 81</td>
@@ -64402,6 +66470,17 @@
 <td></td>
 </tr>
 <tr>
+<td>27080</td>
+<td>Straight Rye Whiskey</td>
+<td>(Ri)1</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>36.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>27025</td>
 <td>Straight Rye Whiskey</td>
 <td>Bulleit Rye</td>
@@ -64479,6 +66558,17 @@
 <td></td>
 </tr>
 <tr>
+<td>27025</td>
+<td>Straight Rye Whiskey</td>
+<td>Bulleit Rye</td>
+<td>750ml</td>
+<td>30.9</td>
+<td>28.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>27052</td>
 <td>Straight Rye Whiskey</td>
 <td>Jefferson's Rye</td>
@@ -64488,6 +66578,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>27052</td>
+<td>Straight Rye Whiskey</td>
+<td>Jefferson's Rye</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>37.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>27056</td>
@@ -64564,7 +66665,7 @@
 <td>37.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27116</td>
@@ -64708,6 +66809,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>26586</td>
+<td>Tennessee Whiskey</td>
+<td>Gentleman Jack</td>
+<td>750ml</td>
+<td>30.9</td>
+<td>27.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>26589</td>
@@ -64906,6 +67018,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>26608</td>
+<td>Tennessee Whiskey</td>
+<td>George Dickel #8</td>
+<td>1750ml</td>
+<td>36.9</td>
+<td>34.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>26598</td>
@@ -65887,6 +68010,17 @@
 <td></td>
 </tr>
 <tr>
+<td>87250</td>
+<td>Tequila</td>
+<td>Cabo Wabo Blanco</td>
+<td>750ml</td>
+<td>34.95</td>
+<td>32.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>89136</td>
 <td>Tequila</td>
 <td>Cabo Wabo Anejo</td>
@@ -66019,6 +68153,17 @@
 <td></td>
 </tr>
 <tr>
+<td>89136</td>
+<td>Tequila</td>
+<td>Cabo Wabo Anejo</td>
+<td>750ml</td>
+<td>44.95</td>
+<td>41.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>89139</td>
 <td>Tequila</td>
 <td>Cabo Wabo Reposado</td>
@@ -66148,7 +68293,7 @@
 <td>37.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>89099</td>
@@ -66382,6 +68527,17 @@
 <td></td>
 </tr>
 <tr>
+<td>87380</td>
+<td>Tequila</td>
+<td>Corazon Blanco Tequila</td>
+<td>750ml</td>
+<td>29.95</td>
+<td>26.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>89235</td>
 <td>Tequila</td>
 <td>Corazon Reposado Tequila</td>
@@ -66566,6 +68722,17 @@
 <td>23.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
+<td></td>
+</tr>
+<tr>
+<td>89215</td>
+<td>Tequila</td>
+<td>Cuervo Tradicional Tequila</td>
+<td>750ml</td>
+<td>25.9</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
 <td>ACTIVE</td>
 </tr>
 <tr>
@@ -66899,6 +69066,17 @@
 <td></td>
 </tr>
 <tr>
+<td>89154</td>
+<td>Tequila</td>
+<td>Don Julio Reposado</td>
+<td>750ml</td>
+<td>55.9</td>
+<td>52.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>87596</td>
 <td>Tequila</td>
 <td>EL MAYOR BLANCO TEQUILA</td>
@@ -66908,6 +69086,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>87596</td>
+<td>Tequila</td>
+<td>EL MAYOR BLANCO TEQUILA</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>22.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89383</td>
@@ -67029,6 +69218,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>87516</td>
+<td>Tequila</td>
+<td>El Charro Tequila Silver</td>
+<td>750ml</td>
+<td>18.9</td>
+<td>17.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89274</td>
@@ -67468,7 +69668,7 @@
 <td>23.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>89286</td>
@@ -67581,6 +69781,17 @@
 <td></td>
 </tr>
 <tr>
+<td>89286</td>
+<td>Tequila</td>
+<td>Espolon Reposado</td>
+<td>750ml</td>
+<td>25.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>89079</td>
 <td>Tequila</td>
 <td>Gran Centenario Azul Reposado</td>
@@ -67689,6 +69900,17 @@
 <td>2012-11-01</td>
 <td>2012-11-30</td>
 <td></td>
+</tr>
+<tr>
+<td>89079</td>
+<td>Tequila</td>
+<td>Gran Centenario Azul Reposado</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>15.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89419</td>
@@ -67823,6 +70045,17 @@
 <td></td>
 </tr>
 <tr>
+<td>3656</td>
+<td>Tequila</td>
+<td>Herradura Anejo Tequila</td>
+<td>750ml</td>
+<td>49.95</td>
+<td>44.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>3655</td>
 <td>Tequila</td>
 <td>Herradura Blanco Silver Tequlia</td>
@@ -67908,7 +70141,7 @@
 <td>34.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>3657</td>
@@ -68417,6 +70650,17 @@
 <td></td>
 </tr>
 <tr>
+<td>89475</td>
+<td>Tequila</td>
+<td>Lunazul Anejo</td>
+<td>750ml</td>
+<td>21.9</td>
+<td>19.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>88018</td>
 <td>Tequila</td>
 <td>Lunazul Blanco Tequila</td>
@@ -68547,6 +70791,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>88018</td>
+<td>Tequila</td>
+<td>Lunazul Blanco Tequila</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89468</td>
@@ -68678,7 +70933,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>89496</td>
@@ -68811,6 +71066,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>89496</td>
+<td>Tequila</td>
+<td>Margaritaville Gold Tequila</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>13.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>88036</td>
@@ -68967,6 +71233,17 @@
 <td></td>
 </tr>
 <tr>
+<td>89590</td>
+<td>Tequila</td>
+<td>Milagro Select Barrel Reserve Reposado Tequila</td>
+<td>750ml</td>
+<td>55.95</td>
+<td>51.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>88120</td>
 <td>Tequila</td>
 <td>Milagro Select Barrel Reserve Silver Tequila</td>
@@ -69031,6 +71308,17 @@
 <td>2012-06-01</td>
 <td>2012-06-30</td>
 <td></td>
+</tr>
+<tr>
+<td>88120</td>
+<td>Tequila</td>
+<td>Milagro Select Barrel Reserve Silver Tequila</td>
+<td>750ml</td>
+<td>51.9</td>
+<td>48.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>88116</td>
@@ -69283,7 +71571,7 @@
 <td>22.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>88148</td>
@@ -69416,6 +71704,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>88148</td>
+<td>Tequila</td>
+<td>Montezuma Tequila White</td>
+<td>1750ml</td>
+<td>24.9</td>
+<td>22.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>88316</td>
@@ -69834,6 +72133,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>89796</td>
+<td>Tequila</td>
+<td>Sauza Conmemorativo</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>22.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89786</td>
@@ -70573,6 +72883,17 @@
 <td></td>
 </tr>
 <tr>
+<td>88566</td>
+<td>Tequila</td>
+<td>Sauza Tres Generaciones Plata</td>
+<td>750ml</td>
+<td>39.9</td>
+<td>35.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>88570</td>
 <td>Tequila</td>
 <td>Sauza Tres Generaciones Reposado</td>
@@ -70636,7 +72957,7 @@
 <td>41.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>88780</td>
@@ -70746,7 +73067,7 @@
 <td>27.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>89889</td>
@@ -70813,6 +73134,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>89889</td>
+<td>Tequila</td>
+<td>Tres Agaves Reposado</td>
+<td>750ml</td>
+<td>37.95</td>
+<td>34.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>89946</td>
@@ -70934,6 +73266,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>89946</td>
+<td>Tequila</td>
+<td>Two Fingers - Gold</td>
+<td>750ml</td>
+<td>14.95</td>
+<td>13.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>88796</td>
@@ -71263,7 +73606,7 @@
 <td>10.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>906238</td>
@@ -71695,6 +74038,17 @@
 <td></td>
 </tr>
 <tr>
+<td>917198</td>
+<td>Virginia Fruit Wines</td>
+<td>Rapidan River Raspberry</td>
+<td>750ml</td>
+<td>10.55</td>
+<td>9.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>917156</td>
 <td>Virginia Miscellaneous Wine</td>
 <td>Cooper Vineyards Noche</td>
@@ -71794,6 +74148,17 @@
 <td></td>
 </tr>
 <tr>
+<td>917206</td>
+<td>Virginia Miscellaneous Wine</td>
+<td>Rapidan River Chocolate Flavored Wine</td>
+<td>750ml</td>
+<td>10.55</td>
+<td>9.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>917201</td>
 <td>Virginia Miscellaneous Wine</td>
 <td>Tomahawk Mill Country Blush</td>
@@ -71838,8 +74203,19 @@
 <td></td>
 </tr>
 <tr>
-<td>917179</td>
+<td>915407</td>
 <td>Virginia Pink Table Wine</td>
+<td>Williamsburg Winery Plantation Blush</td>
+<td>750ml</td>
+<td>7.45</td>
+<td>6.55</td>
+<td>2011-10-01</td>
+<td>2011-10-31</td>
+<td></td>
+</tr>
+<tr>
+<td>917179</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71850,7 +74226,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71861,7 +74237,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71872,7 +74248,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71883,7 +74259,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71894,7 +74270,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71905,7 +74281,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71916,7 +74292,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71927,7 +74303,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71938,7 +74314,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71949,7 +74325,7 @@
 </tr>
 <tr>
 <td>917179</td>
-<td>Virginia Pink Table Wine</td>
+<td>Virginia Pink Wine</td>
 <td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
 <td>11.95</td>
@@ -71959,15 +74335,15 @@
 <td></td>
 </tr>
 <tr>
-<td>915407</td>
-<td>Virginia Pink Table Wine</td>
-<td>Williamsburg Winery Plantation Blush</td>
+<td>917179</td>
+<td>Virginia Pink Wine</td>
+<td>Prince Michel Merlot Blanc</td>
 <td>750ml</td>
-<td>7.45</td>
-<td>6.55</td>
-<td>2011-10-01</td>
-<td>2011-10-31</td>
-<td></td>
+<td>11.95</td>
+<td>11.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>917173</td>
@@ -73884,6 +76260,17 @@
 <td></td>
 </tr>
 <tr>
+<td>38169</td>
+<td>Vodka (domestic)</td>
+<td>360 Vodka</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>13.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>39175</td>
 <td>Vodka (domestic)</td>
 <td>Burnett's 100 Proof Vodka</td>
@@ -74016,6 +76403,17 @@
 <td></td>
 </tr>
 <tr>
+<td>39175</td>
+<td>Vodka (domestic)</td>
+<td>Burnett's 100 Proof Vodka</td>
+<td>1750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41312</td>
 <td>Vodka (domestic)</td>
 <td>Burnett's Coconut Vodka</td>
@@ -74146,6 +76544,17 @@
 <td>2012-10-01</td>
 <td>2012-10-31</td>
 <td></td>
+</tr>
+<tr>
+<td>41312</td>
+<td>Vodka (domestic)</td>
+<td>Burnett's Coconut Vodka</td>
+<td>1750ml</td>
+<td>16.2</td>
+<td>14.2</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35418</td>
@@ -74379,6 +76788,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35785</td>
+<td>Vodka (domestic)</td>
+<td>Cupcake Vodka Deliciously Unflavored</td>
+<td>750ml</td>
+<td>15.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>35734</td>
 <td>Vodka (domestic)</td>
 <td>Deep Run Vodka</td>
@@ -74599,6 +77019,17 @@
 <td></td>
 </tr>
 <tr>
+<td>35800</td>
+<td>Vodka (domestic)</td>
+<td>Dirty Karma Organic Vodka</td>
+<td>750ml</td>
+<td>18.9</td>
+<td>17.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>40882</td>
 <td>Vodka (domestic)</td>
 <td>Dirty Karma SOL Vodka</td>
@@ -74685,6 +77116,17 @@
 <td>2012-06-01</td>
 <td>2012-06-30</td>
 <td></td>
+</tr>
+<tr>
+<td>35948</td>
+<td>Vodka (domestic)</td>
+<td>Fleischmann's Royal Vodka</td>
+<td>1750ml</td>
+<td>12.9</td>
+<td>10.5</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>36108</td>
@@ -74817,6 +77259,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>36108</td>
+<td>Vodka (domestic)</td>
+<td>Gilbey's Vodka</td>
+<td>1750ml</td>
+<td>16.95</td>
+<td>14.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>36211</td>
@@ -75190,7 +77643,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>37526</td>
@@ -75268,6 +77721,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>37526</td>
+<td>Vodka (domestic)</td>
+<td>Prairie Organic Vodka</td>
+<td>750ml</td>
+<td>20.95</td>
+<td>19.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>37586</td>
@@ -75410,7 +77874,7 @@
 <td>17.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>40570</td>
@@ -75476,7 +77940,7 @@
 <td>16.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>37988</td>
@@ -75677,6 +78141,17 @@
 <td></td>
 </tr>
 <tr>
+<td>39868</td>
+<td>Vodka (domestic)</td>
+<td>Smirnoff 100</td>
+<td>1750ml</td>
+<td>30.9</td>
+<td>28.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>37996</td>
 <td>Vodka (domestic)</td>
 <td>Smirnoff 80</td>
@@ -75850,7 +78325,7 @@
 <td>24.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>38006</td>
@@ -76370,6 +78845,17 @@
 <td></td>
 </tr>
 <tr>
+<td>37338</td>
+<td>Vodka (domestic)</td>
+<td>UV Vodka</td>
+<td>1750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>41034</td>
 <td>Vodka (domestic)</td>
 <td>UV Vodka 103</td>
@@ -76510,7 +78996,7 @@
 <td>12.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34202</td>
@@ -76675,7 +79161,7 @@
 <td>29.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34155</td>
@@ -76928,7 +79414,7 @@
 <td>11.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35759</td>
@@ -77602,6 +80088,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34326</td>
+<td>Vodka (imported)</td>
+<td>Finlandia Vodka of Finland</td>
+<td>750ml</td>
+<td>18.9</td>
+<td>16.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34328</td>
 <td>Vodka (imported)</td>
 <td>Finlandia Vodka of Finland</td>
@@ -78075,6 +80572,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34458</td>
+<td>Vodka (imported)</td>
+<td>Ketel One</td>
+<td>1750ml</td>
+<td>50.95</td>
+<td>47.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34496</td>
 <td>Vodka (imported)</td>
 <td>Kru 82 Vodka</td>
@@ -78438,6 +80946,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34546</td>
+<td>Vodka (imported)</td>
+<td>Pearl Vodka</td>
+<td>750ml</td>
+<td>12.9</td>
+<td>10.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>34579</td>
 <td>Vodka (imported)</td>
 <td>Pinnacle Vodka</td>
@@ -78524,6 +81043,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>34579</td>
+<td>Vodka (imported)</td>
+<td>Pinnacle Vodka</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>35242</td>
@@ -78699,7 +81229,7 @@
 <td>26.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>35289</td>
@@ -78788,6 +81318,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35289</td>
+<td>Vodka (imported)</td>
+<td>Pinnacle Vodka Traveler</td>
+<td>750ml</td>
+<td>13.95</td>
+<td>12.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34385</td>
@@ -79129,6 +81670,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>35427</td>
+<td>Vodka (imported)</td>
+<td>Russian Standard Platinum</td>
+<td>750ml</td>
+<td>26.95</td>
+<td>23.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>34505</td>
@@ -79689,7 +82241,7 @@
 <td>23.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>34807</td>
@@ -80077,6 +82629,17 @@
 <td></td>
 </tr>
 <tr>
+<td>34946</td>
+<td>Vodka (imported)</td>
+<td>Vox Vodka</td>
+<td>750ml</td>
+<td>24.9</td>
+<td>22.9</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
+</tr>
+<tr>
 <td>27475</td>
 <td>Whiskey</td>
 <td>Bird Dog Blackberry Flav. Whiskey</td>
@@ -80207,6 +82770,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>27475</td>
+<td>Whiskey</td>
+<td>Bird Dog Blackberry Flav. Whiskey</td>
+<td>750ml</td>
+<td>19.95</td>
+<td>17.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 <tr>
 <td>17668</td>
@@ -80437,7 +83011,7 @@
 <td>11.95</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>21376</td>
@@ -80514,7 +83088,7 @@
 <td>25.9</td>
 <td>2013-01-01</td>
 <td>2013-01-31</td>
-<td>ACTIVE</td>
+<td></td>
 </tr>
 <tr>
 <td>27626</td>
@@ -80757,6 +83331,17 @@
 <td>2012-12-01</td>
 <td>2012-12-31</td>
 <td></td>
+</tr>
+<tr>
+<td>22175</td>
+<td>Whiskey</td>
+<td>Wild Turkey Russell Reserve</td>
+<td>750ml</td>
+<td>32.95</td>
+<td>29.95</td>
+<td>2013-02-01</td>
+<td>2013-02-28</td>
+<td>ACTIVE</td>
 </tr>
 </table>
 </body>
