@@ -54,7 +54,7 @@
 			<ol>
 				<li>Ask to join the <a href="<?php e($link); ?>" target="_blank"><span class="color_orange">[ <?php e($title); ?> Google+ Community ]</span></a></li>
 				<li>
-					Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ here ]</span></a>
+					Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ at <?php printf("%0.6f, %0.6f", $lat/1e6, $lon/1e6); ?> ]</span></a>
 					<blockquote>
 						<p><span class="plext_tab_title">All</span><span class="plext_tab_title tab_selected">Faction</span> - Be sure the upper-right area of the COMM window looks like this</p>
 						<p><span class="plext_tab_title tab_selected">All</span><span class="plext_tab_title">Faction</span> - Not this</p>
