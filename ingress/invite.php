@@ -8,6 +8,7 @@ $communities = array(
 		'link'    => "https://plus.google.com/communities/103349576921336760265",
 		'lat'     => 38000000,
 		'lon'     => -77000000,
+		'mods'    => array("Thrush", "jbaikge"),
 	),
 	'hr-resistance' => array(
 		'title'   => "Hampton Roads Resistance",

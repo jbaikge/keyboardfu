@@ -54,13 +54,12 @@
 			<ol>
 				<li>Ask to join the <a href="<?php e($link); ?>" target="_blank"><span class="color_orange">[ <?php e($title); ?> Google+ Community ]</span></a></li>
 				<li>
-					Announce your Google+ name in <span class="plext_tab_title tab_selected">Faction</span> chat, <a href="http://www.ingress.com/intel?latE6=<?php echo $lat; ?>&amp;lngE6=<?php echo $lon; ?>&amp;z=16" target="_blank"><span class="color_orange">[ at <?php printf("%0.6f, %0.6f", $lat/1e6, $lon/1e6); ?> ]</span></a>
+					Announce your Google+ name (not your Ingress username, but the name on your Google+ profile used in step 1) by sending the following message in <span class="plext_tab_title tab_selected">Faction</span> chat:
 					<blockquote>
-						<p><span class="plext_tab_title">All</span><span class="plext_tab_title tab_selected">Faction</span> - Be sure the upper-right area of the COMM window looks like this</p>
-						<p><span class="plext_tab_title tab_selected">All</span><span class="plext_tab_title">Faction</span> - Not this</p>
+						<p class="NEUTRAL"><?php array_map(function($n) { global $faction; printf('<span class="%s">@%s</span> ', strtoupper($faction), $n); }, $mods); ?> DMV &lt;Your Name&gt;</p>
 					</blockquote>
 				</li>
-				<li>A moderator will verify your name in <span class="plext_tab_title tab_selected">Faction</span> chat and match it with your Google+ name on your community application, then approve you</li>
+				<li>The moderators you tagged above will verify your name in <span class="plext_tab_title tab_selected">Faction</span> chat and match it with your Google+ name on your community application to approve you. Please keep an eye on <span class="plext_tab_title tab_selected">Faction</span> chat for any additional instructions or questions from the moderators</li>
 			</ol>
 		</section>
 		<section id="what-next">
