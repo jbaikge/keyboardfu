@@ -1,4 +1,8 @@
 <?php
+// :(
+header('Location: http://dmvresistance.org');
+exit;
+
 require('webroot.conf.php');
 
 $communities = array(
